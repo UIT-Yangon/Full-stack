@@ -32,7 +32,7 @@ body {
 
 .category {
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .main {
@@ -41,23 +41,25 @@ body {
 }
 
 .alignment {
-  width: 85%;
+  width: 65%;
   margin: auto;
   margin-bottom: 2%;  
 }
 .whole {
-  width: 85%;
+  width: 65%;
+  max-width: 874px;
   margin: auto;
   margin-bottom: 4%;
   border-bottom: 1px solid rgb(208, 208, 208);
   padding-bottom: 15px;
+  transition: 1px solid linear ease-in-out;
+  position: relative;
 }
 
 .whole:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  border-bottom-color: black;
-  transition: all .5s ease-in-out;
   cursor: pointer;
+  border-bottom: 1px solid #1C1D20;
 
 }
 
@@ -77,9 +79,9 @@ body {
 
 .answer {
   width: 100%;
-  padding: 10px;
-  border-left: 5px solid #077d8a;
-  transition: all 2s ease-in-out;
+  height: 0;
+  opacity: 0;
+  transition: height 2s ease-in-out;
 }
 
 
@@ -98,6 +100,7 @@ body {
 
 h3 {
   width: 50%;
+  letter-spacing: 1.25;
 }
 
 .trivia {
@@ -129,18 +132,21 @@ svg {
   color: white;
 }
 
+.high {
+  position: relative;
+  z-index: 30;
+}
+
 
 .para {
-  width: 95%;
+  width: 100%;
   margin: auto;
   text-align: justify;
   text-wrap: wrap;
   font-family: DegularRegular;
 }
 
-span {
-  font-family: DegularBold, sans-serif;
-}
+
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 	.whole {
@@ -149,7 +155,9 @@ span {
     margin-bottom: 4%;
     border-bottom: 1px solid rgb(208, 208, 208);
     padding-bottom: 15px;
+    height: auto;
   }
+
 
   .alignment {
     width: 100%;
@@ -179,6 +187,19 @@ span {
 @media only screen and (max-width : 320px) {
 
 /* Styles */
+.alignment {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2%;  
+}
+.whole {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 4%;
+  border-bottom: 1px solid rgb(208, 208, 208);
+  padding-bottom: 15px;
+  position: relative;
+}
 
 }
 
@@ -224,6 +245,15 @@ span {
 
 /* Styles */
 
+}
+
+.stick {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color:#1C1D20;
+  left: 0;
+  top: 100%;
 }
 
 
