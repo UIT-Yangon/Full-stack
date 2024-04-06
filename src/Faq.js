@@ -23,7 +23,7 @@ function Nav(props){
 
 function Category(props) {
   return(
-    <div className="category text-lg md:text-2xl border-2 p-3.5  border-slate-400">
+    <div className="category ms-3.5 text-base md:text-base border-2 py-2 px-4  border-slate-400 ">
       {props.name}
     </div>
   )
@@ -36,9 +36,15 @@ function Question(props) {
   const [change,setChange] = useState(true);
   const [scope ,animate] = useAnimate();
 
+
   function onClick() {
     setChange(!change);
-    (change) ? animate(".trivia", { height: "100%", width: "100%",left: "0%", top: "0%" }) :  animate(".trivia", { height: "0%", width: "0%",left: "50%", top: "50%" }) ;
+    (change) ? animate(".trivia", { height: "100%", width: "100%",left: "0%", top: "0%" }) :  animate(".trivia", { height: "0%", width: "0%",left: "50%", top: "50%" });
+
+
+    (change) ? animate(".answer", { height: 'auto', opacity: 1, transiton: "all 2s linear ease-in-out" }) :  animate(".answer",{
+      height: 0, opacity: 0
+    } ) ;
   
 
     
@@ -48,14 +54,17 @@ function Question(props) {
     
    
   }
+
   
   return(
-    <div className="whole"  ref={scope}  onClick={ onClick }>
+    
+      <div   ref={scope} >
+      <div className="whole" onClick={ onClick } >
     <div className="mt-7 question p-3.5" >
-      <p className="text-xl lg:text-3xl">{props.question}</p>
+      <p className="text-xl lg:text-3xl" >{props.question}</p>
       <div className="circle p-2" >
         <div className="trivia"></div>
-        {(change && props.answer ) ? <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> : <svg id="svgg"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>}
+        {(change && props.answer ) ? <svg id="svg"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> : <svg id="svgg"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>}
        
         
         
@@ -64,18 +73,17 @@ function Question(props) {
       
     </div>
 
-    {!(change) && <motion.div className="answer" 
-       initial={{ height: 0, opacity: 0 }}
-       animate={{ height: 'auto', opacity: 1 }}
-       exit={{ height: 0, opacity: 0 }}
-        >
-        <pre className="para text-lg">
+
+        <pre className="para text-lg answer p-3.5">
           {props.answer}
       </pre>
-      
-    </motion.div>}
+      <div className="stick"></div>
+    
     
     </div>
+    </div>
+    
+    
   );
 
   
@@ -124,10 +132,10 @@ function Faq() {
   return (
     <div className="App">
       <Nav />
-      <div className="my-20 mt-40 sm:ml-10 sm:mt-50">
-      <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-7xl  font-bold  p-3.5 dd ">Frequently</motion.span>
-      <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-7xl font-bold  p-3.5 dd">Asked</motion.span>
-      <motion.h3 className="text-6xl md:text-7xl w-50 font-bold  p-3.5  "  initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} >Questions</motion.h3>
+      <div className="my-20 mt-40 sm:ml-10 sm:mt-50 mb-15">
+      <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd ">Frequently</motion.span>
+      <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd">Asked</motion.span>
+      <motion.h3 className="text-6xl md:text-8xl w-50  p-3.5  "  initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} >Questions</motion.h3>
       </div>
 
 
@@ -136,6 +144,8 @@ function Faq() {
       {quiz.map(item => (
         <Question id={item.id} question={item.question} answer={item.answer} />
       ))}
+
+
     
 
       </div>
