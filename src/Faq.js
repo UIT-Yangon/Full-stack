@@ -23,7 +23,7 @@ function Nav(props){
 
 function Category(props) {
   return(
-    <div className="category ms-3.5 text-base md:text-base border-2 py-2 px-4  border-slate-400 ">
+    <div className="category ms-3.5 text-base md:text-base border-2 py-4 px-8  border-slate-400 ">
       {props.name}
     </div>
   )
