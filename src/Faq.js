@@ -6,18 +6,7 @@ import './minus.svg';
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from 'react';
 import {useAnimate} from 'framer-motion';
-
-
-function Nav(props){
-  return(
-   <div className=" w-full h-40 bg-teal-600 mb-3.5">
-    <h1 className="text-slate-50 text-4xl">Navigation</h1>
-   </div>
-  );
-}
-
-
-
+import Navbar from './Components/Navbar';
 
 
 
@@ -46,12 +35,6 @@ function Question(props) {
     //   height: 0, opacity: 0
     // } ) ;
   
-
-    
-
-    
-   
-    
    
   }
 
@@ -141,7 +124,7 @@ function Faq() {
   ]
   return (
     <div className="App">
-      <Nav />
+      <Navbar />
       <div className="my-20 mt-40 sm:ml-10 sm:mt-50 mb-15">
       <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd ">Frequently</motion.span>
       <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd">Asked</motion.span>
