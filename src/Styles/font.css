@@ -1,15 +1,11 @@
 @font-face {
     font-family: 'DegularRegular';
     src: local('DegularRegular'),
-         url('./Font/DegularDisplay-Medium.otf') format('opentype')
+         url('../Font/DegularDisplay-Medium.otf') format('opentype')
   }
 
   @font-face {
     font-family: 'DegularBold';
     src: local('DegularBold'),
-         url('./Font/DegularDisplay-Bold.otf') format('opentype')
+         url('../Font/DegularDisplay-Bold.otf') format('opentype')
   }
-
-
-  
-  
