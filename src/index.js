@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Faq from './Faq';
+import Faq from './Faq/Faq.js';
 import reportWebVitals from './reportWebVitals';
+import Degree from './Degree/Degree'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

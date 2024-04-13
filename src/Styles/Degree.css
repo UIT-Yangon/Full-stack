@@ -1,0 +1,353 @@
+@import 'font.css';
+
+body {
+  background-color: #f0f8ff;
+  font-family: DegularRegular;
+}
+
+
+.image {
+  
+  width: 100px;
+  height: 100px;
+  gap: 0px;
+  opacity: 1;
+  background: url(../Images/deg.png);
+  background-repeat: no-repeat;
+  background-color: pink;
+  background-size: cover;
+
+}
+
+
+
+.image-container,.image {
+  height: 50vw;
+  width: 85vw;
+}
+.image-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0%;
+}
+
+.image-section {
+  position: relative;
+  background-color: #f0f8ff;
+  position: relative;
+  background-color: #f0f8ff;
+  z-index: 35;
+}
+
+
+.degree-container {
+  display: flex;
+  
+}
+
+.compo-1,.compo-2 {
+  width: 50%;
+  height: auto;
+}
+
+.compo-1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+.compo-1 h1 {
+  line-height: 102px;
+  letter-spacing: 0.03em;
+  color: #1C1D2080;
+  position: relative;
+  z-index: 20;
+
+
+}
+
+.degreeHead {
+  letter-spacing: 0.06em;
+}
+
+.smallLink {
+  letter-spacing: 0.06em;
+  color: #1C1D20CC;
+
+}
+
+.triviaHead {
+  letter-spacing: 0.06em;
+}
+
+.trivia-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trivia-container {
+  letter-spacing: 0.06em;
+}
+
+.triviaMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#f0f8ff;
+}
+
+
+.hero h1 {
+  letter-spacing: 0.01em;
+  line-height: 125%;
+}
+
+.animator {
+  position: relative;
+}
+
+.animator:hover {
+  cursor: pointer;
+
+}
+
+.fade {
+  height: auto;
+  display: block;
+}
+
+.coverr,.compo-1 h1 {
+  position: relative;
+  display: inline-block;
+
+}
+
+.text-section {
+  position: relative;
+  z-index: 30;
+  background-color:#f0f8ff;
+  color: #1C1D20;
+}
+
+
+.coverr .line {
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 70%;
+  background-color: #1C1D2080;
+}
+
+.hide {
+  display: none;
+}
+
+.hideMe {
+  display: none;
+  background-color:#f0f8ff;
+  position: relative;
+  z-index: 30;
+}
+
+.customHide {
+  display: none;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+
+/* Styles */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+/* Styles */
+
+}
+
+
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 640px) {
+
+/* Styles */
+.hide {
+  display: block;
+}
+
+
+
+}
+
+@media only screen and (max-width : 1024px) {
+
+  /* Styles */
+  .hideMe {
+    display: block;
+    background-color:#f0f8ff;
+    position: relative;
+    z-index: 20;
+  }
+
+  .degree-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    
+  }
+
+  .coverr .line {
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    top: 65%;
+    background-color: #1C1D2080;
+  }
+
+  .compo-1 h1 {
+    font-size: 35px;
+  }
+
+
+  
+
+  .compo-1,.compo-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .compo-2 {
+    margin-top: -55px;
+    position: relative;
+    z-index: -1;
+  }
+
+  .compo-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .compo-1 h1 {
+    line-height: 102px;
+    letter-spacing: 0.03em;
+    color: #1C1D2080;
+  
+  }
+
+  .compo-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+background-color: #f0f8ff;
+  }
+  
+  
+  
+  }
+
+  @media only screen and (min-width : 1024px) {
+
+    /* Styles */
+    .customHide {
+      display: block;
+      position: relative;
+      z-index: 30;
+
+    }
+    
+    .image-section {
+      padding: 62px 0px 62px 0px;
+      position: relative;
+      background-color: #f0f8ff;
+      z-index: 35;
+      
+    }
+    
+    }
+
+    @media only screen and (max-width : 640px) {
+
+      .image-section {
+      
+        position: relative;
+        background-color: #f0f8ff;
+        
+      }
+      .compo-1 h1 span{
+        font-size: 18px;
+        line-height: 102px;
+        letter-spacing: 0.03em;
+        color: red;
+
+      
+      }
+
+      .compo-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 20;
+  background-color: #f0f8ff;
+      }
+    }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+
+/* Styles */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+
+/* Styles */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+
+/* Styles */
+
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+/* Styles */
+
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+/* Styles */
+
+}
+
+
+
+
+
+
+
+

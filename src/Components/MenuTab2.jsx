@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from 'framer-motion' ;
+import {motion,AnimatePrsence} from 'framer-motion' ;
 
 
 function Item2(){
