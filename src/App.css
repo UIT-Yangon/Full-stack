@@ -52,12 +52,12 @@ body {
   margin-bottom: 4%;
   border-bottom: 1px solid rgb(208, 208, 208);
   padding-bottom: 15px;
-  transition: 1px solid linear ease-in-out;
+  transition:  all .5s 0s ease-in-out;
   position: relative;
 }
 
 .whole:hover {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
   cursor: pointer;
   border-bottom: 1px solid #1C1D20;
 
