@@ -5,7 +5,7 @@ import MainSec from './MainSec';
 import Trivia from './Trivia';
 import Image from './Image';
 import Text from './Text';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Nav/Navbar';
 
 function App() {
 

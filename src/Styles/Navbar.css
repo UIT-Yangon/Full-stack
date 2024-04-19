@@ -1,4 +1,4 @@
-@import "font.css";
+@import url(./font.css);
 
 *{
     padding: 0;
@@ -44,9 +44,6 @@ nav a{
     padding: 16px 24px 24px 24px;
     position: relative;
     letter-spacing: 0.7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     /* border: 1px solid red; */
 }
 
@@ -72,6 +69,7 @@ nav a{
 
 nav a svg{
     position: relative;
+    top: -2px;
     margin-left: 8px;
 }
 
@@ -89,6 +87,7 @@ header .nav-btn{
     display: flex;
     flex-direction: column;
     position: relative;
+    justify-content: center;
     /* overflow: hidden; */
 }
 
@@ -168,8 +167,8 @@ header .nav-btn{
         transition: 0.5s;
         overflow: scroll;
         scroll-behavior: smooth;
+        z-index: 999;
         transform: translate(100vw);
-        z-index: 9999;
     }
     header .responsive_nav{
         transform: none;
@@ -189,8 +188,9 @@ header .nav-btn{
     }
     nav .nav-close-btn{
         position: absolute;
-        top: 3rem;
-        right: 3rem;
+        top: 2.5rem;
+        right: 1rem;
+        height: 28px;
     }
     .Menu{
         width: 100%;
@@ -221,5 +221,4 @@ header .nav-btn{
     }
 
 }
-
 

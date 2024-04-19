@@ -3,6 +3,7 @@ import './../Styles/Navbar.css';
 import image from './../Images/UIT-Logo-big.png';
 import Item1 from './MenuTab1';
 import Item2 from './MenuTab2';
+import TranslationButton from './TranslationButton';
 
 function Navbar(){
     const navRef = useRef();
@@ -83,6 +84,8 @@ function Navbar(){
                         <Item2/>
                     )}
                 </div>
+
+                <TranslationButton/>
                 
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <svg width="34" height="2" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
