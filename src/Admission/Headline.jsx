@@ -41,7 +41,7 @@ function Headline() {
        once
        text={header}
        el="h1"
-       className="text-5xl font-medium"
+       className="text-6xl font-medium"
      />
        </span>
        
