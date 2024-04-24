@@ -5,11 +5,13 @@ import Item1 from './MenuTab1';
 import Item2 from './MenuTab2';
 import TranslationButton from './TranslationButton';
 
-function Navbar(){
+function Navbar({sendDataToParent}){
     const navRef = useRef();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [hoveredTab, setHoveredTab] = useState(null);
     const [activeTab, setActiveTab] = useState(null);
+    const [activeNav, setActiveNav] = useState(false);
+    
 
     const handleHover = (tab) => {
         if(windowWidth > 1024){
@@ -42,6 +44,8 @@ function Navbar(){
 
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
+        setActiveNav(!activeNav);
+        sendDataToParent(activeNav);
     }
 
     return (

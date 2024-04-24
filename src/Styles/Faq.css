@@ -54,6 +54,7 @@ body {
   padding-bottom: 15px;
   transition:  all .5s 0s ease-in-out;
   position: relative;
+  
 }
 
 .whole:hover {

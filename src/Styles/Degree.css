@@ -15,9 +15,25 @@ body {
   background: url(../Images/deg.png);
   background-repeat: no-repeat;
   background-color: pink;
+  
   background-size: cover;
 
 }
+
+.main {
+  height: auto;
+  
+  /* transition: opacity 1s, height 5s, visibility 1s; */
+
+}
+
+.mainUnactive {
+  
+  height: 85vh;
+  
+  overflow: hidden;
+}
+
 
 
 

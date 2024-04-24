@@ -15,6 +15,8 @@
 body{
     background: var(--clLight);
     height: 100vh;
+    width: 100%;
+    
 }
 
 header{
@@ -44,6 +46,8 @@ nav a{
     padding: 16px 24px 24px 24px;
     position: relative;
     letter-spacing: 0.7px;
+    display: flex;
+    align-items: center;
     /* border: 1px solid red; */
 }
 
@@ -69,8 +73,8 @@ nav a{
 
 nav a svg{
     position: relative;
-    top: -2px;
     margin-left: 8px;
+    top: 2px;
 }
 
 header .nav-btn{
@@ -156,8 +160,8 @@ header .nav-btn{
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -168,7 +172,7 @@ header .nav-btn{
         overflow: scroll;
         scroll-behavior: smooth;
         z-index: 999;
-        transform: translate(100vw);
+        transform: translate(100%);
     }
     header .responsive_nav{
         transform: none;

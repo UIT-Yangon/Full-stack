@@ -20,7 +20,7 @@ function Headline() {
 
   return (
     <>
-     <div className="hide hero ps-14 pt-64 lg:pt-72 lg:pb-24">
+     <div className="hide hero ps-14 pt-[8rem] lg:pb-24">
     {header.map((header) => 
        <span className="overflow-hidden fade">
           <AnimatedText
@@ -34,14 +34,14 @@ function Headline() {
   
 )}
 </div>
-<div className="sm:hidden hero ps-4 pt-36 lg:pt-72">
+<div className="sm:hidden hero ps-4 pt-[5rem] lg:pt-72">
 {headerMobile.map((header) => 
        <span className="overflow-hidden fade">
         <AnimatedText
        once
        text={header}
        el="h1"
-       className="text-6xl font-medium"
+       className="text-5xl font-medium"
      />
        </span>
        
