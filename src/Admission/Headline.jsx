@@ -1,16 +1,16 @@
 import '../Styles/Degree.css';
-import { AnimatedText } from './AnimatedText';
+import { AnimatedText } from './../Degree/AnimatedText';
 
 
 const header = [
-  "Degree Programs",
-  "We Offer"
+  "Admissions information",
+  "and requirements"
 ]
 
 const headerMobile = [
-  "Degree",
-  "Programs",
-  "We Offer"
+  "Admissions",
+  "information",
+  "requirements"
 ]
 
 
@@ -20,7 +20,7 @@ function Headline() {
 
   return (
     <>
-     <div className="hide hero ps-14 pt-[8rem]  lg:pb-24">
+     <div className="hide hero ps-14 pt-[8rem] lg:pb-24">
     {header.map((header) => 
        <span className="overflow-hidden fade">
           <AnimatedText

@@ -5,7 +5,7 @@ import '../Images/plus.svg';
 import '../Images/minus.svg';
 import Category from './Category';
 import Question from './Question';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Nav/Navbar';
 import { motion, AnimatePresence } from "framer-motion"
 import Footer from './Footer';
 

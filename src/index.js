@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Faq from './Faq/Faq.js';
 import reportWebVitals from './reportWebVitals';
-import Degree from './Degree/Degree'
+import Degree from './Degree/Degree';
+import Admission from './Admission/Admission';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Faq />
+    <Admission />
   </React.StrictMode>
 );
 
