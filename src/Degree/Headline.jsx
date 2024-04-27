@@ -1,5 +1,6 @@
 import '../Styles/Degree.css';
-import { AnimatedText } from './AnimatedText';
+import { AnimatedText } from '../Components/AnimatedText';
+import { motion } from "framer-motion";
 
 
 const header = [
@@ -18,8 +19,14 @@ const headerMobile = [
     
 function Headline() {
 
+
+
+  
+
+
   return (
     <>
+    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} >
      <div className="hide hero ps-14 pt-[8rem]  lg:pb-24">
     {header.map((header) => 
        <span className="overflow-hidden fade">
@@ -28,6 +35,7 @@ function Headline() {
           text={header}
           el="h1"
           className="lg:text-7xl text-6xl font-medium"
+          language="EN"
         />
       </span>
         
@@ -42,6 +50,7 @@ function Headline() {
        text={header}
        el="h1"
        className="text-5xl font-medium"
+       language="EN"
      />
        </span>
        
@@ -49,6 +58,7 @@ function Headline() {
 )}
 
   </div>
+  </motion.div>
   
     </>
   );

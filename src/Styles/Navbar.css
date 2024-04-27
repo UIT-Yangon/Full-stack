@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: DegularRegular;
+    /* font-family: PyiDaungSu; */
 }
 
 :root{
@@ -127,11 +127,16 @@ header .nav-btn{
     
 .frame li{
     list-style: none;
-    line-height: 30px;
+   
     font-size: 16px;
     letter-spacing: 0.8px;
     opacity: 0.5;
     color: #1C1D20;
+}
+
+#navigation {
+    margin: 0;
+    padding: 0;
 }
 
 .frame li:hover{

@@ -3,13 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Faq from './Faq/Faq.js';
 import reportWebVitals from './reportWebVitals';
-import Degree from './Degree/Degree';
-import Admission from './Admission/Admission';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navigator from './navigator.js';
+import { store } from './store/Store';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Admission />
+    <Provider store={store}>
+    <Router>
+      <Navigator />
+
+    </Router>
+    </Provider>
   </React.StrictMode>
 );
 

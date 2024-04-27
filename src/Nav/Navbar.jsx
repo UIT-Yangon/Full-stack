@@ -4,6 +4,7 @@ import image from './../Images/UIT-Logo-big.png';
 import Item1 from './MenuTab1';
 import Item2 from './MenuTab2';
 import TranslationButton from './TranslationButton';
+import { Link } from 'react-router-dom';
 
 function Navbar({sendDataToParent}){
     const navRef = useRef();
@@ -50,7 +51,7 @@ function Navbar({sendDataToParent}){
 
     return (
         <header>
-            <img src={image} className="uitLogo"/>
+            <Link reloadDocument to="/"><img src={image} className="uitLogo"/></Link>
             <nav ref={navRef}>
                 <div className="Menu" onMouseEnter={()=>handleHover("menu1")} onMouseLeave={handleLeave} onClick={()=>handleToggleAccordion("menu1")}>
                     <a href='#' className={windowWidth>1024?"hoverActive menu1":"menu1"} style={{opacity:hoveredTab==='menu1'&&0.7}}>

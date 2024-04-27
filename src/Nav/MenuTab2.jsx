@@ -1,23 +1,73 @@
-import React from "react";
-import {motion,AnimatePrsence} from 'framer-motion' ;
+
+import {motion} from 'framer-motion' ;
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 
 function Item2(){
 
+ 
+
     const listData = [
         {
           title: 'Academic Programs',
-          items: ['Degree', 'Diploma']
+          items: [
+          {
+            text: 'Degree',
+            link: '/academic/degree'
+          },
+          {
+            text: 'Diploma',
+            link: '/academic/diploma'
+          }
+        ]
         },
         {
           title: 'Student Support Service',
-          items: ['LMS', 'Student Registeration', 'Email Service', 'Library']
+          items: [
+          {
+            text: 'LMS',
+            link: '/academic/lms'
+          },
+          {
+            text: 'Student Registeration',
+            link: '/academic/student-registeration'
+          },
+          {
+            text: 'Email Service',
+            link: '/academic/email-service'
+          },
+          {
+            text: 'Library',
+            link: '/academic/library'
+          }
+        ]
         },
         {
           title: 'Admission',
-          items: ['Calendar', 'Academic Rules', 'Campus']
+          items: [
+            {
+              text: 'Calendar',
+              link: '/academic/calendar'
+            },
+            {
+              text: 'Academic Rules',
+              link: '/academic/academic-rules'
+            },
+            {
+              text: 'Campus',
+              link: '/academic/campus'
+            },
+            {
+              text: 'Requirements',
+              link: '/academic/admission-requirements'
+            }
+          ]
         }
       ];
+
+
+ 
     return (
         <motion.div class="item2"
         initial={{opacity:0, y:-10}}
@@ -29,7 +79,7 @@ function Item2(){
                     <ul>
                         <ListItem text={data.title} isTitle={true} />
                         {data.items.map((item, i) => (
-                        <ListItem key={i} text={item} />
+                        <ListItem key={i} text={item.text} link={item.link}/>
                         ))}
                     </ul>
                 </div>
@@ -38,8 +88,14 @@ function Item2(){
     )
 }
 
-function ListItem({ text, isTitle = false }) {
-    return isTitle ? <li className="title">{text}</li> : <li>{text}</li>;
+function ListItem({ text, isTitle = false,link }) {
+  const [key, setKey] = useState(0);
+  const location = useLocation();
+
+
+
+
+    return isTitle ? <li className="title">{text}</li> : <Link reloadDocument to={link} id="navigation" ><li >{text}</li></Link>;
 }
 
 export default Item2;

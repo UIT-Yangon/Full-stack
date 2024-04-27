@@ -6,28 +6,19 @@ import Trivia from './Trivia';
 import Image from './Image';
 import Text from './Text';
 import Navbar from '../Nav/Navbar';
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
+import useResize from '../utils/useResize';
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const windowWidth = useResize("Degree Programs");
   const [dataFromNav, setDataFromNav] = useState(true);
 
   const handleDataFromNav = (data) => {
       setDataFromNav(data);
   };
 
-  useEffect(() => {
-      const handleResize = () => {
-          setWindowWidth(window.innerWidth);
-      };
 
-      window.addEventListener('resize', handleResize);
-
-      
-      return () => {
-          window.removeEventListener('resize', handleResize);
-      };
-  }, []); 
+ 
 
   
   return (
