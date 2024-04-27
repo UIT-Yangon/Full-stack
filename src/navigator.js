@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Degree from './Degree/Degree';
 import Admission from './Admission/Admission';
-import Diploma from './Deploma/Diploma';
+import Diploma from './Diploma/Diploma';
 import Home from './Home/Home';
 import AcademicRule from './AcademicRule/AcademicRule';
 import Calendar from './Calendar/Calendar';
