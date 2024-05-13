@@ -23,6 +23,9 @@ import Visimisi from './Vision-mission/Visimisi';
 import Faq from './Faq/Faq';
 
 
+//sublink for majors
+import HPC from './Degree/subLink/HPC/HPC';
+
 
 export default function Navigator() {
 
@@ -40,7 +43,7 @@ export default function Navigator() {
             <Route path="/academic/library" element={<Library />} />
             <Route path="/academic/calendar" element={<Calendar />} />
             <Route path="/academic/campus" element={<Campus />} />
-            {/* <Route path="/academic/campus" render={(props) => <Campus {...props} key={Date.now()}/>} /> */}
+           
 
 
             <Route path="/about/vision-mission" element={<Visimisi />} />
@@ -52,6 +55,10 @@ export default function Navigator() {
             <Route path="/about/contacts" element={<Contact />} />
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
+
+            {/* for majors sublink */}
+            <Route path="/academic/degree/hpc" element={<HPC />} />
+
 
             
         </Routes>
