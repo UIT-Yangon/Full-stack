@@ -59,6 +59,7 @@ body {
 
 .degree-container {
   display: flex;
+
   
 }
 
@@ -220,6 +221,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
+    z-index: -1;
   
     
   }
