@@ -8,13 +8,16 @@ import { HashRouter as Router } from 'react-router-dom';
 import Navigator from './navigator.js';
 import { store } from './store/Store';
 import { Provider } from 'react-redux';
+import Conference from './Conference/Conference.jsx';
+import OtherCommittie from './Conference/OtherCommittee.jsx';
+import DownloadLinks from './Conference/DownloadLinks.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
     <Router>
-      <Navigator />
+      <Conference />
 
     </Router>
     </Provider>
