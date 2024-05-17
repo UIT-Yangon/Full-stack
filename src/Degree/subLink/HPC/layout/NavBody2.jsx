@@ -74,7 +74,7 @@ function NavBody2() {
                 </div>
     </motion.div>
     :
-    <motion.div className="bg-[#f5f5f5] py-5 ps-8 w-[134px] h-[58px] rounded-[32px] fixed bottom-[4%] right-[6%]" initial={{ y: 1000}} key="content" animate={{ y: (appear) ? 1000 : 0 }} exit={{ opacity: 0,y: 1000 }}><h6 className="text-base font-normal leading-[18px] text-left text-[#1C1D2080]"   onClick={(event) => handleAppear(event)}>Contents</h6></motion.div>
+    <motion.div className="bg-[#f5f5f5] py-5 ps-8 w-[134px] h-[58px] rounded-[32px] fixed bottom-[4%] right-[6%]" initial={{ y: 1000}} key="content" animate={{ y: (appear) ? 1000 : 0 }} exit={{ opacity: 0,y: 1000 }}><h6 className="text-base font-normal leading-[18px] text-left text-[#1C1D2080] inline-block pr-[32px]"   onClick={(event) => handleAppear(event)}>Contents</h6></motion.div>
       }
       
       </AnimatePresence>

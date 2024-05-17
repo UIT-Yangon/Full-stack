@@ -63,6 +63,15 @@ function Item2(){
               link: '/academic/admission-requirements'
             }
           ]
+        },
+        {
+          title: 'Faculties',
+          items: [
+            {
+              text: 'Computer Science',
+              link: '/faculties/computer-science'
+            }
+          ]
         }
       ];
 

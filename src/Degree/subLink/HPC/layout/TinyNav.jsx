@@ -6,7 +6,7 @@ function TinyNav({className, attr}) {
     return (
       
       <div  className={className} >
-        <center>
+        <center className="mt-16">
             {attr ? <NavBody2 /> : <NavBody /> }
             
         </center>

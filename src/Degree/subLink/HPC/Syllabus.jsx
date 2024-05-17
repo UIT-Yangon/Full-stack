@@ -32,7 +32,7 @@ function Syllabus() {
         <div className="flex flex-row flex-wrap w-full justify-between">
             {content.map((item) => 
             <>
-            <div className="relative w-full md:w-[48%] mb-[8%] md:mb-[4%] ">
+            <div className="relative w-full md:w-[48%] mb-[32px] md:mb-[4%] ">
             <Pic className="w-[100%] h-[51vw] md:w-[100%] md:h-[24.1vw] lg:h-[18.3vw] rounded-[32px] bg-[#D9D9D9] opacity-70">
                 
 
