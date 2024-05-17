@@ -48,7 +48,7 @@ function NavBody() {
 
     return (
       
-      <div className="p-[32px] rounded-[32px] bg-[#F5F5F5]" style={{ position: 'sticky', top: '5%'}}>
+      <div className="p-[32px] rounded-[32px] bg-[#F5F5F5]" style={{ position: 'sticky', top: '70px'}}>
            <h5 className="text-left leading-[18px] text-[#1C1D2080] font-normal text-base mb-5">Contents</h5> 
                 <div className="relative">
                 <Ball>

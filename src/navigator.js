@@ -21,6 +21,7 @@ import History from './History/History';
 import Map from './Maps/Map';
 import Visimisi from './Vision-mission/Visimisi';
 import Faq from './Faq/Faq';
+import CS from './Faculty/Faculty'
 
 
 //sublink for majors
@@ -55,6 +56,7 @@ export default function Navigator() {
             <Route path="/about/contacts" element={<Contact />} />
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
+            <Route path="/faculties/computer-science" element={<CS />} />
 
             {/* for majors sublink */}
             <Route path="/academic/degree/hpc" element={<HPC />} />
