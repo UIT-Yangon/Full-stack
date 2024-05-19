@@ -4,7 +4,9 @@ import useResize from '../utils/useResize';
 import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
-
+import Heading from '../Components/Heading';
+import Hero from './Hero';
+import RoleDiffer from './RoleDiffer';
     
 function Library() {
   const language = useSelector((state) => state.language.value);
@@ -29,35 +31,12 @@ function Library() {
      <Navbar sendDataToParent={handleDataFromNav} />
 
      <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2' : 'main px-2'}>
+      <Heading name="Step inside and let your study begin - at our library"/>
+      <Hero />
+      <RoleDiffer />
 
        
-     
-      <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} >
-        <div className="hide hero ps-14 pt-[8rem]  lg:pb-24">
-    <span className="overflow-hidden fade">
-    <AnimatedText
-          once
-          text={display}
-          el="h1"
-          className="lg:text-7xl text-6xl font-medium"
-          language={language}
-        />
-    </span>
-    </div>
-    <div className="sm:hidden hero ps-4 pt-[5rem] lg:pt-72">
-       <span className="overflow-hidden fade">
-        <AnimatedText
-       once
-       text={display}
-       el="h1"
-       className="text-5xl font-medium"
-       language={language}
-     />
-     
-       </span>
-  </div>
-      </motion.div> 
-      
+    
     
     
     </div>
@@ -72,4 +51,5 @@ function Library() {
 
 
 
-export default Library;
+export default Library
+
