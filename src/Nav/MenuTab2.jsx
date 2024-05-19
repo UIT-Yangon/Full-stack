@@ -65,11 +65,15 @@ function Item2(){
           ]
         },
         {
-          title: 'Faculties',
+          title: 'Updated',
           items: [
             {
               text: 'Computer Science',
               link: '/faculties/computer-science'
+            },
+            {
+              text: 'Conference',
+              link: '/about/conference'
             }
           ]
         }

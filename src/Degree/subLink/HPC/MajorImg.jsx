@@ -52,15 +52,3 @@ function MajorImg() {
 
 export default MajorImg;
 
-// .image {
-  
-//     width: 100px;
-//     height: 100px;
-//     gap: 0px;
-//     opacity: 1;
-//     background: url(../Images/deg.png);
-//     background-repeat: no-repeat;
-    
-//     background-size: cover;
-  
-//   }

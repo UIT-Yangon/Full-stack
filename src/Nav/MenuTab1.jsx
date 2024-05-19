@@ -42,7 +42,6 @@ function Item1(){
         },
         {
           title: 'Our Locations',
-          items: ['Contacts', 'Maps', 'Campus'],
           items: [
             {
               text: 'Contacts',

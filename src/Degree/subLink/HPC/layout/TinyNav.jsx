@@ -6,10 +6,16 @@ function TinyNav({className, attr}) {
     return (
       
       <div  className={className} >
-        <center className="mt-16">
-            {attr ? <NavBody2 /> : <NavBody /> }
+        
+
+        {attr ? <div className="flex justify-end">
+             <NavBody2 />
             
-        </center>
+        </div>: 
+        <center className="lg:mt-16">
+        <NavBody /> 
+        
+    </center>}
 
     
       </div>
