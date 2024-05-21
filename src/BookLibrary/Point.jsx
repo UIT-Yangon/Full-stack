@@ -11,10 +11,3 @@ function Point({text}) {
 
 export default Point;
 
-// //styleName: p - mobile;
-// font-family: Oldschool Grotesk;
-// font-size: 14px;
-// font-weight: 350;
-// line-height: 20px;
-// text-align: left;
-
