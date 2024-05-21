@@ -5,9 +5,9 @@ function RoleDiffer() {
     return (
        
                          
-    <>
+    <div id="role">
         {(window.innerWidth < 1024 ) ? <Role2 /> : <Role1 />}
-    </>
+    </div>
                         
 
         
@@ -17,9 +17,4 @@ function RoleDiffer() {
 export default RoleDiffer;
 
 
-//styleName: H4;
-// font-family: Oldschool Grotesk;
-// font-size: 32px;
-// font-weight: 400;
-// line-height: 36px;
-// text-align: left;
+
