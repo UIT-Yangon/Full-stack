@@ -11,13 +11,14 @@ import { Provider } from 'react-redux';
 import Conference from './Conference/Conference.jsx';
 import OtherCommittie from './Conference/OtherCommittee.jsx';
 import DownloadLinks from './Conference/DownloadLinks.jsx';
+import LogoAnimation from './Images/LogoAnimation.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
     <Router>
-      <Navigator />
+      <LogoAnimation/>
 
     </Router>
     </Provider>

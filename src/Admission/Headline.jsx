@@ -13,7 +13,7 @@ const header = [
 
 const headerMobile = [
   "Admissions",
-  "information",
+  "information and",
   "requirements"
 ]
 
@@ -56,7 +56,7 @@ function Headline() {
        once
        text={header}
        el="h1"
-       className="lg:text-7xl text-[3.4rem] font-medium"
+       className="lg:text-7xl text-4xl font-medium"
        language="EN"
        
      />

@@ -9,10 +9,10 @@ export default function Deadline(){
                     
                         <div key={index} className="flex flex-col justify-center items-center gap-[10px]">
                             <div className="flex flex-col jusify-around items-center p-[20px] md:p-[24px] px-6 rounded-[15px] bg-[#f0f8ff]">
-                                <h4 className="text-[24px] md:text-[32px] text-[#1c1d20]">06</h4>
-                                <p className="text-[12px] md:text-[16px] text-[#1c1d20] opacity-50">Sep 2024</p>
+                                <h4 className="text-[21px] sm:text-[24px] md:text-[32px] text-[#1c1d20]">06</h4>
+                                <p className="text-[10px] sm:text-[12px] md:text-[16px] text-[#1c1d20] opacity-50">Sep 2024</p>
                             </div>
-                            <p className="text-[12px] text-center md:text-[18px] text-[#1c1d20] opacity-50">Submission Deadline</p>
+                            <p className="text-[10px] sm:text-[12px] text-center md:text-[18px] text-[#1c1d20] opacity-50">Submission Deadline</p>
                         </div>
                     
                 ))}  
