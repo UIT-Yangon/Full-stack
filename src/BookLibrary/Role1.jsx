@@ -1,13 +1,15 @@
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import onFocus from '../utils/filterRole';
 
 const Span = styled.div`
-    opacity:  ${props => props.signal ? "100%" : "50%"};
+    
 
     &::after {
         content: "${props => props.after}";
         position: absolute;
         top: 0;
-        left: 100%;
+        left: 101%;
         font-size: 12px;
         font-weight: 400;
         line-height: 16.1px;
@@ -17,7 +19,7 @@ const Span = styled.div`
     }
 `
 
-const data = [
+let data = [
     {
         content: "faculty member",
         signal: 0,
@@ -56,12 +58,15 @@ const data = [
 
 ]
 
-function Differ() {
+function Role1() {
+    const role  = useSelector((state) => state.role.value);
+
+    data = onFocus(role, data );
 
     return (
        
-                         
-                        <div className=" whitespace-wrap">
+                         <div className="py-[72px]">
+                            <div className=" whitespace-wrap">
                         <span className="inline-block relative bottom-[5px]  text-xs font-normal ms-[5px] me-[30px] lg:me-[55px]  lg:leading-[18px] lg:text-base">
                             <div className="text-[#3798a6] inline-block relative bottom-[3.5px] px-[7px] text-xl">.</div>
                     
@@ -69,22 +74,23 @@ function Differ() {
                         </span>
                         {data.map(
                             (item) => 
-                                <Span className="text-[32px] leading-0 font-normal color-[#1c1d20] inline-block me-[40px] mb-4 relative" after={item.number} signal={item.signal}>{item.content}</Span>
+                                <Span className={`text-[32px] leading-9 font-normal color-[#1c1d20] inline-block me-[40px] mb-4 relative hover:cursor-pointer ${(item.signal) ? "opacity-100" : "opacity-50"} hover:opacity-100 transition duration-200`} after={item.number} signal={item.signal}>{item.content}</Span>
                             )}
                         </div>
+                        <div className="mt-8">
+                                <span className="font-normal leading-7 text-xl text-[#1C1D2080]">Filter:</span><span className="font-normal leading-7 text-xl ms-[12px]" >{role}</span>
+                            </div>
+                        
+                         </div>
+                        
                         
 
         
     )
 }
 
-export default Differ;
+export default Role1;
 
 
-//styleName: H4;
-// font-family: Oldschool Grotesk;
-// font-size: 32px;
-// font-weight: 400;
-// line-height: 36px;
-// text-align: left;
+
 

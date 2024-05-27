@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import Heading from '../Components/Heading';
 import Hero from './Hero';
 import RoleDiffer from './RoleDiffer';
+import ImgPartDiffer from './ImgPartDiffer';
+import ImgPartDiffer2 from './ImgPartDiffer2';
+import MainFocus from './MainFocus';
     
 function Library() {
   const language = useSelector((state) => state.language.value);
@@ -30,10 +33,13 @@ function Library() {
     <>
      <Navbar sendDataToParent={handleDataFromNav} />
 
-     <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2' : 'main px-2'}>
+     <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2 bg-[#ffffff]' : 'main px-2 bg-[#ffffff]'}>
       <Heading name="Step inside and let your study begin - at our library"/>
       <Hero />
+      <MainFocus />
       <RoleDiffer />
+      <ImgPartDiffer />
+      <ImgPartDiffer2 />
 
        
     

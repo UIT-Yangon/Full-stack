@@ -1,5 +1,4 @@
 import '../Styles/Degree.css';
-import Subsec from './Subsec';
 import {motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
@@ -17,7 +16,7 @@ const headingLine = [
   },
   {
     id: 2,
-    heading: "Decorate"
+    heading: "Doctorate"
   }
 ]
 
@@ -27,24 +26,27 @@ const discription = [
     category1: "Computer Science",
     category2: "Computer Technology",
 
-    title1: [["B.C.sc(Software Engineering)","/academic/degree/hpc"],["B.C.sc(Business Information Technology)","/academic/degree/hpc"],["B.C.sc(Knowledge Engineering)","/academic/degree/hpc"],["B.C.sc(High Performance Computing)","/academic/degree/hpc"]],
-    title2: [["B.C.sc(Software Engineering)","/academic/degree/hpc"],["B.C.sc(Business Information Technology)","/academic/degree/hpc"],["B.C.sc(Knowledge Engineering)","/academic/degree/hpc"],["B.C.sc(High Performance Computing)","/academic/degree/hpc"]]
+    title1: [["B.C.Sc. (Software Engineering)","/academic/degree/hpc"],["B.C.Sc. (Business Information Systems)","/academic/degree/hpc"],["B.C.Sc. (Knowledge Engineering)","/academic/degree/hpc"],["B.C.Sc. (High Performance Computing)","/academic/degree/hpc"]],
+    title2: [["B.C.Tech. (Embedded Systems)","/academic/degree/hpc"],["B.C.Tech. (Communication and Networking)","/academic/degree/hpc"],["B.C.Tech. (Cyber Security)","/academic/degree/hpc"]]
   },
   {
     id: 1,
     category1: "Computer Science",
-    category2: "",
+    category2: "Computer Technology",
 
-    title1: [["B.C.sc(Software Engineering)","/academic/degree/hpc"],["B.C.sc(Business Information Technology)","/academic/degree/hpc"],["B.C.sc(Knowledge Engineering)","/academic/degree/hpc"],["B.C.sc(High Performance Computing)","/academic/degree/hpc"]],
-    title2: []
+    title1: [["M.C.Sc. (Software Engineering)","/academic/degree/hpc"],["M.C.Sc. (Business Information Systems)","/academic/degree/hpc"],["M.C.Sc. (Knowledge Engineering)","/academic/degree/hpc"],["M.C.Sc. (High Performance Computing)","/academic/degree/hpc"]],
+    title2: [
+      ["M.C.Tech. (Embedded Systems)","/academic/degree/hpc"],
+      ["M.C.Tech. (Communication and Networking)","/academic/degree/hpc"],
+      ["M.C.Tech. (Cyber Security)","/academic/degree/hpc"]]
 
   },
   {
     id: 2,
-    category1: "Computer Technology",
+    category1: "",
     category2: "",
 
-    title1: [["B.C.sc(Software Engineering)","/academic/degree/hpc"],["B.C.sc(Business Information Technology)","/academic/degree/hpc"],["B.C.sc(Knowledge Engineering)","/academic/degree/hpc"],["B.C.sc(High Performance Computing)","/academic/degree/hpc"]],
+    title1: [["Ph.D (Information Technology)","/academic/degree/hpc"]],
     title2: []
 
   },
