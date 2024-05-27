@@ -82,7 +82,7 @@ function Item2(){
 
  
     return (
-        <motion.div class="item2"
+        <motion.div className="item2"
         initial={{opacity:0, y:-10}}
         animate={{opacity: 1, y : 10}}
         transition={{ duration: 0.5}}

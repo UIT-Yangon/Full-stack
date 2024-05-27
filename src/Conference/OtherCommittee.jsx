@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {motion,AnimatePresence} from 'framer-motion';
+import {motion,AnimatePresence, spring} from 'framer-motion';
 
 function OtherCommittie(){
 
@@ -44,6 +44,31 @@ function OtherCommittie(){
       { name: 'Program', count: people.Program.length },
     ];
 
+    const categoryVariants = {
+      hidden : {
+        opacity : 0,
+        x : '10%'
+      },
+      visible : {
+        opacity : 1,
+        x : 0,
+        transition : {
+          type : 'spring',
+          delay : 0.2,
+          duration : 0.3,
+          stiffness : 300,
+          damping : 15
+        }
+      },
+      exit : {
+        opacity : 0,
+        x : '-10%',
+        transition : {
+          duration : 0.3
+        }
+      }
+    }
+
     
 
     return (
@@ -62,11 +87,11 @@ function OtherCommittie(){
         <AnimatePresence mode="wait">
         <motion.div
           key={selectedCategory}
-          initial={{opacity:0,  x: '10%' }}
-          animate={{opacity:1,  x: 0 }}
-          exit={{opacity:0,  x: '-10%' }}
-          transition={{ type: 'spring', stiffness: 200, damping: 15, duration: 0.5 }} // Shorter duration
-          style={{ position: 'relative',overflow: 'hidden' }} 
+          variants={categoryVariants}
+          initial='hidden'
+          animate='visible'
+          exit='exit'
+          
         >
                 <ul className='w-full flex flex-row flex-wrap justify-start gap-[15px]'>
                   {getCategoryData().map(person => (

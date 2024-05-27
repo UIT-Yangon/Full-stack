@@ -9,7 +9,7 @@ export default function TitleCon(){
     };
 
     return(
-        <div class="titleCon lg:w-[346px] lg:h-[92px] w-[261px] h-[76px] rounded-[20px] p-[8px] pb-[4px] md:pb-[40px] flex gap-[16px] mb-3 flex-row justify-center">
+        <div className="titleCon lg:w-[346px] lg:h-[92px] w-[261px] h-[76px] rounded-[20px] p-[8px] pb-[4px] md:pb-[40px] flex gap-[16px] mb-3 flex-row justify-center">
             <div className={`rectangle ${showFirst?'visionWrap':'missionWrap'} w-[113px] h-[60px] lg:w-[152px] lg:h-[76px]`}></div>
             <div className={`w-[50%] items-center lg:leading-[90px] leading-[70px] z-10 ${showFirst?'':'cursor-pointer'}`} onClick={handleClick}>
                 <div className="w-full ps-[15px] lg:ps-[24px]">

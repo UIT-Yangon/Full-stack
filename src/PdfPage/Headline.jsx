@@ -6,15 +6,14 @@ import { motion } from "framer-motion";
 
 
 const header = [
-  "Admissions information",
-  "and requirements"
+  "High Performance Computing",
+  "(HPC)"
 ]
 
 
 const headerMobile = [
-  "Admissions",
-  "information and",
-  "requirements"
+  "High Performance",
+  "Computing (HPC)",
 ]
 
 
@@ -33,14 +32,14 @@ function Headline() {
   return (
     <>
     <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} >
-    <div className="hide hero ps-14 pt-[8rem] lg:pb-24">
+    <div className="hide hero py-14">
     {header.map((header) => 
        <span className="overflow-hidden fade">
           <AnimatedText
           once
           text={header}
           el="h1"
-          className="lg:text-7xl text-[3.4rem] font-medium"
+          className="lg:text-7xl text-4xl font-normal leading-9 lg:leading-[80px]"
           language="EN"
           
         />
@@ -49,14 +48,14 @@ function Headline() {
   
 )}
 </div>
-<div className="sm:hidden hero ps-4 pt-[5rem] lg:pt-72">
+<div className="sm:hidden hero pt-14 pb-5">
 {headerMobile.map((header) => 
        <span className="overflow-hidden fade">
         <AnimatedText
        once
        text={header}
        el="h1"
-       className="lg:text-7xl text-4xl font-medium"
+       className="lg:text-7xl text-3xl font-normal leading-9 lg:leading-[80px]"
        language="EN"
        
      />
