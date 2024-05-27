@@ -25,6 +25,7 @@ function HPC() {
     window.addEventListener('resize', handleResize);
     window.scrollTo(0, 0);
     return () => {
+      //this is command
         window.removeEventListener('resize', handleResize); 
         
     }
