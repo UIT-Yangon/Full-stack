@@ -26,7 +26,7 @@ import Conference from './Conference/Conference'
 
 
 //sublink for majors
-import HPC from './Degree/subLink/HPC/HPC';
+import HPC from './subLInks/Degree/HPC/HPC';
 
 
 export default function Navigator() {

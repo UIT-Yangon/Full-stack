@@ -1,8 +1,7 @@
 import '../Styles/Degree.css';
-import Subsec from './Subsec';
 import {motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
+import { Link, useLocation } from 'react-router-dom';
 
 const headingLine = [
   {
@@ -16,7 +15,7 @@ const headingLine = [
   },
   {
     id: 2,
-    heading: "Decorate"
+    heading: "Doctorate"
   }
 ]
 
@@ -26,24 +25,27 @@ const discription = [
     category1: "Computer Science",
     category2: "Computer Technology",
 
-    title1: ["B.C.sc(Software Engineering)","B.C.sc(Business Information Technology)","B.C.sc(Knowledge Engineering)","B.C.sc(High Performance Computing)"],
-    title2: ["B.C.sc(Software Engineering)","B.C.sc(Business Information Technology)","B.C.sc(Knowledge Engineering)","B.C.sc(High Performance Computing)"]
+    title1: [["B.C.Sc. (Software Engineering)","/academic/degree/hpc"],["B.C.Sc. (Business Information Systems)","/academic/degree/hpc"],["B.C.Sc. (Knowledge Engineering)","/academic/degree/hpc"],["B.C.Sc. (High Performance Computing)","/academic/degree/hpc"]],
+    title2: [["B.C.Tech. (Embedded Systems)","/academic/degree/hpc"],["B.C.Tech. (Communication and Networking)","/academic/degree/hpc"],["B.C.Tech. (Cyber Security)","/academic/degree/hpc"]]
   },
   {
     id: 1,
     category1: "Computer Science",
-    category2: "",
+    category2: "Computer Technology",
 
-    title1: ["B.C.sc(Software Engineering)","B.C.sc(Business Information Technology)","B.C.sc(Knowledge Engineering)","B.C.sc(High Performance Computing)"],
-    title2: []
+    title1: [["M.C.Sc. (Software Engineering)","/academic/degree/hpc"],["M.C.Sc. (Business Information Systems)","/academic/degree/hpc"],["M.C.Sc. (Knowledge Engineering)","/academic/degree/hpc"],["M.C.Sc. (High Performance Computing)","/academic/degree/hpc"]],
+    title2: [
+      ["M.C.Tech. (Embedded Systems)","/academic/degree/hpc"],
+      ["M.C.Tech. (Communication and Networking)","/academic/degree/hpc"],
+      ["M.C.Tech. (Cyber Security)","/academic/degree/hpc"]]
 
   },
   {
     id: 2,
-    category1: "Computer Technology",
+    category1: "",
     category2: "",
 
-    title1: ["B.C.sc(Software Engineering)","B.C.sc(Business Information Technology)","B.C.sc(Knowledge Engineering)","B.C.sc(High Performance Computing)"],
+    title1: [["Ph.D (Information Technology)","/academic/degree/hpc"]],
     title2: []
 
   },
@@ -109,11 +111,15 @@ function MainSec() {
                <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{type: "spring", stiffness: 70,}} >
                 <h1 className=" my-3 pt-8 font-medium text-3xl leading-10  text-left degreeHead">{item.category1}</h1>
                 <div className="px-6">
-                  {item.title1.map((li) => (<li className="leading-9 font-medium text-lg smallLink ">{li} </li>))}
+                  {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  <li className="leading-9 font-medium text-lg smallLink ">{li[0]} </li>
+                  </Link>))}
                 </div>
                   <h1 className="my-3 pt-8 font-medium text-3xl leading-10  text-left degreeHead">{item.category2}</h1>
                   <div className="px-6">
-                  {item.title2.map((li) => (<li className="leading-9 font-medium text-lg smallLink ">{li} </li>))}
+                  {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  <li className="leading-9 font-medium text-lg smallLink ">{li[0]} </li>
+                  </Link>))}
                   </div>
 
     
@@ -168,11 +174,15 @@ function MainSec() {
                <motion.div initial={{ y: -500, opacity: 0}} animate={{ y: 0, opacity: 1}} exit={{ y: -500, opacity: 0}}  transition={{type: "spring", stiffness: 70,}} >
                <h1 className="my-3 pt-8 font-medium text-base md:text-3xl leading-10  text-left degreeHead">{item.category1}</h1>
                 <div className="sm:px-6">
-                  {item.title1.map((li) => (<li className="leading-9 font-medium text-xsl md:text-lg smallLink ">{li} </li>))}
+                  {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  <li className="leading-9 font-medium text-xsl md:text-lg smallLink ">{li[0]} </li>
+                  </Link>))}
                 </div>
                   <h1 className="my-3 pt-8 font-medium  text-base md:text-3xl leading-10  text-left degreeHead">{item.category2}</h1>
                   <div className="md:px-6">
-                  {item.title2.map((li) => (<li className="leading-9 font-medium text-base md:text-lg smallLink ">{li} </li>))}
+                  {item.title2.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
+                  <li className="leading-9 font-medium text-base md:text-lg smallLink ">{li[0]}</li>
+                  </Link>))}
                   </div>
 
                

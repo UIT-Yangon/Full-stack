@@ -4,20 +4,14 @@ import { useSelector } from 'react-redux';
 const textsEn = [
   {
     head: "Program Highlight",
-    body: "The University of Information Technology offers undergraduate and postgraduate courses for bachelor’s, diploma, master’s, and doctoral level students in a wide range of subject areas: software engineering, knowledge engineering, high performance computing, business information system."
+    body: ["concentrates on creating links between theory and practice.","covers a wide variety of software and hardware technologies and their applications.","is designed to equip students with the fundamental understanding and practical skills needed by the future leaders of computing and related professions."]
+  
   },
   {
     head: "Career",
-    body: "The University of Information Technology offers undergraduate and postgraduate courses for bachelor’s, diploma, master’s, and doctoral level students in a wide range of subject areas: software engineering, knowledge engineering, high performance computing, business information system."
-  },
-  {
-    head: "Career",
-    body: "The University of Information Technology offers undergraduate and postgraduate courses for bachelor’s, diploma, master’s, and doctoral level students in a wide range of subject areas: software engineering, knowledge engineering, high performance computing, business information system."
-  },
-  {
-    head: "Career",
-    body: "The University of Information Technology offers undergraduate and postgraduate courses for bachelor’s, diploma, master’s, and doctoral level students in a wide range of subject areas: software engineering, knowledge engineering, high performance computing, business information system."
+    body: ["Software Industries","IT-Business Organization","Academic Institutions"]
   }
+ 
 ]
 
 const textsMyn = [
@@ -51,7 +45,7 @@ function Trivia() {
                 <div className="lg:w-1/2 w-full  mb-6">
                   <h1 className="font-medium text-xl sm:text-3xl leading-5 triviaHead  py-8  ">{item.head}</h1>
                   <p className="text-sxl sm:text-lg font-normal leading-8 sm:leading-10 w-full sm:w-5/6 opacity-80 tracking-wide">
-                  {item.body}
+                  {item.body.map((ab) => <span className="block">{ab}</span>)}
                 </p>
                 </div>
                 </>
@@ -62,7 +56,7 @@ function Trivia() {
                 <div className="lg:w-1/2 w-full  mb-6">
                   <h1 className="font-medium text-lg sm:text-2xl leading-5 triviaHead  py-8  ">{item.head}</h1>
                   <p className="text-sm sm:text-base font-normal leading-8 sm:leading-10 w-full sm:w-5/6 opacity-80 tracking-wide">
-                  {item.body}
+                  {item.body.map((ab) => <span className="block">{ab}</span>)}
                 </p>
                 </div>
                 </>
