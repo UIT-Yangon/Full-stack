@@ -59,7 +59,7 @@ function Item1(){
         }
       ];
     return (
-        <motion.div class="item1"
+        <motion.div className="item1"
         initial={{opacity:0, y:-10}}
         animate={{opacity: 1, y : 10}}
         transition={{ duration: 0.5}}

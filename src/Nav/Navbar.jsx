@@ -5,6 +5,7 @@ import Item1 from './MenuTab1';
 import Item2 from './MenuTab2';
 import TranslationButton from './TranslationButton';
 import { Link } from 'react-router-dom';
+import LogoAnimation from "../Images/LogoAnimation";
 
 function Navbar({sendDataToParent}){
     const navRef = useRef();
@@ -49,15 +50,18 @@ function Navbar({sendDataToParent}){
         sendDataToParent(activeNav);
     }
 
+    
+
     return (
         <header>
-            <Link reloadDocument to="/"><img src={image} className="uitLogo"/></Link>
-            <nav ref={navRef}>
+            <Link reloadDocument to="/"><LogoAnimation className='uitLogo'/></Link>
+            <nav
+             ref={navRef}>
                 <div className="Menu" onMouseEnter={()=>handleHover("menu1")} onMouseLeave={handleLeave} onClick={()=>handleToggleAccordion("menu1")}>
                     <a className={windowWidth>1024?"hoverActive menu1":"menu1"} style={{opacity:hoveredTab==='menu1'&&0.7}}>
                         <span>About</span>
                         <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow">
-                            <path d={activeTab==="menu1"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1024 ? "white" : "black"} stroke-width="2" stroke-linecap="round"/>
+                            <path d={activeTab==="menu1"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1024 ? "white" : "black"} strokeWidth="2" strokeLinecap="round"/>
                         </svg>
                         {(windowWidth <= 1024) && (
                             <div className={activeTab==="menu1"?"stick active":"stick"}></div>
@@ -75,7 +79,7 @@ function Navbar({sendDataToParent}){
                     <a className={windowWidth>1024?"hoverActive menu2":"menu2"} style={{opacity:hoveredTab==='menu2'&&0.7}}>
                         <span>Academic</span>
                         <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow">
-                            <path d={activeTab==="menu2"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1024 ? "white" : "black"} stroke-width="2" stroke-linecap="round"/>
+                            <path d={activeTab==="menu2"?"M17 8L8.57895 2L1 8":"M1 1.64285L9.42105 7.64285L17 1.64285"} stroke={windowWidth <= 1024 ? "white" : "black"} strokeWidth="2" strokeLinecap="round"/>
                         </svg>
 
                         {(windowWidth <= 1024) && (
@@ -94,14 +98,14 @@ function Navbar({sendDataToParent}){
                 
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <svg width="34" height="2" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1H33" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M1 1H33" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                 </button>
-            </nav>
+                </nav>
             <button className="nav-btn" onClick={showNavbar}>
                 <svg width="64" height="40" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 16H48" stroke="#1C1D20" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M16 24H32" stroke="#1C1D20" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16 16H48" stroke="#1C1D20" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M16 24H32" stroke="#1C1D20" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
             </button>
         </header>
@@ -109,5 +113,3 @@ function Navbar({sendDataToParent}){
 }
 
 export default Navbar;
-
-

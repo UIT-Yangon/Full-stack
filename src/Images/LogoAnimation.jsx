@@ -1,15 +1,16 @@
 import {motion} from 'framer-motion';
 
-export default function LogoAnimation(){
+export default function LogoAnimation({className}){
 
 	const svgVariants = {
 		hidden : {
-			rotate : -180
+			opacity : 0
 		},
 		visible : {
-			rotate : 0,
+			opacity : 1,
 			transition : {
-				duration : 1
+				duration : 1,
+				ease : 'easeInOut'
 			}
 		}
 	}
@@ -50,93 +51,14 @@ export default function LogoAnimation(){
 					ease : 'easeInOut'
 				}
 			}
-		},
-		visible3 : {
-			fill : '#087d8a',
-			pathLength : 1,
-			transition : {
-				fill : {
-					delay : 1,
-					duration : 1,
-					ease : 'easeInOut'
-				},
-				pathLength : {
-					delay : 0,
-					duration : 2,
-					ease : 'easeInOut'
-				}
-			}
-		},
-		visible4 : {
-			fill : '#087d8a',
-			pathLength : 1,
-			transition : {
-				fill : {
-					delay : 1,
-					duration : 1,
-					ease : 'easeInOut'
-				},
-				pathLength : {
-					delay : 0,
-					duration : 2,
-					ease : 'easeInOut'
-				}
-			}
-		},
-		visible5 : {
-			fill : '#087d8a',
-			pathLength : 1,
-			transition : {
-				fill : {
-					delay : 1,
-					duration : 1,
-					ease : 'easeInOut'
-				},
-				pathLength : {
-					delay : 0,
-					duration : 2,
-					ease : 'easeInOut'
-				}
-			}
-		},
-		visible6 : {
-			fill : '#087d8a',
-			pathLength : 1,
-			transition : {
-				fill : {
-					delay : 2,
-					duration : 1,
-					ease : 'easeInOut'
-				},
-				pathLength : {
-					delay : 1,
-					duration : 2,
-					ease : 'easeInOut'
-				}
-			}
-		},
-		visible7 : {
-			fill : '#087d8a',
-			pathLength : 1,
-			transition : {
-				fill : {
-					delay : 1,
-					duration : 1,
-					ease : 'easeInOut'
-				},
-				pathLength : {
-					delay : 0,
-					duration : 2,
-					ease : 'easeInOut'
-				}
-			}
 		}
+		
 	}
 
 	return (
-		<div className='w-screen h-screen flex justify-center items-center bg-[#f8f8f8]'>
-			<motion.svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 	width="50%" viewBox="0 0 621 556" enable-background="new 0 0 621 556" xmlSpace="preserve" >
+		
+			<motion.svg className={className} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 	width="100%" viewBox="0 0 621 556" enableBackground="new 0 0 621 556" xmlSpace="preserve"variants={svgVariants} initial='hidden' animate='visible' >
 			
 			
 			<motion.path  stroke="#087d8a" strokeWidth='10' variants={pathVariants} initial='hidden' animate='visible1'
@@ -329,7 +251,7 @@ export default function LogoAnimation(){
 				C368.857574,206.917999 372.306610,213.890701 375.991455,221.183868 
 			z"/>
 		</motion.svg>
-		</div>
+		
 	)
 }
 
