@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import useResize from '../utils/useResize';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import UltiWrapper from '../Components/UltiWrapper';
 
 
 
@@ -71,8 +72,7 @@ function Faq() {
   ]
   return (
     <>
-     <Navbar sendDataToParent={handleDataFromNav}/>
-    <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2 app' : 'main px-2 app'}>
+     <UltiWrapper>
      
       <div className="my-20 mt-40 sm:ml-10 sm:mt-50 mb-15">
       <motion.span initial={{ y: 50,opacity: 0 }} animate={{ y: 0,opacity: 1 }} transition={{ type: "spring", stiffness: 100 }} className="text-6xl md:text-8xl  p-3.5 dd ">Frequently</motion.span>
@@ -97,7 +97,7 @@ function Faq() {
       
 
   
-    </div>
+    </UltiWrapper>
     </>
   );
 }

@@ -5,40 +5,29 @@ import useResize from '../utils/useResize';
 import '../Styles/Degree.css';
 import Heading from './Heading';
 import BodyPart from './BodyPart';
+import UltiWrapper from '../Components/UltiWrapper';
 
 
 function Conference() {
 
-  const windowWidth = useResize("The 5th international conference on advanced information technologies (ICAT 2024)");
-  const [dataFromNav, setDataFromNav] = useState(true);
-  const [windowWide, setWindowWide ] = useState(0);
-
-  const handleDataFromNav = (data) => {
-      setDataFromNav(data);
-  };
-
-  useEffect(()=>{
-    const handleResize = () => {
-        setWindowWide(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-        window.removeEventListener('resize', handleResize); 
-    }
-
-},[])
+  
    
+  const windowWidth = useResize("The 5th international conference on advanced information technologies (ICAT 2024)");
 
  
+ 
+
+
 
   
   return (
       <>
-      <Navbar sendDataToParent={handleDataFromNav} />
-      <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2' : 'main px-2'} style={{ backgroundColor: "#FFFFFF"}}>
-      <Heading name="The 5th international conference on advanced information technologies (ICAT 2024)" />
+     <UltiWrapper>
+     <Heading name="The 5th international conference on advanced information technologies (ICAT 2024)" />
       <BodyPart />
-      </div>
+     </UltiWrapper>
+      
+      
           
       
     

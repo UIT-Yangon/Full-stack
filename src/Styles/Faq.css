@@ -38,6 +38,7 @@ body {
 .main {
   min-height: 500px;
   padding: 5%;
+  padding-bottom: 0;
 }
 
 .alignment {

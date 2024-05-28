@@ -74,6 +74,10 @@ function Item2(){
             {
               text: 'Conference',
               link: '/about/conference'
+            },
+            {
+              text: 'Pdf',
+              link: '/about/pdf'
             }
           ]
         }

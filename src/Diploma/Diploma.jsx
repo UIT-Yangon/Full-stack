@@ -5,26 +5,19 @@ import MainSec from './MainSec';
 import Trivia from './Trivia';
 import Image from './Image';
 import Text from './Text';
-import Navbar from '../Nav/Navbar';
 import React,{useState,useEffect} from 'react';
 import useResize from '../utils/useResize';
-
+import UltiWrapper from '../Components/UltiWrapper';
 
 function App() {
     const windowWidth = useResize("Diploma Programs");
-  const [dataFromNav, setDataFromNav] = useState(true);
 
-  const handleDataFromNav = (data) => {
-      setDataFromNav(data);
-  };
 
 
   
   return (
       <>
-          <Navbar sendDataToParent={handleDataFromNav}/>
-          
-          <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2' : 'main px-2'}>
+          <UltiWrapper>
           
           <Headline />
           <Image />
@@ -32,7 +25,7 @@ function App() {
           <MainSec />
           <Trivia />
       
-    </div>
+    </UltiWrapper>
     </>
     
   );

@@ -7,30 +7,25 @@ import useResize from '../utils/useResize';
 import React,{ useState } from 'react';
 import Major from './Major';
 import Member from './Member';
+import UltiWrapper from '../Components/UltiWrapper';
 
 function Faculty(){
 
-    const windowWidth = useResize("Admissions information and requirements");
+    const windowWidth = useResize("Computer Science");
  
-    const [dataFromNav, setDataFromNav] = useState(true);
 
-    const handleDataFromNav = (data) => {
-        setDataFromNav(data);
-    };
 
  
 
     
     return (
         <div className='faculty' style={{background:'#fff'}}>
-            <Navbar sendDataToParent={handleDataFromNav}/>
-            
-                <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive mainCon' : 'mainCon'} >
+            <UltiWrapper>
                     <Headline />
                     <Vision />
                     <Major />
                     <Member />
-                </div>
+            </UltiWrapper>
 
             
         </div>

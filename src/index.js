@@ -20,7 +20,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
     <Router>
-      <PdfPage/>
+      <Navigator />
 
     </Router>
     </Provider>

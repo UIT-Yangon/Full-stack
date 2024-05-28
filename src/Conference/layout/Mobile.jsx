@@ -9,7 +9,7 @@ function Mobile({condition}) {
       
       <div className="" >
        
-        <TinyNav className=" w-72 fixed  fixed bottom-[4%] right-[6%] z-50 " attr={1} />
+        <TinyNav className=" w-72 fixed bottom-[4%] right-[6%] z-50 " attr={1} />
 
     
         <Main className="" >

@@ -22,7 +22,8 @@ import Map from './Maps/Map';
 import Visimisi from './Vision-mission/Visimisi';
 import Faq from './Faq/Faq';
 import CS from './Faculty/Faculty'
-import Conference from './Conference/Conference'
+import Conference from './Conference/Conference';
+import Pdf from './PdfPage/PdfPage';
 
 
 //sublink for majors
@@ -59,6 +60,7 @@ export default function Navigator() {
             <Route path="/about/campus" element={<FaciCampus />} />
             <Route path="/faculties/computer-science" element={<CS />} />
             <Route path="/about/conference" element={<Conference />} />
+            <Route path="/about/pdf" element={<Pdf />} />
 
             {/* for majors sublink */}
             <Route path="/academic/degree/hpc" element={<HPC />} />
