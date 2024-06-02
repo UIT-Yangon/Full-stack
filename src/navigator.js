@@ -21,13 +21,19 @@ import History from './History/History';
 import Map from './Maps/Map';
 import Visimisi from './Vision-mission/Visimisi';
 import Faq from './Faq/Faq';
-import CS from './Faculty/Faculty'
+import CS from './Faculty/CS';
 import Conference from './Conference/Conference';
 import Pdf from './PdfPage/PdfPage';
 
 
 //sublink for majors
-import HPC from './subLInks/Degree/HPC/HPC';
+import HPC from './subLInks/Degree/Bachelor/HPC/HPC';
+import KE from './subLInks/Degree/Bachelor/KE/KE';
+import SE from './subLInks/Degree/Bachelor/SE/SE';
+import BIS from './subLInks/Degree/Bachelor/BIS/BIS';
+import ES from './subLInks/Degree/Bachelor/ES/ES';
+import Csec from './subLInks/Degree/Bachelor/Csec/Csec';
+import Networking from './subLInks/Degree/Bachelor/Networking/Networking';
 
 
 export default function Navigator() {
@@ -63,7 +69,14 @@ export default function Navigator() {
             <Route path="/about/pdf" element={<Pdf />} />
 
             {/* for majors sublink */}
-            <Route path="/academic/degree/hpc" element={<HPC />} />
+            <Route path="/academic/degree/bachelor/hpc" element={<HPC />} />
+            <Route path="/academic/degree/bachelor/ke" element={<KE />} />
+            <Route path="/academic/degree/bachelor/se" element={<SE />} />
+            <Route path="/academic/degree/bachelor/bis" element={<BIS />} />
+            <Route path="/academic/degree/bachelor/es" element={<ES />} />
+            <Route path="/academic/degree/bachelor/csec" element={<Csec />} />
+            <Route path="/academic/degree/bachelor/networking" element={<Networking />} />
+
             
 
 

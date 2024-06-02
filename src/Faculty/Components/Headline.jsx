@@ -1,25 +1,19 @@
-import '../Styles/Degree.css';
-import { AnimatedText } from '../Components/AnimatedText';
+
+import { AnimatedText } from '../../Components/AnimatedText';
 import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
 
 
-const header = [
-  "Faculty of Computer Science",
-  "(FCS)"
-]
 
 
-const headerMobile = [
-  "Faculty of computer",
-  "science(FCS)",
-]
+
+
 
 
 
     
-function Headline() {
+function Headline({header, headerMobile}) {
 
 
   

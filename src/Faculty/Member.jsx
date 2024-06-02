@@ -41,8 +41,13 @@ const members = [
 ]
 
 
+const Div2 = styled.div``;
 
-const Div = styled.div`
+
+
+export default function Member(){
+
+    const Div = styled.div`
     background: url(${props => props.image});
     background-size: cover;
     object-fit: cover;
@@ -56,13 +61,7 @@ const Div = styled.div`
 
 `
 
-const Div2 = styled.div`
 
-
-
-`
-
-export default function Member(){
     return(
         <div className="memberWrap py-[72px] pt-[80px]">
             <div className="member">
