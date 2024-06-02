@@ -26,7 +26,7 @@ function Headline({header, headerMobile}) {
   return (
     <>
     <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0 }} >
-    <div className="hide hero py-14 px-6 lg:px-[97px]">
+    <div className="hide hero py-14 ">
     {header.map((header) => 
        <span className="overflow-hidden fade">
           <AnimatedText
@@ -42,7 +42,7 @@ function Headline({header, headerMobile}) {
   
 )}
 </div>
-<div className="sm:hidden hero py-14 px-6 lg:px-[97px]">
+<div className="sm:hidden hero py-14 ">
 {headerMobile.map((header) => 
        <span className="overflow-hidden fade">
         <AnimatedText

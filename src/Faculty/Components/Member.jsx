@@ -1,65 +1,22 @@
 import React from "react";
 import styled from 'styled-components';
-import Img1 from '../Images/Faculty/CS/Teachers/Teacher_1.png';
-import Img2 from '../Images/Faculty/CS/Teachers/Teacher_2.png';
-import Img3 from '../Images/Faculty/CS/Teachers/Teacher_3.png';
-import Img4 from '../Images/Faculty/CS/Teachers/Teacher_4.png';
-import Img5 from '../Images/Faculty/CS/Teachers/Teacher_5.png';
-
-const members = [
-    {
-        name: "Dr. Ei Chaw Htoon",
-        title: "Pro-rector & Dean",
-        image: Img1
-    },
-    {
-        name: "Dr. Ei Chaw Htoon",
-        title: "Pro-rector & Dean",
-        image: Img2
-    },
-    {
-        name: "Dr. Ei Chaw Htoon",
-        title: "Pro-rector & Dean",
-        image: Img3
-    },
-    {
-        name: "Dr. Ei Chaw Htoon",
-        title: "Pro-rector & Dean",
-        image: Img4
-    },
-    {
-        name: "Dr. Ei Chaw Htoon",
-        title: "Pro-rector & Dean",
-        image: Img5
-    }
 
 
 
-
-
-
-]
 
 
 const Div2 = styled.div``;
 
 
 
-export default function Member(){
+export default function Member({members}){
 
     const Div = styled.div`
     background: url(${props => props.image});
     background-size: cover;
     object-fit: cover;
     background-position: center center;
-    opacity: 70%;
-
-
-
-    
-
-
-`
+    opacity: 70%;`;
 
 
     return(
@@ -72,7 +29,7 @@ export default function Member(){
                     </div>
                     <h2 className="text-[36px] md:text-[72px] font-normal leading-[38px] md:leading-[72px]">Meet our lovely members</h2>
                 </div>
-                <Div2 className="grid gap-5 md:gap-8 w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-[5%]">
+                <Div2 className="grid gap-5 md:gap-8 w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                     {members.map((img) => 
                     <>
                         <div className="memberImgCon w-full">
