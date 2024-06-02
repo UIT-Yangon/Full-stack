@@ -78,7 +78,7 @@ function Item2(){
             {
               text: 'Pdf',
               link: '/about/pdf'
-            }
+            },
           ]
         }
       ];

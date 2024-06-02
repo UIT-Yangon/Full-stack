@@ -26,19 +26,19 @@ const discription = [
     category1: "Computer Science",
     category2: "Computer Technology",
 
-    title1: [["B.C.Sc. (Software Engineering)","/academic/degree/hpc"],["B.C.Sc. (Business Information Systems)","/academic/degree/hpc"],["B.C.Sc. (Knowledge Engineering)","/academic/degree/hpc"],["B.C.Sc. (High Performance Computing)","/academic/degree/hpc"]],
-    title2: [["B.C.Tech. (Embedded Systems)","/academic/degree/hpc"],["B.C.Tech. (Communication and Networking)","/academic/degree/hpc"],["B.C.Tech. (Cyber Security)","/academic/degree/hpc"]]
+    title1: [["B.C.Sc. (Software Engineering)","/academic/degree/bachelor/se"],["B.C.Sc. (Business Information Systems)","/academic/degree/bachelor/bis"],["B.C.Sc. (Knowledge Engineering)","/academic/degree/bachelor/ke"],["B.C.Sc. (High Performance Computing)","/academic/degree/bachelor/hpc"]],
+    title2: [["B.C.Tech. (Embedded Systems)","/academic/degree/bachelor/es"],["B.C.Tech. (Communication and Networking)","/academic/degree/bachelor/networking"],["B.C.Tech. (Cyber Security)","/academic/degree/bachelor/csec"]]
   },
   {
     id: 1,
     category1: "Computer Science",
     category2: "Computer Technology",
 
-    title1: [["M.C.Sc. (Software Engineering)","/academic/degree/hpc"],["M.C.Sc. (Business Information Systems)","/academic/degree/hpc"],["M.C.Sc. (Knowledge Engineering)","/academic/degree/hpc"],["M.C.Sc. (High Performance Computing)","/academic/degree/hpc"]],
+    title1: [["M.C.Sc. (Software Engineering)","/academic/degree/bachelor/se"],["M.C.Sc. (Business Information Systems)","/academic/degree/bachelor/se"],["M.C.Sc. (Knowledge Engineering)","/academic/degree/bachelor/se"],["M.C.Sc. (High Performance Computing)","/academic/degree/bachelor/se"]],
     title2: [
-      ["M.C.Tech. (Embedded Systems)","/academic/degree/hpc"],
-      ["M.C.Tech. (Communication and Networking)","/academic/degree/hpc"],
-      ["M.C.Tech. (Cyber Security)","/academic/degree/hpc"]]
+      ["M.C.Tech. (Embedded Systems)","/academic/degree/bachelor/se"],
+      ["M.C.Tech. (Communication and Networking)","/academic/degree/bachelor/se"],
+      ["M.C.Tech. (Cyber Security)","/academic/degree/bachelor/se"]]
 
   },
   {
@@ -46,7 +46,7 @@ const discription = [
     category1: "",
     category2: "",
 
-    title1: [["Ph.D (Information Technology)","/academic/degree/hpc"]],
+    title1: [["Ph.D (Information Technology)","/academic/degree/bachelor/se"]],
     title2: []
 
   },

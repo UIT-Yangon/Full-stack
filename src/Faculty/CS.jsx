@@ -1,6 +1,6 @@
 import '../Styles/Degree.css';
 import '../Styles/Faculty.css';
-import Headline from './Headline';
+import Headline from './Components/Headline';
 import Navbar from '../Nav/Navbar';
 import Vision from './Vision';
 import useResize from '../utils/useResize';
@@ -12,6 +12,16 @@ import UltiWrapper from '../Components/UltiWrapper';
 function Faculty(){
 
     const windowWidth = useResize("Computer Science");
+
+    const header = [
+        "Faculty of Computer Science",
+        "(FCS)"
+      ]
+
+      const headerMobile = [
+        "Faculty of computer",
+        "science(FCS)",
+      ]
  
 
 
@@ -21,7 +31,7 @@ function Faculty(){
     return (
         <div className='faculty' style={{background:'#fff'}}>
             <UltiWrapper>
-                    <Headline />
+                    <Headline header={header} headerMobile={headerMobile} />
                     <Vision />
                     <Major />
                     <Member />

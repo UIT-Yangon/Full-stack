@@ -1,9 +1,10 @@
 import Main from './Main'
 import TinyNav from './TinyNav';
-import BgPart from '../BgPart';
 
 
-function Mobile({condition}) {
+function Mobile({bgPart}) {
+
+  const BgPart = bgPart;
 
     return (
       

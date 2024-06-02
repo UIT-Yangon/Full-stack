@@ -1,15 +1,15 @@
 
 import React,{useState,useEffect } from 'react';
-import useResize from '../../../utils/useResize';
-import '../../../Styles/Degree.css';
-import Heading from './Heading';
+import useResize from '../../../../utils/useResize';
+import '../../../../Styles/Degree.css';
+import Heading from '../Components/Heading';
 import BodyPart from './BodyPart';
 import { useLocation } from 'react-router-dom';
-import UltiWrapper from '../../../Components/UltiWrapper';
+import UltiWrapper from '../../../../Components/UltiWrapper';
 
 function HPC() {
 
-  const windowWidth = useResize("High Performance Computing");
+  const windowWidth = useResize("Communication and Networking");
   const { pathname } = useLocation();
 
   useEffect(()=>{
@@ -25,7 +25,7 @@ function HPC() {
   return (
       <>
       <UltiWrapper>
-      <Heading name="High Performance Computing (HPC)" />
+      <Heading name="Communication and Networking" />
       <BodyPart />
       </UltiWrapper>
           

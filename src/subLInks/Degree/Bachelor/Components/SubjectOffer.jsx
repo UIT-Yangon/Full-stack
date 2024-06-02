@@ -1,26 +1,10 @@
-function SubjectOffer() {
+function SubjectOffer({content}) {
 
-    const content = [
-        "Analysis of algorithm and parallel algorithm",
-        "Distributed systems and distributed programming",
-        "Cryptographic technique and data security",
-        "Mobile and ubiquitous computing",
-        "High performance computing technology",
-        "Virtualization technology and cloud computing",
-        "Data center and the new converged internet",
-        "Blockchain technology and the Internet of Things (IoT)",
-        "Fog computing",
-        "Principles and strategies of building a modern data center",
-        "Advanced computer architectures and optimization techniques",
-        "High performance big data analytics",
-        "Project and degree term paper"
-
-        
-    ]
+    
 
     return (
       <>
-        <div className="py-7 md:py-8 w-full" id="subjectOffer">
+        <div className="py-7 md:py-8 w-full lg:scroll-mt-[164px]" id="subjectOffer">
         <h3 className="capital mb-[20px] leading-7 text-2xl md:text-[32px] md:leading-9 w-full">Offering subjects</h3>   
         <div className="flex flex-row flex-wrap w-full justify-between">
             {content.map((item) => 
