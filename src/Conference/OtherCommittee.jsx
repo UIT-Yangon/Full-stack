@@ -10,11 +10,21 @@ function OtherCommittie(){
         {id:3, name: 'Prof. Daw Saw Sanda Aye'}
       ],
       Program: [
-        {id:4, name: 'Prof. Daw Saw Sanda Aye'}
+        {id:4, name: 'Prof. Daw Saw Sanda Aye'},
+      ],
+      Local: [
+        {id:5, name: 'Prof.Daw Saw Sanda Aye'},
+        {id:6, name: 'Prof.Daw Saw Sanda Aye'},
+        {id:7, name: 'Prof.Daw Saw Sanda Aye'}
+      ],
+      Foreign: [
+        {id:5, name: 'Prof.Daw Saw Sanda Aye'},
+        {id:6, name: 'Prof.Daw Saw Sanda Aye'},
+        {id:7, name: 'Prof.Daw Saw Sanda Aye'}
       ]
     }
 
-    const allPeople = [...people.Organizing, ...people.Program];
+    const allPeople = [...people.Organizing, ...people.Program, ...people.Local, ...people.Foreign];
 
     
 
@@ -31,6 +41,12 @@ function OtherCommittie(){
           
         case 'Program' :
           return people.Program;
+
+        case 'Local' :
+          return people.Local;
+        
+        case 'Foreign' :
+          return people.Foreign;
           
         default :
           return allPeople;
@@ -42,6 +58,8 @@ function OtherCommittie(){
       { name: 'All', count: allPeople.length },
       { name: 'Organizing', count: people.Organizing.length },
       { name: 'Program', count: people.Program.length },
+      { name: 'Local', count: people.Local.length},
+      { name: 'Foreign', count: people.Foreign.length},
     ];
 
     const categoryVariants = {
@@ -73,12 +91,12 @@ function OtherCommittie(){
 
     return (
       <div className="otherCommittie w-full flex flex-col gap-[10px] mt-5">
-        <div className="Categories flex flex-row w-[90%] md:w-[50%] justify-between items-center mb-2">
+        <div className="Categories flex flex-row w-[90%] md:w-[50%]  justify-between items-center mb-2">
           <p className="text-[#1c1d20] opacity-50 text-[12px] md:text-[16px]">Filter By:</p>
           {categories.map((category) => (
-            <div className="relative px-3 md:px-4 cursor-pointer" key={category.name} onClick={()=>handleCategoryChange(category.name)}>
-              <p className="text-[#1c1d20] text-[16px] md:text-[20px] " style={{ opacity: selectedCategory === category.name ? 1 : 0.5 }}>{category.name}</p>
-              <span className="text-[#1c1d20] text-[8px] md:text-[12px] absolute" style={{right:0,top:0, opacity: selectedCategory === category.name ? 1 : 0.5 }}>({category.count})</span>
+            <div className="relative cursor-pointer" key={category.name} onClick={()=>handleCategoryChange(category.name)}>
+              <p className="text-[#1c1d20] text-[16px] md:text-[20px] px-1 " style={{ opacity: selectedCategory === category.name ? 1 : 0.5 }}>{category.name}</p>
+              <span className="text-[#1c1d20] text-[8px] md:text-[12px] absolute" style={{left:'100%',top:0, opacity: selectedCategory === category.name ? 1 : 0.5 }}>{category.count}</span>
             </div>
             
           ))}
