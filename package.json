@@ -36,9 +36,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-  
-  },
+  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",
