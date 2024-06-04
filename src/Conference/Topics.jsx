@@ -1,20 +1,24 @@
+import useFetch from './../utils/useFetch.js'
+
 function Topics() {
 
-    const content = [
-        "Advanced Networking Technologies",
-        "Advanced Networking Technologies",
-        "Advanced Networking Technologies",
-        "Advanced Networking Technologies",
+  // const {data,loading,error} = useFetch("http://localhost:4000/confrence/1")
 
-        
-    ]
+  
+  // if (!data || !data.topics || data.topics.length === 0) return <div>No topics found</div>;
+
+
+
+    // const content = [...data.topics]
+
+    const contents = ['Ai','Cloud','Deep Learning'];
 
     return (
       <>
         <div className="py-7 md:py-8 w-full" id="topics">
         <h3 className="capital mb-[20px] leading-7 text-2xl md:text-[32px] md:leading-9 w-full">Topics</h3>   
         <div className="flex flex-row flex-wrap w-full justify-between">
-            {content.map((item,index) => 
+            {contents.map((item,index) => 
             <div className="flex flex-row w-full md:w-[45%] items-center mb-[12px]" key={index}>
                 
                 <svg width="5" height="5" xmlns="http://www.w3.org/2000/svg" className="mt-[2px] me-[10px] text-[5px] flex-none">

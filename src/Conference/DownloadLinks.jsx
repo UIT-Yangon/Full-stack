@@ -34,13 +34,13 @@ export default function DownloadLinks({className}){
                     
                     <DownloadText className=" p-2 px-10 bg-[#f0f8ff] text-[16px] text-[#1c1d20] rounded-[10px] relative">
                     <DownloadIcon icon={faDownload} className=' bg-[#000] text-[#fff] p-1 rounded-[5px] absolute'/>
-                    ICAIT2024 paper template</DownloadText>
+                    conference_book.pdf</DownloadText>
                 </div>
                 <div className="flex items-center">
                     
                     <DownloadText className="gef p-2 px-10 bg-[#f0f8ff] text-[16px] text-[#1c1d20] rounded-[10px] relative">
                     <DownloadIcon icon={faDownload} className='abc bg-[#000] text-[#fff] p-1 rounded-[5px] absolute'/>
-                    ICAIT2024 brochure</DownloadText>
+                    conference_brochure.pdf</DownloadText>
                 </div>
             </div>
         </div>

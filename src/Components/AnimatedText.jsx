@@ -24,8 +24,8 @@ const defaultAnimations = {
             (language == "EN") ?
             <motion.span ref={ref} initial="hidden" key="modal" animate={isInView ? "visible" : "hidden"}  transition={{ staggerChildren: 0.04 }} aria-hidden>
           {text.split(" ").map((word,index) => (
-            <span className="inline-block">
-            {word.split('').map(char => <motion.span className="inline-block" variants={defaultAnimations}>{char}</motion.span>)}
+            <span className="inline-block" key={index}>
+            {word.split('').map((char,i) => <motion.span className="inline-block" variants={defaultAnimations} key={i}>{char}</motion.span>)}
             <span  className="inline-block">&nbsp;</span>
             </span>
             

@@ -8,6 +8,8 @@ import Deadline from './Deadline';
 import RegistrationFees from './RegistrationFees';
 import { useState, useEffect } from 'react';
 import DownloadLinks from './DownloadLinks';
+import InvitedSpeakers from './InvitedSpeakers';
+import KeynoteSpeakers from './KeynoteSpeakers';
 
 function BgPart() {
 
@@ -20,6 +22,8 @@ function BgPart() {
         <CallsForPaper />
         <ImageSection />
         <Topics/>
+        <InvitedSpeakers/>
+        <KeynoteSpeakers/>
         <Committee />
         <Guideline/>
         <Deadline/>

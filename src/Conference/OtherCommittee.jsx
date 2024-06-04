@@ -5,22 +5,19 @@ function OtherCommittie(){
 
     const people = {
       Organizing: [
-        {id:1, name: 'Prof. Daw Saw Sanda Aye'},
-        {id:2, name: 'Prof. Daw Saw Sanda Aye'},
-        {id:3, name: 'Prof. Daw Saw Sanda Aye'}
+        {id:1, name: 'Associate Professor.Jane Smith', faculty: 'Deputy Head', uni: 'Oxford University Myanmar'},
+        {id:2, name: 'Professor.Sophia Davis', faculty: 'Chair of Faculty', uni: 'Heidelberg University Germany'},
+        {id:3, name: 'Professor.James White' , faculty: 'Dean', uni: 'MIT USA'}
       ],
       Program: [
-        {id:4, name: 'Prof. Daw Saw Sanda Aye'},
+        {id:4, name: 'Prof. Daw Saw Sanda Aye', faculty: 'Rector', uni: 'UIT Yangon, Myanmar'},
       ],
       Local: [
-        {id:5, name: 'Prof.Daw Saw Sanda Aye'},
-        {id:6, name: 'Prof.Daw Saw Sanda Aye'},
-        {id:7, name: 'Prof.Daw Saw Sanda Aye'}
       ],
       Foreign: [
-        {id:5, name: 'Prof.Daw Saw Sanda Aye'},
-        {id:6, name: 'Prof.Daw Saw Sanda Aye'},
-        {id:7, name: 'Prof.Daw Saw Sanda Aye'}
+        {id:8, name: 'Professor.John Doe', faculty: 'Head of Department', uni: 'Harvard University USA'},
+        {id:9, name: 'Lecturer.Emily Johnson', faculty: 'Chair of Faculty', uni: 'University of Toronto Canada'},
+        {id:10, name: 'Liam Anderson' , faculty: 'Dean', uni: 'University of Rome Italy'}
       ]
     }
 
@@ -90,8 +87,9 @@ function OtherCommittie(){
     
 
     return (
-      <div className="otherCommittie w-full flex flex-col gap-[10px] mt-5">
-        <div className="Categories flex flex-row w-[90%] md:w-[50%]  justify-between items-center mb-2">
+      <div className="otherCommittie w-full flex flex-col gap-[30px] mt-[30px]">
+        
+        <div className="Categories flex flex-row w-[100%] md:w-[70%] lg:w-[60%] xl:w[50%]  justify-between items-center mb-2">
           <p className="text-[#1c1d20] opacity-50 text-[12px] md:text-[16px]">Filter By:</p>
           {categories.map((category) => (
             <div className="relative cursor-pointer" key={category.name} onClick={()=>handleCategoryChange(category.name)}>
@@ -111,17 +109,17 @@ function OtherCommittie(){
           exit='exit'
           
         >
-                <ul className='w-full flex flex-row flex-wrap justify-start gap-[15px]'>
-                  {getCategoryData().map(person => (
+                <ul className='w-full flex flex-row flex-wrap justify-between gap-[10px]'>
+                  {getCategoryData().map((person,index) => (
                     
-                    <li key={person.id} className="w-[47.6%] md:w-[300px] flex items-center justify-center gap-[10px] ">
-                        <div className="w-[50px] h-[50px] md:w-[75px]  bg-[#ccc] rounded-md"></div>
-                        <div className="flex flex-col">
-                            
-                            <p className="text-[10px] md:text-[16px] text-[#1c1d20]">{person.name}</p>
-                            <p className="text-[12px] md:text-[16px] text-[#1c1d20] opacity-50">Rector</p>
-                        </div>
-                    </li>
+                    <div key={index} className=" flex justify-start gap-[10px] w-[350px]">
+                      <div className="w-[50px] md:w-[75px]  bg-[#ccc] rounded-md"></div>
+                      <div className="flex flex-col">
+                        <p className="text-[11px] md:text-[16px] text-[#3798a6]">{person.name}</p>
+                        <p className="text-[10px] md:text-[16px] text-[#1c1d20] opacity-70">{person.faculty}</p>
+                        <p className="text-[12px] md:text-[16px] text-[#1c1d20] opacity-50">{person.uni}</p>
+                      </div>
+                  </div>
                     
                   ))}  
                 </ul>
