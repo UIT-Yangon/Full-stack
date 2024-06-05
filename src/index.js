@@ -17,14 +17,14 @@ import PdfPage from './PdfPage/PdfPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  
     <Provider store={store}>
     <Router>
       <Navigator />
 
     </Router>
     </Provider>
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,53 +1,122 @@
 import Img from '../Images/syllabus.png';
-import MajorImg from './MajorImg';
-import styled from 'styled-components'
-const Pic = styled.div`
+import styled from 'styled-components';
+import useFetch from '../utils/useFetch.js';
+import React,{useState,useEffect} from 'react';
 
-    background: url(${Img});
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;  
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+  height: 51vw;
 
+  @media only screen and (min-width: 1024px) {
+    height: 37.6vw;
+  }
+`;
 
-    `;
+const Pic1 = styled.div`
+  background: url(${Img});
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center center;
+  border-radius: 32px;
+`;
+
+// insert //props => props.img in Img
+
+const Pic2 = styled.div`
+  background: url(${Img});  
+  background-size: cover;
+  object-fit: cover;
+  background-position: center center;
+  border-radius: 32px;
+  opacity: 0.7;
+`;
+
+const GroupContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
+const PortraitWrapper = styled.div`
+  width: 49%;
+  margin-bottom: 8%;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 4%;
+  }
+  .pic {
+    width: 100%;
+    height: 51vw;
+    @media only screen and (min-width: 768px) {
+      height: 24.1vw;
+    }
+    @media only screen and (min-width: 1024px) {
+      height: 18.3vw;
+    }
+  }
+`;
+
 
 function ImageSection() {
 
-    const content = [
-        "First year syllabus",
-        "Second year syllabus",
-        
-    ]
+  // const {data,loading,error} = useFetch('http://localhost:4000/confrence/1','GET');
 
-    
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error}</div>;
+  // if (!data || !data.images || data.images.length === 0) return <div>No images found</div>;
 
-    return (
-      <div id="imagesection">
-        <MajorImg />
-        <div className=" w-full" id="">
-        <div className="flex flex-row flex-wrap w-full justify-between">
-            {content.map((item,index) => 
-            
-            <div className="relative w-[48%] mb-[8%] md:mb-[4%] " key={index}>
-            <Pic className="w-[100%] h-[51vw] md:w-[100%] md:h-[24.1vw] lg:h-[18.3vw] rounded-[32px] bg-[#D9D9D9] opacity-70">
-                
+  const images = [
+    {"img":"20240516171320_Americano.jpg","style":"landscape"},
+    {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"landscape"},
+    {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"landscape"}
+  ]
 
-            </Pic>  
-            
-            </div>
-            
-            )}
-            
+  const landscapes = images.filter(image => image.style === 'landscape');
+  const portraits = images.filter(image => image.style === 'portrait');
+
+  const groupedImages = [];
+  let i = 0, j = 0;
+
+  while (i < landscapes.length && j < portraits.length - 1) {
+    const group = [
+      landscapes[i],
+      portraits[j],
+      portraits[j + 1]
+    ];
+    groupedImages.push(group);
+    i++;
+    j += 2;
+  } 
+
+
+
+  return (
+    <div className="pt-5" id="image">
+      {groupedImages.map((group, index) => (
+        <div key={index} className='flex flex-col gap-[15px]'>
+          <Container>
+            <Pic1 img={group[0].img} />
+          </Container>
+          <GroupContainer>
+            {group.slice(1).map((image, idx) => (
+              <PortraitWrapper key={idx}>
+                <Pic2 img={image.img} className="pic" />
+              </PortraitWrapper>
+            ))}
+          </GroupContainer>
         </div>
-
-      </div>
-      
-      </div>
-      
-    );
-  
-   
-  }
+      ))}
+    </div>
+  );
+};
   
   export default ImageSection;
 

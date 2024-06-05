@@ -83,7 +83,7 @@ function CopyrightSection(){
 }
 
 const ButtonContainer = styled(motion.div)`
-    max-width: 194.37px;
+    width: ${props => props.width};
     position: relative;
     display: flex;
     align-items: center;
@@ -151,13 +151,22 @@ function TextContainer(){
                 <p className="text-[13px] md:text-[16px] text-[#fff] mb-3">Multiply your potential with us at UIT. Let’s embark on this journey together!</p>
                 <p className="text-[13px] md:text-[16px] text-[#fff]"> Made with <span className="text-[#05ef05]">🍀</span> from the UIT development team.</p>
             </div>
-            <ButtonContainer
+            <AnimationButton value='Get in touch'/>
+        </div>
+    )
+}
+
+export function AnimationButton({value,width='194.37px'}){
+    return (
+       <>
+        <ButtonContainer
+                width={width}
                 variants={containerVariants}
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
             >
-                <Button>Get in touch</Button>
+                <Button>{value}</Button>
                 <IconContainer
                 variants={iconVariants}
                 transition={{ duration: 0.3 }}
@@ -168,7 +177,7 @@ function TextContainer(){
                 variants={circleVariants}
                 />
             </ButtonContainer>
-        </div>
+       </>
     )
 }
 
