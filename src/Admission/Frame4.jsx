@@ -8,16 +8,22 @@ function Frame4(){
     const language = useSelector((state) => state.language.value);
     return (
         <div className=" md:max-w-screen-lg lg:pt-[6rem] pt-14 pb-[90px] lg:pb-[50px] frame4 lg:max-w-full px-4">
-            <div className="frame3 mx-0 lg:mx-auto w-full  xl:pl-[10rem] ">
-                <div className="frame1 mb-8">
+            <div className="flex justify-center">
+            <div className="flex justify-center lg:justify-start sm:gap-[10vw] gap-[20vw] items-center flex-wrap">
+                <div className="sm:w-[560px] sm:h-[560px] w-[60vw] h-[60vw]  bg-[#d9d9d9] rounded-[20px]"></div>
+                <div className="flex flex-col items-start gap-[30px] relative">
+                    <div className="smallMemberTitle sm:top-[-40px] top-[-20px]" style={{left:15}}>
+                        <p className="flex-none text-[#3798a6] text-lg me-[7px] lg:me-[10px] mb-2.5">.</p>
+                        <p className="text-xs md:text-base text-[#1c1d20] opacity-50 font-normal leading-[18px]">Welcome</p>
+                    </div>
                     <p className="font-light text-4xl md:text-6xl text-start leading-tight tracking-wide">Step into UIT <br/>your new home</p>
-                </div>
-                <div className="frame2 flex md:justify-end justify-start ">
                     <p className={(language == "EN") ? "font-light text-base md:text-lg md:text-xl text-left tracking-wider lg:w-[530px] pale": "font-light text-sm md:text-base text-left tracking-wider lg:w-[530px] pale"}>{(language == "EN") ? firstPara[0] : firstPara[1]}</p>
                 </div>
+            </div>
             </div>
         </div>
     )
 }
 
 export default Frame4;
+

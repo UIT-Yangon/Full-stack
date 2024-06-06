@@ -9,9 +9,9 @@ export default function RegistrationFees(){
             <div className="flex flex-col items-between gap-[10px]">
                 <p style={{fontWeight:350}} className="text-[14px] md:text-[18px] text-[#1c1d20] opacity-80">Foreign participants - 200USD </p>
                 <p style={{fontWeight:350}} className="text-[14px] md:text-[18px] text-[#1c1d20] opacity-80">Local participants - 200,000MMK </p>
-                <div className="flex items-center gap-[10px]">
+                <div className="flex items-center sm:justify-start justify-between sm:gap-[10px]">
                     <p style={{fontWeight:350}} className="text-[14px] md:text-[18px] text-[#1c1d20] opacity-80">To submit- </p>
-                    <AnimationButton value='icait@uit.edu.mm' width='250px'/>
+                    <AnimationButton value='icait@uit.edu.mm' width='250px'left='61%' />
                 </div>
             </div>
         </div>

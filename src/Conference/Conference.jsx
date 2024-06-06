@@ -12,7 +12,7 @@ function Conference() {
 
   
    
-  const windowWidth = useResize("The 5th international conference on advanced information technologies (ICAT 2024)");
+  const windowWidth = useResize("The 5th International Conference On Advanced Information Technologies (ICAT 2024)");
 
  
  
@@ -23,7 +23,7 @@ function Conference() {
   return (
       <>
      <UltiWrapper>
-     <Heading name="The 5th international conference on advanced information technologies (ICAT 2024)" />
+     <Heading name="The 5th International Conference On Advanced Information Technologies (ICAT 2024)" />
       <BodyPart />
      </UltiWrapper>
       

@@ -23,7 +23,7 @@ function Admission(){
         <>
             <UltiWrapper>
                     <Headline />
-                    <Image />
+                    
                     <Frame4 />
                     <Frame6 />
                     <Frame7 />
