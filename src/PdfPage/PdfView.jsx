@@ -1,116 +1,49 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
 import styled from 'styled-components';
-import { Worker } from '@react-pdf-viewer/core';
-import { Viewer } from '@react-pdf-viewer/core';
-import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout'; // Import default layout plugin
-import '@react-pdf-viewer/core/lib/styles/index.css'; // Import core styles
-import '@react-pdf-viewer/default-layout/lib/styles/index.css'; // Import default layout styles
-import PdfTitle from './PdfTitle';
-import Tabs from './Tabs';
 
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px 0;
-    width: 100%;
+// Setting up the worker path for PDF.js
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-    @media (max-width: 462px){
-        gap: 20px;
-        padding: 20px 0;
-    }
-`;
-
+// Styled components
 const ViewerContainer = styled.div`
-    width: 100%;
-    max-height: 600px;
-    border-radius: 20px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
-    overflow: scroll;
-
-    @media (max-width: 768px) {
-        max-width: 80%;
-        height: 300px;
-    }
+  display: flex;
+  flex-direction: row; /* Change to 'column' for vertical layout */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  overflow: auto;
 `;
 
-function PdfView() {
-    
-    
-    const [defaultScale, setDefaultScale] = useState(1);
-    const viewerContainerRef = useRef(null);
-    const [currentPage, setCurrentPage] = useState(0);
-    const defaultLayoutPluginInstance = defaultLayoutPlugin();
+const PageContainer = styled.div`
+  width: 600px;
+  height: 500px;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  background-color: #fff;
+  overflow: auto;
+  margin-top: 20px;
+`;
 
+const PdfView = ({ file }) => {
+  const [numPages, setNumPages] = useState(null);
 
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
 
-        // Set the local PDF file URL
-        const url = [`${process.env.PUBLIC_URL}/somatosensory.pdf`,`${process.env.PUBLIC_URL}/drylab.pdf`];
-        
-        
-    
-
-    useEffect(() => {
-        // Update the default scale based on the container width
-        const updateScale = () => {
-            if (viewerContainerRef.current) {
-                const containerWidth = viewerContainerRef.current.clientWidth;
-                const naturalWidth = 600; // to control pdf size, the greater the number, the smaller the size
-                const scale = containerWidth / naturalWidth;
-                setDefaultScale(scale);
-                
-            }
-        };
-        
-        updateScale();
-        window.addEventListener('resize', updateScale);
-
-        return () => {
-            window.removeEventListener('resize', updateScale);
-        };
-    }, []);
-
-    return ( 
-        
-        <div className="pdfView px-[0%] md:px-[10%] xl:px-[15%] md:pt-[72px] md:pt-[50px] py-[16px]">
-            <PdfTitle/>
-            <Container>
-                
-                <ViewerContainer ref={viewerContainerRef}>
-                    {url ? (
-                        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                            <Viewer
-                            fileUrl={url[0]}
-                            // plugins={[defaultLayoutPluginInstance]}
-                            defaultScale={defaultScale}
-
-                            />
-                        </Worker>
-                        ) : (
-                        <p>Loading PDF...</p>
-                        )}
-                </ViewerContainer>
-                <ViewerContainer ref={viewerContainerRef}>
-                    {url ? (
-                        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                            <Viewer
-                            fileUrl={url[1]}
-                            // plugins={[defaultLayoutPluginInstance]}
-                            defaultScale={defaultScale}
-
-                            />
-                        </Worker>
-                        ) : (
-                        <p>Loading PDF...</p>
-                        )}
-                </ViewerContainer>
-                
-            </Container>
-            <Tabs/>
-        </div>
-     );
-}
+  return (
+    <ViewerContainer>
+      <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
+        {Array.from(new Array(numPages), (el, index) => (
+          <PageContainer key={`page_${index + 1}`}>
+            <Page pageNumber={index + 1} width={480} />
+          </PageContainer>
+        ))}
+      </Document>
+    </ViewerContainer>
+  );
+};
 
 export default PdfView;

@@ -10,6 +10,7 @@ function PdfPage(){
 
     const windowWidth = useResize("High Performance Computing (HPC)");
 
+    const pdfFile = `${process.env.PUBLIC_URL}/drylab.pdf`;
 
  
 
@@ -18,7 +19,7 @@ function PdfPage(){
         <div className='pdfPage' style={{background:'#fff'}}>
             <UltiWrapper>
                     <Headline />
-                    <PdfView/>
+                    <PdfView file={pdfFile}/>
             </UltiWrapper>
         </div>
     )
