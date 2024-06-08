@@ -61,7 +61,7 @@ body {
   
 }
 
-.compo-1,.compo-2 {
+.compo-2 {
   width: 50%;
   height: auto;
 }
@@ -73,45 +73,17 @@ body {
   
 }
 
-.compo-1 h1 {
-  line-height: 102px;
-  letter-spacing: 0.03em;
-  color: #1C1D2080;
-  position: relative;
-  z-index: 20;
 
 
-}
 
-.degreeHead {
-  letter-spacing: 0.06em;
-}
 
-.smallLink {
-  letter-spacing: 0.06em;
-  color: #1C1D20CC;
 
-}
 
-.triviaHead {
-  letter-spacing: 0.06em;
-}
-
-.trivia-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.trivia-container {
-  letter-spacing: 0.06em;
-}
 
 .triviaMain {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#ffffff;
 }
 
 
@@ -144,16 +116,15 @@ body {
   position: relative;
   z-index: 30;
   background-color:#ffffff;
-  color: #1C1D20;
 }
 
 
 .coverr .line {
-  width: 0%;
+  width: 100%;
   height: 2px;
   position: absolute;
   top: 70%;
-  background-color: #1C1D2080;
+  background-color: #ffffff;
 }
 
 .hide {
@@ -162,7 +133,7 @@ body {
 
 .hideMe {
   display: none;
-  background-color:#ffffff;
+  background-color: #1C1D20;
   position: relative;
   z-index: 30;
 }
@@ -210,7 +181,7 @@ body {
   /* Styles */
   .hideMe {
     display: block;
-    background-color:#ffffff;
+    background-color: #1C1D20;
     position: relative;
     z-index: 20;
   }
@@ -233,14 +204,12 @@ body {
     background-color: #1C1D2080;
   }
 
-  .compo-1 h1 {
-    font-size: 35px;
-  }
+
 
 
   
 
-  .compo-1,.compo-2 {
+.compo-2 {
     width: 100%;
     height: auto;
   }
@@ -258,12 +227,7 @@ body {
     align-items: center;
   }
   
-  .compo-1 h1 {
-    line-height: 102px;
-    letter-spacing: 0.03em;
-    color: #1C1D2080;
-  
-  }
+ 
 
   .compo-1 {
     display: flex;
@@ -271,7 +235,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 20;
-background-color: #ffffff;
+background-color: #1c1d20;
   }
   
   
@@ -306,14 +270,6 @@ background-color: #ffffff;
         background-color: #ffffff;
         
       }
-      .compo-1 h1 span{
-        font-size: 18px;
-        line-height: 102px;
-        letter-spacing: 0.03em;
-        color: red;
-
-      
-      }
 
       .compo-1 {
         display: flex;
@@ -321,7 +277,6 @@ background-color: #ffffff;
         justify-content: space-between;
         align-items: center;
         z-index: 20;
-  background-color: #ffffff;
       }
     }
 

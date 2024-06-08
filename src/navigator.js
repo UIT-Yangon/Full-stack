@@ -21,7 +21,7 @@ import History from './History/History';
 import Map from './Maps/Map';
 import Visimisi from './Vision-mission/Visimisi';
 import Faq from './Faq/Faq';
-import CS from './Faculty/CS';
+import CS from './Faculty/CS/CS';
 import Conference from './Conference/Conference';
 import Pdf from './PdfPage/PdfPage';
 

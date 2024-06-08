@@ -1,6 +1,6 @@
 import React from "react";
 import TitleCon from "./TitleCon";
-import VisionTextCon from "../VisionTextCon";
+import VisionTextCon from "../CS/VisionTextCon";
 import { StateProvider } from "./StateContext";
 
 function Vision(){

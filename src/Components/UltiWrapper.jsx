@@ -5,7 +5,7 @@ import '../Styles/Degree.css';
 import Footer from './Footer';
 
 
-function UltiWrapper({children}) {
+function UltiWrapper({children,className}) {
 
   const windowWidth = useResize("");
   const [dataFromNav, setDataFromNav] = useState(true);
@@ -33,7 +33,7 @@ function UltiWrapper({children}) {
   return (
       <>
       <Navbar sendDataToParent={handleDataFromNav} />
-      <div className={windowWidth <= 1024 && !dataFromNav ? 'mainUnactive main px-2' : 'main px-2'} style={{ backgroundColor: "#FFFFFF"}}>
+      <div className={windowWidth <= 1024 && !dataFromNav ? `mainUnactive main px-2 ${className}` : `main px-2 ${className}`} style={{ backgroundColor: "#FFFFFF"}}>
 
         {children}
 
