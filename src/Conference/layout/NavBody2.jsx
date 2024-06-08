@@ -51,8 +51,6 @@ function NavBody2() {
         setAppear(!appear);
     }
 
-    console.log(appear)
-
 
     return (
       <>

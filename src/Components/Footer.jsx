@@ -83,12 +83,11 @@ function CopyrightSection(){
 }
 
 const ButtonContainer = styled(motion.div)`
-    max-width: 194.37px;
+    width: ${props => props.width};
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
-
     &hover: .icon {
         transform: rotate(-50deg);
     }
@@ -121,7 +120,7 @@ const CircleDiv = styled(motion.div)`
   height: 28px;
   background-color: #3798a6;
   position: absolute;
-  left: 59.7%;
+  left: ${props => props.left};
 `;
 
 const containerVariants = {
@@ -151,13 +150,23 @@ function TextContainer(){
                 <p className="text-[13px] md:text-[16px] text-[#fff] mb-3">Multiply your potential with us at UIT. Let’s embark on this journey together!</p>
                 <p className="text-[13px] md:text-[16px] text-[#fff]"> Made with <span className="text-[#05ef05]">🍀</span> from the UIT development team.</p>
             </div>
-            <ButtonContainer
+            <AnimationButton value='Get in touch'/>
+        </div>
+    )
+}
+
+export function AnimationButton({value='Get in touch',width='194.37px',left='59.7%'}){
+    return (
+       <>
+        <ButtonContainer
+                width={width}
                 variants={containerVariants}
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
+                
             >
-                <Button>Get in touch</Button>
+                <Button>{value}</Button>
                 <IconContainer
                 variants={iconVariants}
                 transition={{ duration: 0.3 }}
@@ -165,10 +174,11 @@ function TextContainer(){
                 <FontAwesomeIcon icon={faArrowRight} className="text-[14px] text-[#fff]" />
                 </IconContainer>
                 <CircleDiv
+                left={left}
                 variants={circleVariants}
                 />
             </ButtonContainer>
-        </div>
+       </>
     )
 }
 
