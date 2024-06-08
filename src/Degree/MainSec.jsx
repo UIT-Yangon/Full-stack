@@ -25,8 +25,6 @@ const discription = [
     id: 0,
     category1: "Computer Science",
     category2: "Computer Technology",
-    margin: "0px",
-    marginTiny: "apx",
 
     title1: [["B.C.Sc. (Software Engineering)","/academic/degree/bachelor/se"],["B.C.Sc. (Business Information Systems)","/academic/degree/bachelor/bis"],["B.C.Sc. (Knowledge Engineering)","/academic/degree/bachelor/ke"],["B.C.Sc. (High Performance Computing)","/academic/degree/bachelor/hpc"]],
     title2: [["B.C.Tech. (Embedded Systems)","/academic/degree/bachelor/es"],["B.C.Tech. (Communication and Networking)","/academic/degree/bachelor/networking"],["B.C.Tech. (Cyber Security)","/academic/degree/bachelor/csec"]]
@@ -35,8 +33,6 @@ const discription = [
     id: 1,
     category1: "Computer Science",
     category2: "Computer Technology",
-    margin: "174px",
-    marginTiny: "apx",
 
     title1: [["M.C.Sc. (Software Engineering)","/academic/degree/bachelor/se"],["M.C.Sc. (Business Information Systems)","/academic/degree/bachelor/se"],["M.C.Sc. (Knowledge Engineering)","/academic/degree/bachelor/se"],["M.C.Sc. (High Performance Computing)","/academic/degree/bachelor/se"]],
     title2: [
@@ -49,8 +45,6 @@ const discription = [
     id: 2,
     category1: "",
     category2: "",
-    margin: "apx",
-    marginTiny: "325px",
 
     title1: [["Ph.D (Information Technology)","/academic/degree/bachelor/se"]],
     title2: []
@@ -86,7 +80,7 @@ function MainSec() {
               { headingLine.map((h1) => 
                 <div className="coverr">
                 
-                  <h1 className="max-[1170px]:text-[70px] text-[108px]  font-normal leading-[96px]  lg:py-8 border-b border-[#ffffff] block w-[100%]"  onClick={onClick.bind(this,h1.id )}>
+                  <h1 className="max-[1170px]:text-[70px] text-[108px]  font-normal leading-[96px]  lg:py-8 border-b border-[#ffffff] block w-[100%] "  onClick={onClick.bind(this,h1.id )}>
                     <AnimatePresence>
                     <motion.span className="animator" initial={{ color: "#1C1D2080"}} animate={{ color: (h1.id === activeId) ? "#ffffff" : "#FFFFFF80"}} exit={{ color: "#1C1D2080"}} transition={{ type: "spring", stiffness: 100 }}>{h1.heading}</motion.span>
                     </AnimatePresence>
@@ -102,24 +96,26 @@ function MainSec() {
                 
       </div>
               )}
+
+              {/* this is comment added */}
               
               
 
                 
             </div>
                 <div className="compo-2 mb-[75px]" >
-                <div className="">
+                
         <div>
         {discription.map(
           (item) => (
             item.id === activeId)
              &&
              <AnimatePresence>
-               <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{ease: 'linear'}} >
-                <h1 className={`text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3 mt-[${item.margin}]`}>{item.category1}</h1>
+               <motion.div initial={{ x: 500, opacity: 0}} animate={{ x: 0, opacity: 1}} exit={{ x: 500, opacity: 0}}  transition={{ease: 'linear'}} className={(item.id == 1) ? `pt-[174px]` : (item.id == 2) ? `pt-[325px]` : `` }>
+                <h1 className={`text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3`}>{item.category1}</h1>
                 <div className="ps-6 pb-8">
                   {item.title1.map((li) => (<Link reloadDocument to={li[1]} id="navigation" >
-                  <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 mt-[${item.marginTiny}]`}>{li[0]} </li>
+                  <li className={`leading-[35px] text-xl font-medium smallLink tracking-[0.06em] text-[#FFFFFF80] mb-2 `}>{li[0]} </li>
                   </Link>))}
                 </div>
                   <h1 className="text-[32px] leading-[45px] tracking-[0.06em] font-medium mb-3">{item.category2}</h1>
@@ -134,8 +130,6 @@ function MainSec() {
           </AnimatePresence>)}    
         </div>
         
-        
-    </div>
             </div>
         </div>
       
