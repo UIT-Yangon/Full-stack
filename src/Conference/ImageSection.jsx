@@ -73,10 +73,10 @@ function ImageSection() {
     {"img":"20240516171320_Americano.jpg","style":"portrait"},
     {"img":"20240516171320_Americano.jpg","style":"landscape"},
     {"img":"20240516171320_Americano.jpg","style":"portrait"},
+    {"img":"20240516171320_Americano.jpg","style":"landscape"},
     {"img":"20240516171320_Americano.jpg","style":"portrait"},
     {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"portrait"},
-    {"img":"20240516171320_Americano.jpg","style":"landscape"}
+    {"img":"20240516171320_Americano.jpg","style":"portrait"}
   ]
 
   const landscapes = images.filter(image => image.style === 'landscape');
@@ -101,7 +101,7 @@ function ImageSection() {
   return (
     <div className="pt-5" id="image">
       {groupedImages.map((group, index) => (
-        <div key={index} className='flex flex-col gap-[15px]'>
+        <div key={index} className='flex flex-col gap-[6px] md:gap-[15px]'>
           <Container>
             <Pic1 img={group[0].img} />
           </Container>

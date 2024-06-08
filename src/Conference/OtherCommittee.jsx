@@ -87,13 +87,13 @@ function OtherCommittie(){
     
 
     return (
-      <div className="otherCommittie w-full flex flex-col gap-[30px] mt-[30px]">
+      <div className="otherCommittie w-full flex flex-col gap-[15px] sm:gap-[30px] mt-[30px]">
         
         <div className="Categories flex flex-row w-[100%] md:w-[70%] lg:w-[60%] xl:w[50%]  justify-between items-center mb-2">
-          <p className="text-[#1c1d20] opacity-50 text-[12px] md:text-[16px]">Filter By:</p>
+          <p className="text-[#1c1d20] opacity-50 text-[11px] md:text-[16px]">Filter By:</p>
           {categories.map((category) => (
             <div className="relative cursor-pointer" key={category.name} onClick={()=>handleCategoryChange(category.name)}>
-              <p className="text-[#1c1d20] text-[16px] md:text-[20px] px-1 " style={{ opacity: selectedCategory === category.name ? 1 : 0.5 }}>{category.name}</p>
+              <p className="text-[#1c1d20] text-[13px] md:text-[20px]" style={{ opacity: selectedCategory === category.name ? 1 : 0.5 }}>{category.name}</p>
               <span className="text-[#1c1d20] text-[8px] md:text-[12px] absolute" style={{left:'100%',top:0, opacity: selectedCategory === category.name ? 1 : 0.5 }}>{category.count}</span>
             </div>
             
@@ -109,7 +109,7 @@ function OtherCommittie(){
           exit='exit'
           
         >
-                <ul className='w-full flex flex-row flex-wrap justify-between gap-[10px]'>
+                <ul className='w-full flex flex-row flex-wrap justify-between gap-[15px]'>
                   {getCategoryData().map((person,index) => (
                     
                     <div key={index} className=" flex justify-start gap-[10px] w-[350px]">

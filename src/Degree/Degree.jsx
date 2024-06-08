@@ -23,7 +23,7 @@ function App() {
           <Image />
           <Text />
           <MainSec />
-          <Trivia />
+          {/* <Trivia /> */}
       
     </UltiWrapper>
     </>

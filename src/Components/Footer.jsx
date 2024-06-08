@@ -88,7 +88,6 @@ const ButtonContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     cursor: pointer;
-
     &hover: .icon {
         transform: rotate(-50deg);
     }
@@ -121,7 +120,7 @@ const CircleDiv = styled(motion.div)`
   height: 28px;
   background-color: #3798a6;
   position: absolute;
-  left: 59.7%;
+  left: ${props => props.left};
 `;
 
 const containerVariants = {
@@ -156,7 +155,7 @@ function TextContainer(){
     )
 }
 
-export function AnimationButton({value,width='194.37px'}){
+export function AnimationButton({value='Get in touch',width='194.37px',left='59.7%'}){
     return (
        <>
         <ButtonContainer
@@ -165,6 +164,7 @@ export function AnimationButton({value,width='194.37px'}){
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
+                
             >
                 <Button>{value}</Button>
                 <IconContainer
@@ -174,6 +174,7 @@ export function AnimationButton({value,width='194.37px'}){
                 <FontAwesomeIcon icon={faArrowRight} className="text-[14px] text-[#fff]" />
                 </IconContainer>
                 <CircleDiv
+                left={left}
                 variants={circleVariants}
                 />
             </ButtonContainer>

@@ -17,6 +17,10 @@ function Item1(){
               link: '/about/history'
             },
             {
+              text: 'Faculty',
+              link: '/'
+            },
+            {
               text: 'FAQS',
               link: '/about/faqs'
             }
