@@ -1,7 +1,7 @@
 import Img from '../Images/syllabus.png';
 import styled from 'styled-components';
-import useFetch from '../utils/useFetch.js';
 import React,{useState,useEffect} from 'react';
+import { useSelector } from 'react-redux';
 
 const Container = styled.div`
   position: relative;
@@ -79,8 +79,16 @@ function ImageSection() {
     {"img":"20240516171320_Americano.jpg","style":"portrait"}
   ]
 
-  const landscapes = images.filter(image => image.style === 'landscape');
-  const portraits = images.filter(image => image.style === 'portrait');
+  const imgOne = useSelector((state) => state.data.value.images.landscape);
+  const imgTwo = useSelector((state) => state.data.value.images.portrait);
+
+  const landscapes = (imgOne.length == 0) ? images.filter(image => image.style === 'landscape') : imgOne;
+  const portraits = (imgTwo.length == 0) ? images.filter(image => image.style === 'portrait') : imgTwo;
+
+  // const landscapes = useSelector((state) => state.data.value.images.landscape) || useSelector((state) => state.data.value.images.potrait) ;
+  // const portraits = useSelector((state) => state.data.value.images.potrait) || images.filter(image => image.style === 'portrait');
+
+
 
   const groupedImages = [];
   let i = 0, j = 0;

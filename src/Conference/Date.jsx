@@ -1,13 +1,13 @@
-import useFetch from './../utils/useFetch.js';
+import { useSelector } from 'react-redux';
 
 function Date() {
 
-  // const {data,loading,error} = useFetch('http://localhost:4000/confrence/1');
+  const date = useSelector((state) => state.data.value.conference_date);
 
     return (
       <>
         <div className="rounded-[32px] py-2 px-4 bg-[#F0F8FF] inline-block ">
-            <h5 className="text-left font-normal text-xs md:text-base leading-[18px] text-[#1C1D20]  items-center">Updated on 2023-08-15</h5>
+            <h5 className="text-left font-normal text-xs md:text-base leading-[18px] text-[#1C1D20]  items-center">Updated on {date}</h5>
 
           </div>
       </>
