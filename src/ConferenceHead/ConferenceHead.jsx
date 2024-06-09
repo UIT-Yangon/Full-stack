@@ -1,26 +1,20 @@
-
 import React,{useState,useEffect } from 'react';
-import Navbar from '../Nav/Navbar';
 import useResize from '../utils/useResize';
 import '../Styles/Degree.css';
-import Heading from './Heading';
-import BodyPart from './BodyPart';
 import UltiWrapper from '../Components/UltiWrapper';
+import { Link } from 'react-router-dom';
+
 import axios from '../utils/axiosInstance';
-import { useDispatch } from 'react-redux';
-import { insertApiData } from '../store/apiDataSlice';
-import { useParams } from 'react-router-dom';
+
 
 
 function Conference() {
 
   const [data, setData] = useState(null);
-  const { id } = useParams();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const url = `conferences/${id}`;
-  const windowWidth = useResize("The 5th International Conference On Advanced Information Technologies (ICAT 2024)");
-  const dispatch = useDispatch();
+  const url = 'conferences';
+  const windowWidth = useResize("Conferences");
 
 
   useEffect(() => {
@@ -32,7 +26,6 @@ function Conference() {
       .then(response => {
         // Handle the successful response here
         setData(response.data);
-        dispatch(insertApiData(response.data));
         setLoading(false);
       })
       .catch(error => {
@@ -64,9 +57,14 @@ function Conference() {
   
   return (
       <>
-     <UltiWrapper>
-     <Heading />
-      <BodyPart />
+      <UltiWrapper>
+        <div className="flex flex-col gap-x-20px">
+      {data.data.map(
+        (item) => <Link to= {`/about/conference/${item.id}`} className="underline text-2xl mb-9 pb-9 decoration-solid" ><span >{item.name}</span></Link>
+        
+
+     )}
+     </div>
      </UltiWrapper>
       
       

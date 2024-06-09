@@ -1,20 +1,8 @@
 import styled from 'styled-components'
 import Img from '../Images/researchLab.png';
-
-const Pic = styled.div`
-
-    background: url(${Img});
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-position: center center;
-    
-    
-        
+import { useSelector } from 'react-redux';
 
 
-    `;
 
     const Container = styled.div`
 
@@ -36,12 +24,32 @@ const Pic = styled.div`
 
 function MajorImg() {
 
+    const majorImg = useSelector((state) => state.data.value.images.heading[0]) || Img;
+
+
+
+
+    const Pic = styled.div`
+
+    background: url(${props => props.image});
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center center;
+    
+    
+        
+
+
+    `;
+
 
   return (
         <div className="py-7" id="image">
             
             <Container>
-            <Pic className="rounded-[32px]"></Pic>  
+            <Pic className="rounded-[32px]" image={majorImg}></Pic>  
             </Container>
             
       
