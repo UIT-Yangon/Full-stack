@@ -77,5 +77,5 @@ color: #1C1D20CC;
 }
 
 .slick-arrow{
-  display: none;
+  display: none!important;
 }
