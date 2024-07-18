@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import {Network,Vision,HPC,DDM,ML} from '../Images/Images';
+import { motion } from 'framer-motion';
 
 const itemsData = [
   { id: 1, name: 'Events and Reunions', img: Network, note: 'Reunion of alumni and events'},
@@ -27,14 +28,37 @@ const Benefits = () => {
   const currentItems = itemsData.slice(offset, offset + itemsPerPage);
   const pageCount = Math.ceil(itemsData.length / itemsPerPage);
 
+  const variants = {
+    initial: {
+      scale: 1,
+    },
+    hover: {
+      scale: 1.2,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    }
+  }
+
   return (
     <div className='px-[5%] pt-[56px] pb-[72px] flex flex-col gap-[56px] bg-[#f0f8ff] rounded-[30px] '>
-      <h1 className="text-[#1c1d20] text-[16px] md:text-[32px]">Benefits and Opportunities</h1>
+      <h1 className="text-[#1c1d20] text-3xl md:text-5xl ">Benefits and Opportunities</h1>
       <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[50px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] xs:justify-start'>
         {currentItems.map((item) => (
           <li key={item.id} className='h-[488px]'>
             <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
-              <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px]' style={{backgroundImage: `url(${item.img})`, backgroundSize: 'cover', aspectRatio: 16/9, objectFit: 'cover', backgroundPosition: 'center center'}}></div>
+              <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] cursor-pointer' style={{overflow: 'hidden'}}>
+                  <motion.div
+                    variants={variants}
+                    initial='initial'
+                    whileHover='hover'
+                    className=' rounded-[32px] w-full h-full'
+                    style={{backgroundImage: `url(${item.img})`, backgroundSize: 'cover', aspectRatio: 16/9, objectFit: 'cover', backgroundPosition: 'center center'}}
+                  >
+
+                  </motion.div>
+                </div>
               <div className='flex flex-col gap-[8px] '>
                 
                   

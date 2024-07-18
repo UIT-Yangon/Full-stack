@@ -59,6 +59,7 @@ import Blog from './Blog/Blog';
 
 import Syllabus from './Syllabus/Syllabus';
 import Alumni from "./Alumni/Alumni";
+import Accommodation from "./Accommodation/Accomodation";
 
 
 export default function Navigator() {
@@ -92,6 +93,7 @@ export default function Navigator() {
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
             <Route path="/about/alumni" element={<Alumni />} />
+            <Route path="/about/accommodation" element={<Accommodation/>} />
 
             <Route path="/search/:type" element={<NewsSearch />} />
 

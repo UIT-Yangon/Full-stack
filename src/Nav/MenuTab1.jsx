@@ -49,6 +49,10 @@ function Item1(){
             {
               text: 'Alumni',
               link: '/about/alumni' 
+            },
+            {
+              text: 'Accommodation',
+              link: '/about/accommodation'
             }
           ]
           

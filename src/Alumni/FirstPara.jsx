@@ -1,6 +1,6 @@
 export default function FirstPara() {
     return (
-        <div className="pt-[72px] ">
+        <div className="">
             <div className="xl:grid xl:grid-cols-2 items-center">
                 <div className="flex flex-col gap-[30px] pr-10">
                     <h3 className="xl:text-[48px] text-[35px]">Our Community</h3>

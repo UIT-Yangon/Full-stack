@@ -57,8 +57,8 @@ function Upcoming() {
         <div className="flex flex-col gap-6">
             {
                 data.map((item, index) => 
-                    <Link to= {`/about/news/${item.id}`} >
-                         <div key={index} className="w-full flex justify-between items-center lg:p-8 p-6 rounded-[24px] lg:rounded-[32px] bg-[#F0F8FF]">
+                    <Link to= {`/about/news/${item.id}`} key={index} >
+                        <div  className="w-full flex justify-between items-center lg:p-8 p-6 rounded-[24px] lg:rounded-[32px] bg-[#F0F8FF]">
                         <h5 className="font-normal lg:leading-7 text-base leading-[22px] lg:text-xl me-5">{item.title}</h5>
                         <div className="flex flex-row items-center justify-center">
                         <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="me-[2.33px] flex-none ">
