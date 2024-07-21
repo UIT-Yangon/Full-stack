@@ -114,6 +114,7 @@ function Faculty(){
         <div className='faculty overflow-x-hidden' style={{background:'#fff'}}>
             <UltiWrapper>
                     <ImageHeader name="Department of English" />
+
                     <Vision />
                     <div className="lg:py-10 py-7 ">
                     <SubjectOffer content={content} svgType={2}/>
