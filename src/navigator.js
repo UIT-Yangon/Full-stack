@@ -77,7 +77,7 @@ export default function Navigator() {
             <Route path="/academic/calendar" element={<Calendar />} />
             <Route path="/academic/campus" element={<Campus />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />
-            <Route path="about/faculties" element={<FaculHead />} />
+            <Route path="/about/faculties" element={<FaculHead />} />
 
 
             <Route path="/about/vision-mission" element={<Visimisi />} />
@@ -115,7 +115,7 @@ export default function Navigator() {
 
             {/* Department of Language */}
             <Route path="/departments/myanmar" element={<Myan />} />
-            <Route path="departments/english" element={<Eng />} />
+            <Route path="/departments/english" element={<Eng />} />
             <Route path="departments/physics" element={<Phy />} />
 
 
