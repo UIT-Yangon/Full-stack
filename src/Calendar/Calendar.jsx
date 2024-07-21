@@ -15,6 +15,8 @@ import PaginatedItems from '../Components/PaginatedItems';
     
 function Calendar() {
 
+  
+
   Name("Academic Calendar");
   useResize();
  
