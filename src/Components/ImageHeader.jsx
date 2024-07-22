@@ -1,28 +1,33 @@
 import styled from 'styled-components';
-import img from '../Images/visimisi/photo.png';
+import img from '../Images/mainPhoto.png';
 
 const Div = styled.div`
   background-image: url(${img});
   width: 111.5%;
   margin-left: -6%;
-  object-fit: contain;
+  object-fit: cover;
   margin-top: -5.5%;
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat
-  opacity: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image within the div */
+  opacity: 90%;
+
 
 `;
 
 const Div2 = styled.div`
-  background: linear-gradient(187.79deg, rgba(233, 233, 233, 0.5) 5.9%, rgba(0, 0, 0, 0.5) 93.9%);
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 41.1%, rgba(28, 29, 32, 0.8) 95.1%);
+
 `
 
 function ImageHeader({name,name1}) {
 
     return (
-      <Div className="py-[27.5px] lg:py-14 lg:px-97 relative">
-        <h1 className="flex lg:flex-row flex-col relative ms-[5%] font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]" style={{ zIndex: 1}}><span>{name}</span><span>{name1}</span></h1>
+      <Div className="py-[27.5px] lg:py-14 lg:px-97 relative h-[319px] md:h-[455px]">
+        <div className="absolute bottom-[70.5px] width-full left-[5%]">
+        <h1 className=" w-full flex lg:flex-row flex-col relative  font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]" style={{ zIndex: 1}}><span>{name}</span><span>{name1}</span></h1>
+        </div>
+        
         <Div2 className=" absolute top-0 w-full h-full z-0"></Div2></Div>
     );
   

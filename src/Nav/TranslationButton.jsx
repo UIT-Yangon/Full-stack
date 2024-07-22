@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
+import React, { useState } from 'react';
 import './../Styles/TranslationButton.css';
 import { useDispatch } from 'react-redux';
 import { changeLanguage } from '../store/languageSlice';

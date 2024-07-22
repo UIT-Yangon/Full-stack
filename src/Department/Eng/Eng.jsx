@@ -1,6 +1,5 @@
 import '../../Styles/Degree.css';
 import '../../Styles/Faculty.css';
-import Headline from '../../Faculty/Components/Headline';
 import Vision from './Vision';
 import useResize from '../../utils/useResize';
 import React from 'react';
@@ -11,12 +10,17 @@ import Img2 from '../../Images/Faculty/CS/Teachers/Teacher_2.png';
 import Img3 from '../../Images/Faculty/CS/Teachers/Teacher_3.png';
 import Img4 from '../../Images/Faculty/CS/Teachers/Teacher_4.png';
 import Img5 from '../../Images/Faculty/CS/Teachers/Teacher_5.png';
+import Name from '../../utils/Name';
+import ImageHeader from '../../Components/ImageHeader';
+import Objectives from '../Components/Objectives';
 
 import SubjectOffer from '../../subLInks/Degree/Bachelor/Components/SubjectOffer';
 
 function Faculty(){
 
-    const windowWidth = useResize("Department of English");
+    useResize();
+    Name("Department of English");
+
 
     const header = [
         "Department of English",
@@ -24,6 +28,8 @@ function Faculty(){
       ]
 
       const content = [
+        "Different levels of English Language Proficiency",
+        "Different levels of English Language Proficiency",
         "Different levels of English Language Proficiency",
         
       ];
@@ -106,11 +112,17 @@ function Faculty(){
     
     return (
         <div className='faculty overflow-x-hidden' style={{background:'#fff'}}>
-            <UltiWrapper className='p-[5%]'>
-                    <Headline header={header} headerMobile={headerMobile} />
+            <UltiWrapper>
+                    <ImageHeader name="Department of English" />
+
                     <Vision />
-                    <SubjectOffer content={content} />
-                    <Member members={members} />
+                    <div className="lg:py-10 py-7 ">
+                    <SubjectOffer content={content} svgType={2}/>
+
+                    </div>
+                    
+                    <Objectives />
+                    <Member members={members} condition={1} />
             </UltiWrapper>
 
             
