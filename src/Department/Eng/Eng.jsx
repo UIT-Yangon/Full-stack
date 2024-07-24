@@ -112,7 +112,7 @@ function Faculty(){
     
     return (
         <div className='faculty overflow-x-hidden' style={{background:'#fff'}}>
-            <UltiWrapper>
+            <UltiWrapper className='p-[5%]'>
                     <ImageHeader name="Department of English" />
 
                     <Vision />

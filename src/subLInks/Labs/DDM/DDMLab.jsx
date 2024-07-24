@@ -24,7 +24,7 @@ function DDMLab() {
   
   return (
       <>
-      <UltiWrapper>
+      <UltiWrapper className='p-[5%]'>
       <Heading name="Data Distribution Management Laboratory" />
       <BodyPart />
       </UltiWrapper>

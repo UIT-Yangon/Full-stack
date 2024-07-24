@@ -11,6 +11,7 @@ import LMS from './LMS/LMS';
 import StudentRegister from './StudentRegisteration/StudentRegister';
 import Library from './BookLibrary/Library';
 import NewsSearch from './NewsSearch/NewssSearch.jsx';
+import Accomodation from './Accomodation/Accomodation.jsx'
 
 
 import Contact from './Contacts/Contact';
@@ -95,7 +96,7 @@ export default function Navigator() {
 
             <Route path="/search/:type" element={<NewsSearch />} />
 
-         
+            <Route path="/about/accomodation" element={<Accomodation/>} />
             
             
 
