@@ -41,7 +41,7 @@ const images = [
 const CarouselSlider = () => {
   const settings = {
     dots: true,
-    fade: true,
+    // fade: true,
     infinite: true,
     speed: 3000,
     slidesToShow: 1,
@@ -55,21 +55,9 @@ const CarouselSlider = () => {
     <Slider {...settings} >
       {images.map((image)=>(
         <div key={image.id} className='relative' >
-          <img src={image.image} alt="Slide 1" className='w-full h-[60vh] lg:h-[690px]'/>
-          <div className='absolute w-full h-[690px] flex flex-col bg-gradient-to-bottom top-0 '>
-            <div className='lg:h-[30%] h-[20%]'>
-
-            </div>
-            <div className='text-white px-[10%]'>
-                <div className='lg:text-[100px] text-[40px] lg:leading-[100px]'>
-                  <div>{image.text1 ? image.text1 : <br/>}</div>
-                  <div>{image.text2}</div>
-                  <div>{image.text3}</div>
-                </div>
-              <div className='mt-[3%]'>
-                <AnimationButton value='Register Now'/>
-              </div>
-            </div>
+          <img src={image.image} alt="Slide 1" className='w-[95%] h-[60vh] lg:h-[690px]'/>
+          <div className='absolute w-[95%] h-[690px] flex flex-col bg-gradient-to-bottom top-0 '>
+            
           </div>
         </div>)
       )}

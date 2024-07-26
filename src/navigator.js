@@ -40,8 +40,6 @@ import DDMLab from "./subLInks/Labs/DDM/DDMLab";
 import FaculHead from './FaculHead/FaculHead';
 
 // import ChildConference from './Conference/Conference';
-import Pdf from './PdfPage/PdfPage';
-
 import Research from './Research/Research';
 
 
@@ -60,6 +58,7 @@ import Blog from './Blog/Blog';
 
 import Syllabus from './Syllabus/Syllabus';
 import Alumni from "./Alumni/Alumni";
+import Accommodation from "./Accommodation/Accomodation";
 
 
 export default function Navigator() {
@@ -93,6 +92,7 @@ export default function Navigator() {
             <Route path="/about/maps" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
             <Route path="/about/alumni" element={<Alumni />} />
+            <Route path="/about/accommodation" element={<Accommodation/>} />
 
             <Route path="/search/:type" element={<NewsSearch />} />
 
@@ -126,7 +126,7 @@ export default function Navigator() {
             <Route path="/about/conference" element={<ConferenceHead />} />
             <Route path="/about/conference/:id" element={<Conference />} />
             
-            <Route path="/about/pdf" element={<Pdf />} />
+           
             <Route path="/about/news" element={<News />} />
 
             {/* for majors sublink */}
