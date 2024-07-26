@@ -8,11 +8,11 @@ function DepartmentCon(){
         },
         {
           name: "Department of Myanmar",
-          link: "myanmar"
+          link: "departments/myanmar"
         },
         {
           name: "Department of Physics",
-          link: "physics"
+          link: "departments/physics"
         },
         {
           name: "Department of Information Technology Support and Maintenance",

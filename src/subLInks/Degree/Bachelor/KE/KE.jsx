@@ -24,7 +24,7 @@ function HPC() {
   
   return (
       <>
-      <UltiWrapper>
+      <UltiWrapper className='p-[5%]'>
       <Heading name="Knowledge Engineering (KE)" />
       <BodyPart />
       </UltiWrapper>

@@ -26,7 +26,7 @@ function SE() {
   
   return (
       <>
-      <UltiWrapper>
+      <UltiWrapper className='p-[5%]'>
       <ImageHeader name="M.C.Sc." name1=" ( Software Engineering )"/>
       <BodyPart />
       </UltiWrapper>

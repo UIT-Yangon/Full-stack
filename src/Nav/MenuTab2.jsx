@@ -19,7 +19,12 @@ function Item2(){
           {
             text: 'Diploma',
             link: ''
+          },
+          {
+            text: 'Extra Curriculum',
+            link: ''
           }
+          
         ]
         },
         {
@@ -33,10 +38,15 @@ function Item2(){
             text: 'Student Registration',
             link: 'https://stu-reg.uit.edu.mm/'
           },
+          // {
+          //   text: 'Email Service',
+          //   link: '/academic/email-service'
+          // },
           {
-            text: 'Email Service',
-            link: '/academic/email-service'
+            text: 'Academic Labs',
+            link: '/'
           },
+          
           
         ]
         },
@@ -73,7 +83,8 @@ function Item2(){
               link: ''
             },
           ]
-        }
+        },
+        
       ];
 
 
