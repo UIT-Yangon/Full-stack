@@ -24,7 +24,7 @@ function HPC() {
   
   return (
       <>
-      <UltiWrapper>
+      <UltiWrapper className='p-[5%]'>
       <Heading name="High Performance Computing (HPC)" />
       <BodyPart />
       </UltiWrapper>

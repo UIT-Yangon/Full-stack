@@ -51,8 +51,8 @@ function Item1(){
               link: '/about/alumni' 
             },
             {
-              text: 'Accommodation',
-              link: '/about/accommodation'
+              text: 'Accomodation',
+              link: '/about/accomodation' 
             }
           ]
           

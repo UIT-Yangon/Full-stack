@@ -100,10 +100,10 @@ header .nav-btn{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     padding: 32px;
-    gap: 54px;
-    width: 380%;
+    gap: 20px;
+    width: 400%;
     background: #FFFFFF;
     box-shadow: 0px 30px 60px rgba(138, 149, 158, 0.2);
     border-radius: 8px;
