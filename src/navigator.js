@@ -35,7 +35,7 @@ import Eng from './Department/Eng/Eng';
 import Phy from './Department/Phy/Phy';
 import Conference from './Conference/Conference';
 import ConferenceHead from './ConferenceHead/ConferenceHead';
-import DDMLab from "./subLInks/Labs/DDM/DDMLab";
+import Lab from "./subLInks/Labs/Labs.jsx";
 
 import FaculHead from './FaculHead/FaculHead';
 
@@ -105,7 +105,7 @@ export default function Navigator() {
            
 
 
-          <Route path="/research/ddm-lab" element={<DDMLab />} />
+          <Route path="/research/:labType" element={<Lab />} />
             
 
             

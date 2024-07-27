@@ -8,11 +8,11 @@ import {Network,Vision,HPC,DDM,ML} from '../Images/Images';
 import { motion } from 'framer-motion';
 
 const itemsData = [
-  { id: 1, name: 'Network Systems (NETsys) Lab', img: Network},
-  { id: 2, name: 'Vision and Learning Lab', img: Vision },
-  { id: 3, name: 'High Performance Computing (HPC) Lab', img: HPC },
-  { id: 4, name: 'Data Distribution Management (DDM) Lab', img: DDM },
-  { id: 5, name: 'Deep Learning and Information Systems Lab', img: ML },
+  { id: 1, name: 'Network Systems (NETsys) Lab', img: Network, labType: 'netsysLab'},
+  { id: 2, name: 'Vision and Learning Lab', img: Vision, labType: 'visionLab' },
+  { id: 3, name: 'High Performance Computing (HPC) Lab', img: HPC, labType: 'hpcLab' },
+  { id: 4, name: 'Data Distribution Management (DDM) Lab', img: DDM, labType: 'ddmLab' },
+  { id: 5, name: 'Deep Learning and Information Systems Lab', img: ML, labType: 'deeplearningLab' },
   
 ];
 
@@ -47,7 +47,7 @@ const PaginatedItems = () => {
       <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[30px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px]'>
         {currentItems.map((item) => (
           <li key={item.id}>
-            <Link to= {`/research/ddm-lab`} >
+            <Link to= {item.labType} >
               <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
                 <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[350px] rounded-[32px] cursor-pointer' style={{overflow: 'hidden'}}>
                   <motion.div
