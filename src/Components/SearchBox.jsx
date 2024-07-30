@@ -13,6 +13,7 @@ const Div = styled.div`
   &::-webkit-scrollbar {
     width: 5px;
     height: 12px; 
+    background-color: #ffffff;
 }
 
 
@@ -61,15 +62,35 @@ const CustomHits = ({ hits,query }) => {
     };
   }, [hits, navigate]);
   return (
-  <Div className="pt-6 flex flex-col gap-y-4 max-h-[150px] overflow-y-scroll  ">
+  <Div className="pt-6 flex flex-col max-h-[150px] overflow-y-scroll  ">
     {hits.map(hit => (
       <div key={hit.objectID} >
-        <Link reloadDocument to={hit.link} id="navigation" ><h2 className="hover:hoverMode font-normal text-lg leading-[27px] underline underline-offset-1">{(!hit.name.includes(query) && query.length > 0) && <span className="text-[#1C1D2080] font-normal leading-[18px] text-base">In </span>}{hit.name}</h2></Link>
+        {
+          (hit.name.toLowerCase().includes(query.toLowerCase()) && query.length > 0) &&
+          <Link reloadDocument to={hit.link} id="navigation" ><h2 className="hover:hoverMode font-normal text-lg leading-[27px] underline underline-offset-1 my-1">{hit.name}</h2></Link>
+        }
+        
 
 
         
       </div>
     ))}
+    <>
+    {hits.map(hit => (
+      <div key={hit.objectID} >
+        {(!hit.name.toLowerCase().includes(query.toLowerCase()) && query.length > 0) &&
+         <Link reloadDocument to={hit.link} id="navigation" ><h2 className="hover:hoverMode font-normal text-lg leading-[27px] underline underline-offset-1 my-1">
+          <span className="text-[#1C1D2080] font-normal leading-[18px] text-base">In </span>{hit.name}</h2></Link>}
+        
+
+
+        
+      </div>
+    ))}
+    
+    </>
+
+{/*  */}
 
 
 
