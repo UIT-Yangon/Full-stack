@@ -13,6 +13,7 @@ const Div = styled.div`
   &::-webkit-scrollbar {
     width: 5px;
     height: 12px; 
+    background-color: #ffffff;
 }
 
 

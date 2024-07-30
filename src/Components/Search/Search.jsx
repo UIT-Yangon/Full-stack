@@ -2,6 +2,9 @@ import React,{useState} from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import SearchBox from '../SearchBox';
 import useResize from '../../utils/useResize';
+import enter from '../../Images/keyboards/enter.png';
+import slash from '../../Images/keyboards/slash.png';
+
 const quickLink = [
   "facebook",
   "facebook",
@@ -58,8 +61,8 @@ const Search = ({ message }) => {
       <li className="text-[#1C1D2080] font-normal leading-[18px] text-base ">Shortcuts</li>
      </ul>
      <div className="mt-4 flex items-center gap-x-6">
-      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base "><span className="me-3">01</span>Type / to focus the search box</p>
-      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base "><span className="me-3">02</span>Type enter to search</p>
+      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base  flex flex-row items-center "><span className="me-3">01</span><span>Type </span><span className="inline-block px-3"><img className="aspect-square w-[70px]" src={slash} alt="enter keyboard"></img></span><span> to focus the search box</span></p>
+      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base flex flex-row items-center"><span className="me-3">02</span><span>Type </span><span className="inline-block px-3"><img className="aspect-square w-[70px]" src={enter} alt="enter keyboard"></img></span><span> to search</span></p>
      </div>
       
       </>
