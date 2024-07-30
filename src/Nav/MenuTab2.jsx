@@ -46,6 +46,10 @@ function Item2(){
             text: 'Academic Labs',
             link: '/'
           },
+          {
+            text: 'Extra Curriculums',
+            link: '/academic/extra-curriculums'
+          }
           
           
         ]

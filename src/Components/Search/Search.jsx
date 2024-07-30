@@ -58,8 +58,8 @@ const Search = ({ message }) => {
       <li className="text-[#1C1D2080] font-normal leading-[18px] text-base ">Shortcuts</li>
      </ul>
      <div className="mt-4 flex items-center gap-x-6">
-      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base "><span className="me-3">01</span>Press / to focus the search box</p>
-      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base "><span className="me-3">02</span>Press enter to search</p>
+      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base "><span className="me-3">01</span>Type / to focus the search box</p>
+      <p className="text-[#1C1D2080] font-normal leading-[18px] text-base "><span className="me-3">02</span>Type enter to search</p>
      </div>
       
       </>

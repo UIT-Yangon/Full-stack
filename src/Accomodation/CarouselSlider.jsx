@@ -66,3 +66,4 @@ const CarouselSlider = () => {
 };
 
 export default CarouselSlider;
+  
