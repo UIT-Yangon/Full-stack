@@ -16,6 +16,8 @@ import {deepLearning} from './LabData/DeepLearning';
 
 export const LabContext = createContext()
 
+
+
 function Lab() {
 
   
@@ -44,7 +46,7 @@ switch (labType) {
   case 'visionLab':
     lab = vision();
     break;
-  case 'deepLearningLab':
+  case 'deeplearningLab':
     lab = deepLearning();
     break;
   default:
@@ -52,7 +54,9 @@ switch (labType) {
 }
 
 
- 
+
+
+//  console.log(lab)
 
   
   return (
