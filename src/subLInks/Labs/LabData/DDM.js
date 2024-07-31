@@ -36,38 +36,7 @@ const data = {
         "Edge based Crime Assistance System with Cloud Computing",
         "Blockchain-Based Storage optimization on Hyperledger Fabric"
       ],
-    syllabus : [
-        {
-          name: "First year syllabus",
-          image: Img2,
-          id: 1,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Second year syllabus",
-          image: Img2,
-          id: 2,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Third year syllabus",
-          image: Img2,
-          id: 3,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Fourth year syllabus",
-          image: Img2,
-          id: 4,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Fifth year syllabus",
-          image: Img2,
-          id: 5,
-          paragraph: "lorem ipsum"
-        }
-      ],
+    
     members : [
         {
             name: "Dr. Nwe Nwe Myint Thein",
@@ -149,6 +118,20 @@ const data = {
           ]
         }
       ],
+       publication: {
+        prev : [
+          {title:"Edge based Crime Assistance System with Cloud Computing", place:"Proceedings of the 3rd International Conference on Advanced Information Technologies (ICAIT), Myanmar", time:"November 2019"},
+          {title:"An Indexing Approach of Historical States on Hyperledger Fabric", place: " Proceedings of the 11th International Conference on Future Computer and Communication, (ICFCC 2019), Yangon, Myanmar" , time: 'February 2019'},
+          {title:"Storage Structure of Student Record based on Hyperledger Fabric Blockchain", place:"Proceedings of the 3rd International Conference on Advanced Information Technologies (ICAIT), Myanmar", time: "November 2019"},
+          {title:"Performance Evaluation of M/D/1 Queuing Model on Hyperledger Fabric", place:"Proceedings of the 4th International Conference on Advanced Information Technologies (ICAIT), Myanmar", time:"December 2020"},
+          {title:"Performance Analysis on Block Size Valuation of Hyperledger Fabric Blockchain", place:"Proceedings of the IEEE   20th International Conference on Computer Applications (ICCA)", time:"February 2023"},
+          {title:"NFT-Based Certificates and Proof of Delivery in Education Sector with Ethereum Blockchain", place:"Proceedings of the IEEE   21th International Conference on Computer Applications (ICCA)", time:"March 2024"}],
+    
+        upcoming : [
+          {title:"Optimized Block Size Valuation by Blockchain-based Hyperledger Fabric Network", place:"The 16th INternational Conference Genetic and Evolutionary Computing, ICGEC2024, Miyazaki, Japan", time:"28-29 August 2024"},
+          {title:"Cloud Cost Prediction with Long Short-term Memory (LSTM) on Parametric Data", place:"The 16th INternational Conference Genetic and Evolutionary Computing, ICGEC2024, Miyazaki, Japan", time:"28-29 August 2024"},
+          {title:"Evaluating Pipeline Architecture with Apache Kafka and Apache Flink: Data-Driven Architecture", place:"The 16th INternational Conference Genetic and Evolutionary Computing, ICGEC2024, Miyazaki, Japan", time:"28-29 August 2024"}]
+       }
 
     }
 

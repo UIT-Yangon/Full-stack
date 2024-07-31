@@ -12,6 +12,7 @@ import StudentRegister from './StudentRegisteration/StudentRegister';
 import Library from './BookLibrary/Library';
 import NewsSearch from './NewsSearch/NewssSearch.jsx';
 import Accomodation from './Accomodation/Accomodation.jsx'
+import AcademicLabs from './AcademicLabs/AcademicLabs.jsx'
 
 
 import Contact from './Contacts/Contact';
@@ -58,7 +59,7 @@ import Blog from './Blog/Blog';
 
 import Syllabus from './Syllabus/Syllabus';
 import Alumni from "./Alumni/Alumni";
-import Accommodation from "./Accommodation/Accomodation";
+import Accommodation from "./Accomodation/Accomodation.jsx";
 
 
 export default function Navigator() {
@@ -78,6 +79,7 @@ export default function Navigator() {
             <Route path="/academic/calendar" element={<Calendar />} />
             <Route path="/academic/campus" element={<Campus />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />
+            <Route path="/academic/academic-labs" element={<AcademicLabs />} />
             <Route path="/about/faculties" element={<FaculHead />} />
 
 

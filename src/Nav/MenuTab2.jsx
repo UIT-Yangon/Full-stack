@@ -18,7 +18,7 @@ function Item2(){
           },
           {
             text: 'Diploma',
-            link: ''
+            link: '/academic/diploma'
           },
           {
             text: 'Extra Curriculum',
@@ -44,7 +44,7 @@ function Item2(){
           // },
           {
             text: 'Academic Labs',
-            link: '/'
+            link: '/academic/academic-labs'
           },
           
           
