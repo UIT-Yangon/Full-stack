@@ -1,20 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
-const prev = [
-      {title:"Edge based Crime Assistance System with Cloud Computing", place:"Proceedings of the 3rd International Conference on Advanced Information Technologies (ICAIT), Myanmar", time:"November 2019"},
-      {title:"An Indexing Approach of Historical States on Hyperledger Fabric", place: " Proceedings of the 11th International Conference on Future Computer and Communication, (ICFCC 2019), Yangon, Myanmar" , time: 'February 2019'},
-      {title:"Storage Structure of Student Record based on Hyperledger Fabric Blockchain", place:"Proceedings of the 3rd International Conference on Advanced Information Technologies (ICAIT), Myanmar", time: "November 2019"},
-      {title:"Performance Evaluation of M/D/1 Queuing Model on Hyperledger Fabric", place:"Proceedings of the 4th International Conference on Advanced Information Technologies (ICAIT), Myanmar", time:"December 2020"},
-      {title:"Performance Analysis on Block Size Valuation of Hyperledger Fabric Blockchain", place:"Proceedings of the IEEE   20th International Conference on Computer Applications (ICCA)", time:"February 2023"},
-      {title:"NFT-Based Certificates and Proof of Delivery in Education Sector with Ethereum Blockchain", place:"Proceedings of the IEEE   21th International Conference on Computer Applications (ICCA)", time:"March 2024"}]
 
-const upcoming = [
-      {title:"Optimized Block Size Valuation by Blockchain-based Hyperledger Fabric Network", place:"The 16th INternational Conference Genetic and Evolutionary Computing, ICGEC2024, Miyazaki, Japan", time:"28-29 August 2024"},
-      {title:"Cloud Cost Prediction with Long Short-term Memory (LSTM) on Parametric Data", place:"The 16th INternational Conference Genetic and Evolutionary Computing, ICGEC2024, Miyazaki, Japan", time:"28-29 August 2024"},
-      {title:"Evaluating Pipeline Architecture with Apache Kafka and Apache Flink: Data-Driven Architecture", place:"The 16th INternational Conference Genetic and Evolutionary Computing, ICGEC2024, Miyazaki, Japan", time:"28-29 August 2024"}]
-
-function Publication(){
+function Publication({publication}){
+    const {prev,upcoming} = publication;
+   
     return (
         <div className="memberWrap py-[56px] " id="Publications">
             <div className="flex flex-col justify-center gap-5">

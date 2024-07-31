@@ -1,13 +1,9 @@
 
 import '../Styles/Degree.css';
-import Headline from './Headline';
-import MainSec from './MainSec';
-
-import Image from './Image';
-import Text from './Text';
-import React from 'react';
 import useResize from '../utils/useResize';
 import UltiWrapper from '../Components/UltiWrapper';
+import Headline from '../Components/Headline';
+import Programs from './Programs';
 
 function App() {
     const windowWidth = useResize("Diploma Programs");
@@ -17,15 +13,12 @@ function App() {
   
   return (
       <>
-          <UltiWrapper className='p-[5%]'>
+          <UltiWrapper>
           
-          <Headline />
-          <Image />
-          <Text />
-          <MainSec />
-          {/* <Trivia /> */}
+            <Headline title='Diploma Programs' MyanText='Diploma Programs'/>
+            <Programs />
       
-    </UltiWrapper>
+          </UltiWrapper>
     </>
     
   );

@@ -1,5 +1,5 @@
-import Mobile from '../../Degree/Bachelor/layout/Mobile';
-import Pc from '../../Degree/Bachelor/layout/Pc';
+import Mobile from '../Degree/Bachelor/layout/Mobile';
+import Pc from '../Degree/Bachelor/layout/Pc';
 import BgPart from './BgPart';
 function BodyPart({condition}) {
 
