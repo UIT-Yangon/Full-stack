@@ -12,6 +12,7 @@ import StudentRegister from './StudentRegisteration/StudentRegister';
 import Library from './BookLibrary/Library';
 import NewsSearch from './NewsSearch/NewssSearch.jsx';
 import Accomodation from './Accomodation/Accomodation.jsx'
+import ExtraCurri from './ExtraCurri/ExtraCurri.jsx';
 
 
 import Contact from './Contacts/Contact';
@@ -79,6 +80,8 @@ export default function Navigator() {
             <Route path="/academic/campus" element={<Campus />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />
             <Route path="/about/faculties" element={<FaculHead />} />
+
+            <Route path="/academic/extra-curriculums" element={<ExtraCurri />} />
 
 
             <Route path="/about/vision-mission" element={<Visimisi />} />
