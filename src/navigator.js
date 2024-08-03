@@ -62,6 +62,8 @@ import Syllabus from './Syllabus/Syllabus';
 import Alumni from "./Alumni/Alumni";
 import AcademicLabs from './AcademicLabs/AcademicLabs.jsx'
 
+import NotFound from './NotFound/NotFound';
+
 export default function Navigator() {
 
     return (
@@ -146,6 +148,10 @@ export default function Navigator() {
             <Route path="/about/news/:id" element={<Blog />} />
 
             <Route path="/about/degree/syllabus" element={<Syllabus />} />
+
+
+            {/* This should be placed as the last route */}
+            <Route path="*" element={<NotFound />} />
 
             
 
