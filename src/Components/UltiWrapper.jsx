@@ -5,7 +5,7 @@ import '../Styles/Degree.css';
 import Footer from './Footer';
 
 
-function UltiWrapper({children,className}) {
+function UltiWrapper({children,className,footer = true}) {
 
   const windowWidth = useResize("");
   const [dataFromNav, setDataFromNav] = useState(true);
@@ -37,7 +37,14 @@ function UltiWrapper({children,className}) {
         {children}
 
       </div>
-      <Footer/>
+      <>
+      {
+        footer && 
+        <Footer/>
+      }
+      </>
+      
+      
           
       
     

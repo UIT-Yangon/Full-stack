@@ -45,9 +45,16 @@ const CustomHits = ({ hits,query }) => {
 
   useEffect(() => {
     const handleKeyEnter = (event, hit) => {
-      if (event.key === 'Enter' && hit ) {
-        navigate(hit[0].link); // Navigate to hit.link
-      }
+      if (event.key === 'Enter' ) {
+        if (hit && Array.isArray(hit) && hit.length > 0 && hit[0].link) {
+          navigate(hit[0].link); // Navigate to hit[0].link
+  
+
+         
+      } 
+      
+      
+      } 
      
     };
 
@@ -119,6 +126,35 @@ const Results = connectStateResults(
 
 
 const CustomSearchBox = ({ currentRefinement, refine }) => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyEnter = (event) => {
+      if (event.key === 'Enter' ) {
+        
+         
+          navigate('/there-is-no-pages');
+      
+         
+      } 
+      
+      
+      } 
+     
+    
+
+    // Add event listener when component mounts
+    const handleKeyDown = (event) => handleKeyEnter(event);
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [navigate]);
+
   const dispatch = useDispatch()
 
   const inputRef = useRef(null);
