@@ -56,8 +56,6 @@ switch (labType) {
 
 
 
-//  console.log(lab)
-
   
   return (
       <LabContext.Provider value={lab}>

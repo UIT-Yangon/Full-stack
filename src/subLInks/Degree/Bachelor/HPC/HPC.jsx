@@ -1,7 +1,7 @@
 
 import React,{ useEffect } from 'react';
 import '../../../../Styles/Degree.css';
-import Heading from '../Components/Heading';
+import Headline from '../../../../Components/Headline';
 import BodyPart from './BodyPart';
 import { useLocation } from 'react-router-dom';
 import UltiWrapper from '../../../../Components/UltiWrapper';
@@ -24,9 +24,12 @@ function HPC() {
   
   return (
       <>
-      <UltiWrapper className='p-[5%]'>
-      <Heading name="High Performance Computing (HPC)" />
-      <BodyPart />
+      <UltiWrapper>
+      <Headline title='High Performance Computing (HPC)' MyanText='High Performance Computing (HPC)'/>
+      <div className='px-[5%]'>
+        <BodyPart />
+        
+      </div>   
       </UltiWrapper>
           
       

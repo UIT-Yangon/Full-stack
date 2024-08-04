@@ -7,7 +7,7 @@ function BodyPart({condition}) {
 
     return (
       
-      <section className="py-[88px] border-t-2 border-[#F5F5F5]">
+      <section className="py-[88px] lg:py-[10px] border-t-2 border-[#F5F5F5]">
         {(window.innerWidth < 1024 ) ? <Mobile bgPart={bgPart} /> : <Pc bgPart={bgPart} />}
       </section>
 

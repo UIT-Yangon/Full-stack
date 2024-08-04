@@ -2,7 +2,7 @@
 import React,{useState,useEffect } from 'react';
 import useResize from '../../../../utils/useResize';
 import '../../../../Styles/Degree.css';
-import Heading from '../Components/Heading';
+import Headline from '../../../../Components/Headline';
 import BodyPart from './BodyPart';
 import { useLocation } from 'react-router-dom';
 import UltiWrapper from '../../../../Components/UltiWrapper';
@@ -24,9 +24,11 @@ function HPC() {
   
   return (
       <>
-      <UltiWrapper className='p-[5%]'>
-      <Heading name="Knowledge Engineering (KE)" />
-      <BodyPart />
+      <UltiWrapper>
+      <Headline title='Knowledge Engineering (KE)' MyanText='Knowledge Engineering (KE)'/>
+      <div className='px-[5%]'>
+        <BodyPart />
+      </div>      
       </UltiWrapper>
           
       
