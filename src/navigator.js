@@ -39,6 +39,9 @@ import ConferenceHead from './ConferenceHead/ConferenceHead';
 import Lab from "./subLInks/Labs/Labs.jsx";
 
 import FaculHead from './FaculHead/FaculHead';
+import UnderGraduate from './Diploma/Undergraduate/Undergraduate.jsx'
+import PostgraduateWeb from "./Diploma/PostgraduateWeb/PostgraduateWeb.jsx";
+import PostgraduateNetwork from "./Diploma/PostgraduateNetwork/PostgraduateNetwork.jsx";
 
 // import ChildConference from './Conference/Conference';
 
@@ -71,6 +74,9 @@ export default function Navigator() {
             
             <Route path="/" element={<Home />} />
             <Route path="/academic/diploma" element={<Diploma />} />
+            <Route path="/academic/diploma/dip-it" element={<UnderGraduate />} />
+            <Route path="/academic/diploma/web-engineering-diploma" element={<PostgraduateWeb />} />
+            <Route path="/academic/diploma/network-engineering-diploma" element={<PostgraduateNetwork />} />
             <Route path="/academic/degree" element={<Degree />} />
             <Route path="/academic/admission-requirements" element={<Admission />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />

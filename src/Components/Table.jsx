@@ -23,7 +23,7 @@ function Table({dataHeader, data, center}) {
                 {
                     item.map((item,index) =>
                         <td key={index} className="">
-                            <div className={`flex justify-center items-center font-normal leading-[18px] text-base text-[#1C1D2080] py-8 ${center}`}>{item}</div>
+                            <div className={`flex justify-center text-center items-center font-normal leading-[18px] text-base text-[#1C1D2080] py-8 ${center}`}>{item}</div>
                             
                             </td>
                     )
