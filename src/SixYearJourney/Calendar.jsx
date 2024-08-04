@@ -1,22 +1,20 @@
-import { AnimatedText } from '../Components/AnimatedText';
-import Navbar from '../Nav/Navbar';
-import useResize from '../utils/useResize';
-import React,{ useState } from 'react';
-import { useSelector } from 'react-redux';
-import { motion } from "framer-motion";
+import React from 'react';
+import Name from '../utils/Name';
 import UltiWrapper from '../Components/UltiWrapper';
-import Headline from './../Components/Headline';
 import PdfView from './PdfView';
+import Headline from '../Components/Headline';
 
     
 function SixYearJourney() {
-
+  const title ="Six Year Journey";
+  Name(title);
   const pdfFile = `${process.env.PUBLIC_URL}/UIT6YearsJourney.pdf`;
   
 return (
   <>
     <UltiWrapper>
-      <Headline title='Six Year Journey' MyanText='ခြောက်နှစ်တာခရီးစဥ်'/>
+    <Headline title={title} MyanText={title}/>
+
       <div className='p-[5%]'>
       <PdfView file={pdfFile} />
       </div>
