@@ -4,6 +4,7 @@ import useResize from '../utils/useResize';
 import UltiWrapper from '../Components/UltiWrapper';
 import Headline from '../Components/Headline';
 import Programs from './Programs';
+import Container from './Container';
 
 function App() {
     const windowWidth = useResize("Diploma Programs");
@@ -16,7 +17,7 @@ function App() {
           <UltiWrapper>
           
             <Headline title='Diploma Programs' MyanText='Diploma Programs'/>
-            <Programs />
+            <Container />
       
           </UltiWrapper>
     </>
