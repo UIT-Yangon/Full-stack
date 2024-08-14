@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import {Network,Vision,HPC,DDM,ML} from '../Images/Images';
+import {Network,Vision,HPC,DDM,ML} from '../../Images/Images';
 import { motion } from 'framer-motion';
-import './../Styles/Frame4.css'
+import './../..//Styles/Frame4.css'
 
 const itemsData = [
-  { id: 1, name: 'Hardware Lab', img: Network, link: '/academic/academic-labs/hardware-lab'},
+  { id: 1, name: 'Hardware Lab', img: Network, link: ''},
   { id: 2, name: 'CISCO Network Lab', img: Vision, link: '/academic/academic-labs/cisco-network-lab' },
   { id: 3, name: 'K-Lab', img: HPC, link: '' },
   { id: 4, name: 'Internet of Things Lab', img: DDM, link: '' },
@@ -44,39 +44,12 @@ const PaginatedItems = () => {
   }
 
   return (
-    <div className='pt-[56px] pb-[72px] flex flex-col gap-[56px]'>
-      <div className='relative '>
-        <div className="absolute flex items-center top-0 md:left-[47%] left-[44%]">
-            <span className="flex-none text-[#3798a6] text-lg me-[7sxan] lg:me-[10px] mb-2.5">.</span>
-            <span className="text-xs md:text-base text-[#1c1d20] opacity-50 font-normal leading-[18px]">Welcome</span>
-        </div>
-        <h1 className="text-[#1c1d20] text-center text-[20px] md:text-[36px] md:leading-[36px] md:pt-[3rem] pt-[2rem]">Commited <br/> to world-leading</h1>
-        
-      </div>
-      <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[30px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px]'>
+    <div className='pt-[32px] pb-[45px] flex flex-col gap-[56px]'>
+      <ul className='lg:grid lg:grid-cols-3 gap-[10px] flex flex-col'>
         {currentItems.map((item) => (
           <li key={item.id}>
             <Link to= {item.link} >
-              <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
-                <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[300px] rounded-[32px] cursor-pointer' style={{overflow: 'hidden'}}>
-                  <motion.div
-                    variants={variants}
-                    initial='initial'
-                    whileHover='hover'
-                    className=' rounded-[32px] w-full h-full'
-                    style={{backgroundImage: `url(${item.img})`, backgroundSize: 'cover', aspectRatio: 16/9, objectFit: 'cover', backgroundPosition: 'center center'}}
-                  >
-
-                  </motion.div>
-                </div>
-                <div className='flex flex-col gap-[8px] '>
-                  
-                    
-                  <h5 className='text-[#1c1d20]  md:text-[25px] text-[17px] ps-[5px]'>
-                    {item.name}
-                  </h5>
-                </div>
-              </div>
+              <img src={item.img} className='lg:h-[300px] h-[150px] w-full' />
             </Link>
           </li>
         ))}
