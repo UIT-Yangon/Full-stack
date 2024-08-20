@@ -15,6 +15,7 @@ import ImageHeader from '../../Components/ImageHeader';
 import Objectives from '../Components/Objectives';
 
 import SubjectOffer from '../../subLInks/Degree/Bachelor/Components/SubjectOffer';
+import Labs from './Labs';
 
 function Faculty(){
 
@@ -122,6 +123,7 @@ function Faculty(){
                     </div>
                     
                     <Objectives />
+                    <Labs />
                     <Member members={members} condition={1} />
             </UltiWrapper>
 

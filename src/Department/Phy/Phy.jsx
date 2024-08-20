@@ -14,6 +14,7 @@ import Img5 from '../../Images/Faculty/CS/Teachers/Teacher_5.png';
 import High from '../../Images/Faculty/CS/Trivia/High_Performance_Computing.png';
 import Img from '../../Images/Faculty/CS/Trivia/Knowledge_Engineering.png';
 import SubjectOffer from '../../subLInks/Degree/Bachelor/Components/SubjectOffer';
+import Labs from './Labs';
 
 function Faculty(){
 
@@ -112,6 +113,7 @@ function Faculty(){
                     <Headline header={header} headerMobile={headerMobile} />
                     <Vision />
                     <SubjectOffer content={content} />
+                    <Labs />
                     <Member members={members} />
             </UltiWrapper>
 

@@ -11,10 +11,10 @@ import './../Styles/Frame4.css'
 const itemsData = [
   { id: 1, name: 'Hardware Lab', img: Network, link: '/academic/academic-labs/hardware-lab'},
   { id: 2, name: 'CISCO Network Lab', img: Vision, link: '/academic/academic-labs/cisco-network-lab' },
-  { id: 3, name: 'K-Lab', img: HPC, link: '' },
-  { id: 4, name: 'Internet of Things Lab', img: DDM, link: '' },
-  { id: 5, name: 'English Lab', img: ML, link: '' },
-  { id: 6, name: 'Physics Lab', img: Network, link: ''}
+  
+  { id: 4, name: 'Internet of Things Lab', img: DDM, link: '/academic/academic-labs/iot-lab' },
+  { id: 5, name: 'English Lab', img: ML, link: '/academic/academic-labs/english-lab' },
+  { id: 6, name: 'Physics Lab', img: Network, link: '/academic/academic-labs/physics-lab'}
   
 ];
 

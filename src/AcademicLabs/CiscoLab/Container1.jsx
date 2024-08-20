@@ -32,7 +32,7 @@ export default function Container1(){
             </p>
             <br/>
             <h1 className="text-[#1e717d] lg:text-[32px] text-[18px] inline-block border-slate-400 border-b-4">The Aim of CISCO Networking Lab</h1>
-            <ul className="list-disc px-5">
+            <ul className="list-disc px-5 mt-5">
                     {aims.map((subj,index) => (
                         <li key={index} className="lg:text-[18px] text-[14px] opacity-70 py-1">{subj}</li>
                     ))}

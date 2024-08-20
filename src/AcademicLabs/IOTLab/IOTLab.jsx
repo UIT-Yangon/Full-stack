@@ -10,14 +10,15 @@ import LabsPhoto from '../RouteLabs/LabsPhoto';
 
 function App({labType}) {
     const windowWidth = useResize("Diploma Programs");
-    
+
+
 
   
   return (
       <>
           <UltiWrapper>
           
-            <Headline title='CISCO Network Lab' MyanText='CISCO Network Lab'/>
+            <Headline title='Internet of Things Lab' MyanText='Internet of Things Lab'/>
             <div className='py-[5%] lg:px-[15%] px-[10%] flex flex-col gap-[30px] '>
                 <Container1 />
                 <LabsPhoto labType={labType} />

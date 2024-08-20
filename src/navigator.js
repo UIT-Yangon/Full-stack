@@ -64,8 +64,7 @@ import Blog from './Blog/Blog';
 import Syllabus from './Syllabus/Syllabus';
 import Alumni from "./Alumni/Alumni";
 import AcademicLabs from './AcademicLabs/AcademicLabs.jsx'
-import CiscoLab from './AcademicLabs/CiscoLab/CiscoLab.jsx'
-import HardwareLab from './AcademicLabs/HardwareLab/HardwareLab.jsx'
+import RouteLabs from './AcademicLabs/RouteLabs/RouteLabs.jsx'
 
 import NotFound from './NotFound/NotFound';
 
@@ -90,8 +89,8 @@ export default function Navigator() {
             <Route path="/academic/campus" element={<Campus />} />
             <Route path="/academic/academic-rules" element={<AcademicRule />} />
             <Route path="/academic/academic-labs" element={<AcademicLabs />} />
-            <Route path="/academic/academic-labs/cisco-network-lab" element={<CiscoLab />} />
-            <Route path="/academic/academic-labs/hardware-lab" element={<HardwareLab />} />
+            <Route path="/academic/academic-labs/:labType" element={<RouteLabs />} />
+            
             <Route path="/about/faculties" element={<FaculHead />} />
 
             <Route path="/academic/extra-curriculums" element={<ExtraCurri />} />

@@ -29,7 +29,7 @@ const labs = [
 export default function Container1(){
     return(
         <div>
-            <h1 className="text-[#1e717d] lg:text-[32px] text-[20px] inline-block border-slate-400 border-b-4">Kinds of Labs at Hardware Lab</h1>
+            <h1 className="text-[#1e717d] lg:text-[32px] text-[20px] inline-block border-slate-400 border-b-4">Kinds of Lab at Hardware Lab</h1>
             <div className="px-5">
             {labs.map((lab,index) => (
                 <div className="mt-5" key={index}>

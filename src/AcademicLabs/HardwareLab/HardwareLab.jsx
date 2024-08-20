@@ -6,10 +6,9 @@ import useResize from '../../utils/useResize';
 import UltiWrapper from '../../Components/UltiWrapper';
 import Headline from '../../Components/Headline';
 import Container1 from './Container1';
-import PaginatedItems from './PaginatedItems';
+import LabsPhoto from '../RouteLabs/LabsPhoto';
 
-
-function App() {
+function App({labType}) {
     const windowWidth = useResize("Diploma Programs");
 
 
@@ -22,7 +21,7 @@ function App() {
             <Headline title='Hardware Lab' MyanText='Hardware Lab'/>
             <div className='py-[5%] lg:px-[15%] px-[10%] flex flex-col gap-[30px] '>
                 <Container1 />
-                <PaginatedItems />
+                <LabsPhoto labType={labType}/>
             </div>
       
           </UltiWrapper>
