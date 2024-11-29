@@ -40,7 +40,7 @@ switch (labType) {
   case 'hpcLab':
     lab = hpc();
     break;
-  case 'netLab':
+  case 'netsysLab':
     lab = netsys();
     break;
   case 'visionLab':

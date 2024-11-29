@@ -4,26 +4,24 @@ import member1 from '../../../Images/Faculty/CS/Teachers/Teacher_1.png';
 
 
 const data = {
-    name: "Data Distribution Management Library",
+    name: "Network Systems (NETsys) Research Lab",
     date: "Updated on 04 May 2024",
     Img: [Image],
-    paragraph : ['Technology education needs to be kept up-to-date and to be innovated constantly. The Data Distribution Management (DDM) Research Lab stands as a testament to the power of gathering computer scientist together with a common purpose. The lab was the first data management research lab under the Faculty of Computer Science, University of Information Technology (UIT).','With the support of Rector Dr. Saw Sanda Aye, the DDM Research Lab was founded. Our theme is "Efficient Data Management on High Performance Computing". Dr. Nwe Nwe Myint Thein, head of the DDM Research Lab, Dr. Dim En Nyaung, Dr. Thet Thet Aung and Dr. Khin Su Su Wai who would work on the next big profitable outcomes for the data management and high performance computing sector.'],
+    paragraph : ['The rapid evolution of communication technologies necessitates the establishment of a dedicated Research Lab for advanced research, experimentation, and development in network systems. The Network Systems (NETsys) Research Lab is a research group affiliated with the Faculty of Computer Systems and Technologies (FCST) at the University of Information Technology. The NETsys Research Lab, designed to facilitate cutting-edge research in network protocols, security, and emerging technologies. The research lab serves as a hub for collaboration, innovation, and knowledge sharing in the field of network systems. Our research emphasis spans a wide range of theoretical and applied topics in big data analytics, software-defined network (SDN) architectures, Internet architecture, as well as system and network security. The NETsys Research Lab maintains a sustainable and innovative learning, teaching, and research environment as one of the missions of the university.'],
     content : [
-        "To offer the most technologically advanced solutions to the ICT sector of our nation",
-        "To continually enhance the quality of education with research",
-        "To integrate the process of teaching, learning, and research environment ",
-        "To facilitate high quality research in distributed data management ",
-        "To promote the research and development cooperation with institutions in other countries "
+        "To carry out innovative research in emerging technologies, security, and network protocols.",
+        "To promote cooperation between academic, industrial, and research partners.",
+        "To encourage the creation of creative answers to current networking problems.",
+        "To contribute to the development of network systems-related knowledge and technology.",
         
     ],
     areas:  [
-        "Data Enrichment and Transformations",
-        "Data Quality Assurance and Control",
-        "Blockchain-Enabled Virtualized Cloud Security",
-        "Privacy Preservation",
-        "Data Delivery Resiliency",
-        "Segregation, Coupling, Interoperability and Behavior Preservation in Simulation",
-        "Accelerated Performance and Analytics with CUDA enabled GPUs",
+        "Examining the efficiency and security of new network protocols.",
+        "Creating cutting-edge security solutions to safeguard crucial network   infrastructure.",
+        "Examining the effects of edge computing and IoT on network architecture.",
+        "Examining the possibilities of 5G and future technologies to improve network performance.",
+        "Examining how SDN and NFV affect network administration and effectiveness.",
+        "Analyzing the issues of big data processing in distributed computing environments",
         
       ],
     currentWorks : [
@@ -36,38 +34,7 @@ const data = {
         "Edge based Crime Assistance System with Cloud Computing",
         "Blockchain-Based Storage optimization on Hyperledger Fabric"
       ],
-    syllabus : [
-        {
-          name: "First year syllabus",
-          image: Img2,
-          id: 1,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Second year syllabus",
-          image: Img2,
-          id: 2,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Third year syllabus",
-          image: Img2,
-          id: 3,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Fourth year syllabus",
-          image: Img2,
-          id: 4,
-          paragraph: "lorem ipsum"
-        },
-        {
-          name: "Fifth year syllabus",
-          image: Img2,
-          id: 5,
-          paragraph: "lorem ipsum"
-        }
-      ],
+    
     members : [
         {
             name: "Dr. Nwe Nwe Myint Thein",
@@ -149,6 +116,19 @@ const data = {
           ]
         }
       ],
+       publication: {
+        prev : [
+          {title:"Performance Evaluation of Resource Allocation in Software Defined Network", place:"2023 IEEE Conference on Computer Applications (ICCA), Yangon, Myanmar", time:"27-28, February 2023"},
+          {title:"Comparative Analysis of Coordinate Checkpoint Protocol in Real-time Messaging System", place: "     2023 International Conference on Communication and Computer Research, Daejeon Korea" , time: 'October 23-24, 2023'},
+          {title:"Evaluation of Environmental Monitoring and Data Visualization", place:"2023 International Conference on Communication and Computer Research, Daejeon Korea", time: "October 23-24, 2023"},
+          {title:"A Systematic Review: Big Data Analytics in Network Environment", place:"IEEE Conference on Computer Applications (ICCA), University of Computer Studies, Yangon, Myanmar", time:"March 16, 2024"},
+          {title:"Investigation of Oversampling in IoT-IDS", place:"IEEE Conference on Computer Applications (ICCA), University of Computer Studies, Yangon, Myanmar", time:"March 16, 2024"},
+          ],
+    
+          upcoming : [
+            {title:"More events are coming....", place:"", time:""},
+            ]
+       }
 
     }
 

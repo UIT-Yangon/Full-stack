@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import './../Styles/Navbar.css';
-import image from './../Images/UIT-Logo-big.png';
 import Item1 from './MenuTab1';
 import Item2 from './MenuTab2';
 import TranslationButton from './TranslationButton';
@@ -11,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Search from '../Components/Search/Search';
 
-function Navbar({sendDataToParent}){
+function Navbar(){
     const navRef = useRef();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [hoveredTab, setHoveredTab] = useState(null);
@@ -54,7 +53,7 @@ function Navbar({sendDataToParent}){
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
         setActiveNav(!activeNav);
-        sendDataToParent(activeNav);
+        // sendDataToParent(activeNav);
     }
 
     const searchAppear = () => {

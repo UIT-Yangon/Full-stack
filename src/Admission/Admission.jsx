@@ -10,14 +10,7 @@ import UltiWrapper from '../Components/UltiWrapper';
 
 function Admission(){
     const windowWidth = useResize("Admissions information and requirements");
-    
 
-    
-
-
- 
-
-    
     return (
         <>
             <UltiWrapper>
