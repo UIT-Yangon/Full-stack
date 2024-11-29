@@ -9,12 +9,12 @@ import { motion } from 'framer-motion';
 import './../Styles/Frame4.css'
 
 const itemsData = [
-  { id: 1, name: 'Hardware Lab', img: Network, labType: 'hardwareLab'},
-  { id: 2, name: 'CISCO Network Lab', img: Vision, labType: 'ciscoNetworkLab' },
-  { id: 3, name: 'K-Lab', img: HPC, labType: 'kLab' },
-  { id: 4, name: 'Internet of Things Lab', img: DDM, labType: 'iotLab' },
-  { id: 5, name: 'English Lab', img: ML, labType: 'engLab' },
-  { id: 6, name: 'Physics Lab', img: Network, labType: 'physicsLab'}
+  { id: 1, name: 'Hardware Lab', img: Network, link: '/academic/academic-labs/hardware-lab'},
+  { id: 2, name: 'CISCO Network Lab', img: Vision, link: '/academic/academic-labs/cisco-network-lab' },
+  
+  { id: 4, name: 'Internet of Things Lab', img: DDM, link: '/academic/academic-labs/iot-lab' },
+  { id: 5, name: 'English Lab', img: ML, link: '/academic/academic-labs/english-lab' },
+  { id: 6, name: 'Physics Lab', img: Network, link: '/academic/academic-labs/physics-lab'}
   
 ];
 
@@ -56,7 +56,7 @@ const PaginatedItems = () => {
       <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[30px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px]'>
         {currentItems.map((item) => (
           <li key={item.id}>
-            <Link to= {item.labType} >
+            <Link to= {item.link} >
               <div className='flex flex-col gap-[20px] justify-center items-center sm:justify-start sm:items-start'>
                 <div className='2xl:w-[520px] xl:w-[380px] xl:h-[380px] w-[300px] h-[300px] rounded-[32px] cursor-pointer' style={{overflow: 'hidden'}}>
                   <motion.div

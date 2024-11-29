@@ -14,6 +14,7 @@ import Img4 from '../../Images/Faculty/CS/Teachers/Teacher_4.png';
 import Img5 from '../../Images/Faculty/CS/Teachers/Teacher_5.png';
 import High from '../../Images/Faculty/CS/Trivia/High_Performance_Computing.png';
 import Img from '../../Images/Faculty/CS/Trivia/Knowledge_Engineering.png'
+import Labs from './Labs';
 
 function Faculty(){
 
@@ -120,6 +121,7 @@ function Faculty(){
                     <Headline header={header} headerMobile={headerMobile} />
                     <Vision />
                     <Major numText={numText} desktopLeftRow={desktopLeftRow} desktopRightRow={desktopRightRow} mobile={mobile} faculty={faculty} infoText={infoText}/>
+                    <Labs />
                     <Member members={members} />
             </UltiWrapper>
 
