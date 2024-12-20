@@ -68,6 +68,10 @@ import RouteLabs from './AcademicLabs/RouteLabs/RouteLabs.jsx'
 
 import NotFound from './NotFound/NotFound';
 
+
+import Staff from './Staff/Staff';
+
+
 export default function Navigator() {
 
     return (
@@ -161,6 +165,9 @@ export default function Navigator() {
 
             {/* This should be placed as the last route */}
             <Route path="*" element={<NotFound />} />
+
+
+            <Route path="/about/staff" element={<Staff />} />
 
             
 

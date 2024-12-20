@@ -7,12 +7,14 @@ import { HashRouter as Router } from 'react-router-dom';
 import Navigator from './navigator.js';
 import { store } from './store/Store';
 import { Provider } from 'react-redux';
+import ScrollToTop from "./utils/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
     <Provider store={store}>
     <Router>
+    <ScrollToTop />
       <Navigator />
 
     </Router>
