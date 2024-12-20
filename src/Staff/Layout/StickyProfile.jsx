@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+
 const Div = styled.div`
 background: url(${props => props.image});
 background-size: cover;

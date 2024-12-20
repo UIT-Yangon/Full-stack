@@ -108,7 +108,7 @@ export default function Navigator() {
             <Route path="/about/facilities-lms" element={<FaciLms />} />
             <Route path="/about/facilities-email-service" element={<FaciEmailService />} />
             <Route path="/about/contacts" element={<Contact />} />
-            <Route path="/about/maps" element={<Map />} />
+            <Route path="/about/map" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
             <Route path="/about/alumni" element={<Alumni />} />
 

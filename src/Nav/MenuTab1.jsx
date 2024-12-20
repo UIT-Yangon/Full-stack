@@ -65,8 +65,8 @@ function Item1(){
               link: '/about/contacts'
             },
             {
-              text: 'Maps',
-              link: '/about/maps'
+              text: 'Map',
+              link: '/about/map'
             },
             {
               text: 'Campus',
