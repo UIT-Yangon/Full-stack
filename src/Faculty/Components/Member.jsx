@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,6 +22,7 @@ export default function Member({members,condition}){
 
 
     return(
+        <Link  to="/about/staff">
         <div className="memberWrap py-[72px] pt-[80px]">
             <div className="member">
                 <div className={`memberTitle md:w-[${condition ? "719px" : "506px"}] w-[${condition ? "360px" : "253px"}]`}>
@@ -46,6 +48,7 @@ export default function Member({members,condition}){
                 </Div2>
             </div>
         </div>
+        </Link>
     )
 }
 
