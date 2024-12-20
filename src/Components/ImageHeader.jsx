@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import img from '../Images/mainPhoto.png';
 
+
 const Div = styled.div`
-  background-image: url(${img});
+  background-image: url(${props => props.image});
   width: 111.5%;
   margin-left: -6%;
   object-fit: cover;
@@ -11,20 +12,17 @@ const Div = styled.div`
   background-size: 100% 100%; /* Ensures the image covers the div */
   background-position: center; /* Centers the image within the div */
   opacity: 90%;
-
-
 `;
 
 const Div2 = styled.div`
   background: linear-gradient(180deg, rgba(217, 217, 217, 0) 41.1%, rgba(28, 29, 32, 0.8) 95.1%);
+`;
 
-`
-
-function ImageHeader({name,name1}) {
+function ImageHeader({name,name1, image = img}) {
 
     return (
-      <Div className="py-[27.5px] lg:py-14 lg:px-97 relative h-[319px] md:h-[455px]">
-        <div className="absolute bottom-[70.5px] width-full left-[5%]">
+      <Div className="py-[27.5px] lg:py-14 lg:px-97 relative h-[319px] md:h-[455px]" image={image}>
+        <div className="absolute bottom-[70.5px] width-full left-[6%]">
         <h1 className=" w-full flex lg:flex-row flex-col relative  font-normal text-[40px] leading-[40px] lg:text-[80px] lg:leading-[80px] text-[#ffffff]" style={{ zIndex: 1}}><span>{name}</span><span>{name1}</span></h1>
         </div>
         
