@@ -71,6 +71,10 @@ import NotFound from './NotFound/NotFound';
 
 import Staff from './Staff/Staff';
 
+// Academies
+
+import RedHat from './Academies/RedHat/RedHat';
+
 
 export default function Navigator() {
 
@@ -168,6 +172,8 @@ export default function Navigator() {
 
 
             <Route path="/about/staff" element={<Staff />} />
+
+            <Route path="/academic/extra-curriculums/redhat" element={<RedHat />} />
 
             
 

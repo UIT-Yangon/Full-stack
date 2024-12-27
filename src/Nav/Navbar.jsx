@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import './../Styles/Navbar.css';
-import image from './../Images/UIT-Logo-big.png';
 import Item1 from './MenuTab1';
 import Item2 from './MenuTab2';
 import TranslationButton from './TranslationButton';
@@ -8,7 +7,7 @@ import { Link } from 'react-router-dom';
 import LogoAnimation from "../Images/LogoAnimation";
 import Item3 from "./MenuTab3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Search from '../Components/Search/Search';
 
 function Navbar({sendDataToParent}){
