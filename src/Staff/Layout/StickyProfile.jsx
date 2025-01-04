@@ -2,9 +2,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+let url = process.env.REACT_APP_NEWS_IMAGE;
 
 const Div = styled.div`
-background: url(${props => props.image});
+background: url(${props => props.image ? url+props.image : 'https://advisorretire.com/wp-content/plugins/pl-platform/engine/ui/images/default-landscape.png'});
 background-size: cover;
 object-fit: cover;
 background-position: center center;

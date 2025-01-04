@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
+const url = process.env.REACT_APP_NEWS_IMAGE;
+
 const Div = styled.div`
 
-background: url(${props => require(`../../Images/${props.image}`)});
+background: url(${props => `${url}${props.image}`});
 background-size: cover;
 width: 100%;
 aspect-ratio: 16/9;
@@ -18,7 +20,7 @@ border-radius: 32px;
 
 const Div2 = styled.div`
 
-background: url(${props => require(`../../Images/${props.image}`)});
+background: url(${props => `${url}${props.image}`});
 background-size: cover;
 width: 100%;
 aspect-ratio: 4/5;

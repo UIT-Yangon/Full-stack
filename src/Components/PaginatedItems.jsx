@@ -189,10 +189,11 @@ const StyledPaginate = styled(ReactPaginate)`
   }
 `;
 
+const Url = process.env.REACT_APP_NEWS_IMAGE;
 
 const Div = styled.div`
 
-    background: url(${props => require(`../Images/${props.image}`)});
+    background: url(${props => `${Url}${props.image}`});
     background-size: cover;
     aspect-ratio: 16/9;
     object-fit: cover;

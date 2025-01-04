@@ -5,63 +5,102 @@ import Education from './Education';
 import Research from './Research';
 import Course from './Course';
 import StickyProfile from './Layout/StickyProfile';
-import img from '../Images/Staff/staff.jfif';
+
 import Name from '../utils/Name';
+import React,{useState,useEffect } from 'react';
+import axios from '../utils/axiosInstance';
+
 function Staff() {
   Name("Staff");
 
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
 
+const url = 'staff/1';
+
+useEffect(() => {
+  // Define the URL to send the GET request to
  
+
+  // Make the GET request
+  axios.get(url)
+    .then(response => {
+      // Handle the successful response here
+      setData(response.data[0]);
+      setLoading(false);
+    })
+    .catch(error => {
+      // Handle any errors here
+      setError(error.message);
+      console.error('Error fetching data:', error);
+      setLoading(false);
+    });
+    
+}, [url]);
+
+if (loading) {
+  return <p>Loading...</p>;
+}
+
+if (error) {
+  return <p>Error: {error}</p>;
+}
+
+function transformStringToArray(input) {
+  if (typeof input !== 'string') {
+      throw new Error("Input must be a string.");
+  }
+
+  // Split the input by `\r\n` and trim each entry
+  const lines = input.split(/\r?\n/).map(line => line.trim());
+
+  // Filter out empty entries and ensure the content has letters
+  const result = lines.filter(line => /[a-zA-Z]/.test(line));
+
+  return result;
+}
+
+let eduArray = transformStringToArray(data.education);
+let interestArray = transformStringToArray(data.research_interests);
+let courseArray = transformStringToArray(data.courses_taught);
+
+
 
   let about = {
     title: "About",
-    body: "Dr. Aung Nway Oo earned a Bachelor degree in 2002, Master degree in 2006 and Doctoral degree in 2010 from University of Computer Studies, Yangon, (UCSY). He was started working as a Tutor at UCSY in 2004. He is currently a Professor in Faculty of Computer Science, University of Information Technology (UIT)."
+    body: data.biography
   }
 
   let education = {
     title: "Education",
-    list: [
-      "Ph.D. (Information Technology) (2010) from University of Computer Studies Yangon, Myanmar",
-      "M.C.Sc.(Credit), (2006) from University of Computer Studies, Yangon, Myanmar",
-      "B.C.Sc.(Hons.) (2003) from University of Computer Studies, Yangon, Myanmar",
-      "B.C.Sc.(Credit) (2002) from University of Computer Studies, Yangon, Myanmar"
-    ]
+    list: eduArray
   }
 
   let research = {
     title: "Research Interests",
-    list: [
-      "Data mining and machine learning",
-      "Computer vision and deep learning"
-    ]
+    list: interestArray
 
   }
 
   let courses = {
     title: "Courses taught",
-    list: [
-      "Computer graphics",
-      "Computer Vision",
-      "Interactive Multimedia"
-
-    ]
+    list: courseArray
 }
 
-let publication = {
-  title: "Publication",
-  bander: "Edge based Crime Assistance System with Cloud Computing",
-  date: "16 July 2024",
-  body: "Proceedings of the 3rd International Conference on Advanced Information Technologies (ICAIT), Myanmar,"
-}
+let publication = data.staff_publications;
 
 let profile = {
-  img: img,
-  name: "Staff name",
-  title: "Professor & Dean of",
-  faculty: "Faculty of Computer Science",
+  img: data.image,
+  name: data.name,
+  title: data.position,
+  faculty: data.department,
   link: "/faculties/computer-science"
 }
+
+
+
 
 
   return (
