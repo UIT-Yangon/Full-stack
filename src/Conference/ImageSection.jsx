@@ -13,8 +13,11 @@ const Container = styled.div`
   }
 `;
 
+const url = process.env.REACT_APP_NEWS_IMAGE;
+
+
 const Pic1 = styled.div`
-  background: url(${props => require(`../Images/${props.img}`)});
+  background: url(${props => `${url}${props.img}`});
   background-size: cover;
   width: 100%;
   height: 100%;

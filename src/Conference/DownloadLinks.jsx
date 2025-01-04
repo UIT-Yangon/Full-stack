@@ -28,29 +28,38 @@ export default function DownloadLinks({className}){
     const conferenceBook = useSelector((state) => state.data.value.book);
     const brochure = useSelector((state) => state.data.value.brochure);
 
+    function cleanStart(input) {
+        if (typeof input !== 'string') {
+            throw new Error("Input must be a string.");
+        }
+    
+        // Use a regex to replace leading digits and underscores
+        return input.replace(/^[_\d]+/, '');
+    }
+
    
 
-    
+    const url = process.env.REACT_APP_NEWS_IMAGE;
 
     return(
         <div className={className}>
             <h5 className="text-[16px] text-[#1c1d20] opacity-50 text-left mt-10 mb-3">PDF download links</h5>
             <div className="flex flex-col gap-[12px] w-full">
-            {conferenceBook && <a href={require(`../Document/${conferenceBook}`)} download={conferenceBook}>
+            {conferenceBook && <a href={`${url}${conferenceBook}`} download={conferenceBook}>
                 <div className="flex items-center">
                     
-                    <DownloadText className="gef p-2 px-10 bg-[#f0f8ff] text-[16px] text-[#1c1d20] rounded-[10px] relative">
+                    <DownloadText className="gef p-2 px-10 bg-[#f0f8ff] text-[16px] text-[#1c1d20] rounded-[10px] relative  w-full">
                     <DownloadIcon icon={faDownload} className='abc bg-[#000] text-[#fff] p-1 rounded-[5px] absolute'/>
-                    {conferenceBook}</DownloadText>
+                    {cleanStart(conferenceBook)}</DownloadText>
                 </div>
                 </a>}
             
-                {brochure && <a href={require(`../Document/${brochure}`)} download='brochure'>
+                {brochure && <a href={`${url}${brochure}`} download='brochure'>
                 <div className="flex items-center">
                     
-                    <DownloadText className="gef p-2 px-10 bg-[#f0f8ff] text-[16px] text-[#1c1d20] rounded-[10px] relative">
+                    <DownloadText className="gef p-2 px-10 bg-[#f0f8ff] text-[16px] text-[#1c1d20] rounded-[10px] relative  w-full">
                     <DownloadIcon icon={faDownload} className='abc bg-[#000] text-[#fff] p-1 rounded-[5px] absolute'/>
-                    {brochure}</DownloadText>
+                    {cleanStart(brochure)}</DownloadText>
                 </div>
                 </a>}
                 

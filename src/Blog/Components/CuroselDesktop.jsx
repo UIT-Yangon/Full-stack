@@ -21,7 +21,6 @@ function CuroselDesktop() {
   // Ensure `id` is parsed to an integer
   const parsedId = parseInt(id, 10);
 
-
   const dataa = useSelector((state) => state.post.value).filter((item) => item.id !== parsedId);
 
   
@@ -169,9 +168,10 @@ function CuroselDesktop() {
   );
 }
 
+const url = process.env.REACT_APP_NEWS_IMAGE;
 const Div = styled.div`
 
-    background: url(${props => require(`../../Images/${props.image}`)});
+    background: url(${props => `${url}${props.image}`});
     background-size: cover;
     aspect-ratio: 16/9;
     object-fit: cover;

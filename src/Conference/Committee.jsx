@@ -12,9 +12,12 @@ export default function Committee() {
 
   const sumChair = generalChair.concat(generalCoChair, programChair);
 
+ 
+  const url = process.env.REACT_APP_NEWS_IMAGE;
+
   const Div = styled.div`
 
-    background: url(${props => require(`../Images/${props.image}`)});
+    background: url(${props => (props.image === "default.jpg") ? require(`../Images/${props.image}`) : url + props.image});
     background-size: cover;
     aspect-ratio: 16/9;
     object-fit: cover;

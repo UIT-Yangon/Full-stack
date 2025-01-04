@@ -7,11 +7,14 @@ import HeadPart from './HeadPart';
 import Conclusion from './Conclusion';
 import img from "../../Images/redHat.png";
 import Section from './Section';
+import Name from '../../utils/Name';
 
 
 
     
 function RedHat() {
+
+  Name("Red Hat Academy");
 
   const text = "The University of Information Technology has been accredited as Red Hat Academy for faculties and students to start learning journey with Red Hat. Red Hat Academy’s learning platform provides course contents, guided exercises, and Labs in a practical way. ";
 
