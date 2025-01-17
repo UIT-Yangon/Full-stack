@@ -5,13 +5,12 @@ import UltiWrapper from '../Components/UltiWrapper';
 import { Link } from 'react-router-dom';
 
 import axios from '../utils/axiosInstance';
-import FaculTitle from './FaculTitle';
-import FaculCon from './FaculCon';
-import DepartmentTitle from './DepartmentTitle';
-import DepartmentCon from './DepartmentCon';
+import FacultyContainer from './FacultyContainer';
+import DepartmentContainer from './DepartmentContainer';
 
 
-function Conference() {
+
+function FaculHead() {
 
 
 
@@ -23,10 +22,10 @@ function Conference() {
   return (
       <div className='FaculHead '>
       <UltiWrapper className='p-[5%]'>
-        <FaculTitle/>
-        <FaculCon/>
-        <DepartmentTitle/>
-        <DepartmentCon/>
+        
+          <FacultyContainer/>
+          
+          <DepartmentContainer />
      </UltiWrapper>
       
       
@@ -38,4 +37,4 @@ function Conference() {
   );
 }
 
-export default Conference;
+export default FaculHead;

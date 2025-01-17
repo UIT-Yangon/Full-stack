@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/Faq.css';
+// import '../Styles/Faq.css';
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from 'react';
 

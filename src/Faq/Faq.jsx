@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '../Styles/Faq.css';
+// import '../Styles/Faq.css';
 import '../Images/plus.svg';
 import '../Images/minus.svg';
 import Question from './Question';
