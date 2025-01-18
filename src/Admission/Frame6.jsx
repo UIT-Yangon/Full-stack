@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from 'react-redux';
 import { AnimationButton } from "../Components/Footer";
 
-function Frame6(){
+function Frame6({studentCount}){
     let para = ["Annual student intake :","နှစ်စဉ် ကျောင်းသား ဝင်ခွင့် :"];
-    let num = ["200","၂၀၀"]
+    let num = [studentCount,"၂၀၀"]
     const language = useSelector((state) => state.language.value);
     return (
         <div className="frame6 w-full pb-16 pt-0 lg:pb-26 lg:pt-[6rem]">

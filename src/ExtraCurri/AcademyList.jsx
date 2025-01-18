@@ -4,6 +4,7 @@ import RedHat from '../Images/Academies/RedHat.png';
 import Oracle from '../Images/Academies/Oracle.png';
 import Aws from '../Images/Academies/aws.png';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 const Academies = [
@@ -46,7 +47,10 @@ function AcademyList() {
         {
             Academies.map(
                 (academy, index) => <div key={index} className="w-full flex flex-col gap-y-2">
-                    <Div img={academy.img} className="aspect-video w-full"></Div>
+                     <Link to='/academic/extra-curriculums/redhat'>
+                     <Div img={academy.img} className="aspect-video w-full"></Div>
+                     </Link>
+                    
                     <h4 className="font-normal text-2xl lg:text-[32px] leading-7 lg:leading-9 text-center">
                         {academy.name}
 

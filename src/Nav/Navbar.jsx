@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import LogoAnimation from "../Images/LogoAnimation";
 import Item3 from "./MenuTab3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Search from '../Components/Search/Search';
 
 function Navbar(){

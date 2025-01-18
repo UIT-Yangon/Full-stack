@@ -6,8 +6,11 @@ import ReactPaginate from 'react-paginate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+const url = process.env.REACT_APP_NEWS_IMAGE;
+
+
 const Div = styled.div`
-  background: url(${props => require(`../Images/${props.image}`)});
+  background: url(${props => (props.image === "default.jpg") ? require(`../Images/${props.image}`) : url + props.image});
   background-size: cover;
   aspect-ratio: 16/9;
   object-fit: cover;

@@ -29,6 +29,7 @@ function Conference() {
       .then(response => {
         // Handle the successful response here
         dispatch(insertApiData(response.data));
+        console.log(response.data)
         setLoading(false);
       })
       .catch(error => {

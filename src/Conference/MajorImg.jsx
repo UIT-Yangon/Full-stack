@@ -22,9 +22,11 @@ import { useSelector } from 'react-redux';
 
     `;
 
-    const Pic = styled.div`
+    let url = process.env.REACT_APP_NEWS_IMAGE;
 
-    background: url(${props => require(`../Images/${props.image}`)});
+    const Pic = styled.div`
+   
+    background: url(${props => props.image ? props.image : 'https://advisorretire.com/wp-content/plugins/pl-platform/engine/ui/images/default-landscape.png'});
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -38,9 +40,11 @@ import { useSelector } from 'react-redux';
     `;
 
 function MajorImg() {
+  
 
-    const majorImg = useSelector((state) => state.data.value.images.heading[0]) || Img;
+    
 
+    const majorImg = useSelector((state) => state.data.value.images.heading[0]);
 
 
 

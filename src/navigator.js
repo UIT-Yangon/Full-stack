@@ -68,6 +68,14 @@ import RouteLabs from './AcademicLabs/RouteLabs/RouteLabs.jsx'
 
 import NotFound from './NotFound/NotFound';
 
+
+import Staff from './Staff/Staff';
+
+// Academies
+
+import RedHat from './Academies/RedHat/RedHat';
+
+
 export default function Navigator() {
 
     return (
@@ -104,7 +112,7 @@ export default function Navigator() {
             <Route path="/about/facilities-lms" element={<FaciLms />} />
             <Route path="/about/facilities-email-service" element={<FaciEmailService />} />
             <Route path="/about/contacts" element={<Contact />} />
-            <Route path="/about/maps" element={<Map />} />
+            <Route path="/about/map" element={<Map />} />
             <Route path="/about/campus" element={<FaciCampus />} />
             <Route path="/about/alumni" element={<Alumni />} />
 
@@ -161,6 +169,11 @@ export default function Navigator() {
 
             {/* This should be placed as the last route */}
             <Route path="*" element={<NotFound />} />
+
+
+            <Route path="/about/staff" element={<Staff />} />
+
+            <Route path="/academic/extra-curriculums/redhat" element={<RedHat />} />
 
             
 
