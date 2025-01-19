@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Search from '../Components/Search/Search';
 
-function Navbar({sendDataToParent}){
+function Navbar(){
     const navRef = useRef();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [hoveredTab, setHoveredTab] = useState(null);
@@ -53,7 +53,7 @@ function Navbar({sendDataToParent}){
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
         setActiveNav(!activeNav);
-        sendDataToParent(activeNav);
+        // sendDataToParent(activeNav);
     }
 
     const searchAppear = () => {

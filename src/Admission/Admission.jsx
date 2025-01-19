@@ -52,12 +52,6 @@ const studentCount = data.student_intake;
 const requirement = data.requirements;
     
 
-    
-
-
- 
-
-    
     return (
         <>
             <UltiWrapper>

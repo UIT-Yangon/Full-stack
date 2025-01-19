@@ -1,6 +1,4 @@
-import { AnimatedText } from '../Components/AnimatedText';
-import Navbar from '../Nav/Navbar';
-import useResize from '../utils/useResize';
+
 import React,{ useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";

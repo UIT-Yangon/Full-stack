@@ -1,8 +1,4 @@
-import React, { useState } from 'react';
-import ReactPaginate from 'react-paginate';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from 'react-router-dom';
 import {Network,Vision,HPC,DDM,ML} from '../Images/Images';
 import { motion } from 'framer-motion';
@@ -33,7 +29,7 @@ const Offer = () => {
 
   return (
     <div className='px-[5%] pt-[56px] pb-[72px] flex flex-col gap-[56px] bg-[#f0f8ff] rounded-[30px] '>
-      <h1 className="text-[#1c1d20] text-3xl md:text-5xl text-[#3798a6] text-center">UIT Hostels can offer</h1>
+      <h1 className=" text-3xl md:text-5xl text-[#3798a6] text-center">UIT Hostels can offer</h1>
       <ul className='flex flex-row xl:grid xl:grid-cols-3 xl:gap-x-[50px] gap-x-[15px] justify-center w-full items-center flex-wrap xl:gap-y-[20px] gap-y-[30px] md:justify-start'>
         {itemsData.map((item) => (
           <li key={item.id} className='h-[488px]'>
