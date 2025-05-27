@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 const Div2 = styled.div``;
-
+const url = process.env.REACT_APP_NEWS_IMAGE;
 const Div = styled.div`
-background: url(${props => props.image});
+background: url("${props => `${url}${props.image}`}");
 background-size: cover;
 object-fit: cover;
 background-position: center center;
@@ -22,7 +22,7 @@ export default function Member({members,condition}){
 
 
     return(
-        <Link  to="/about/staff">
+        
         <div className="memberWrap py-[72px] pt-[80px]">
             <div className="member">
                 <div className={`memberTitle md:w-[${condition ? "719px" : "506px"}] w-[${condition ? "360px" : "253px"}]`}>
@@ -34,6 +34,11 @@ export default function Member({members,condition}){
                 </div>
                 <Div2 className="grid gap-5 md:gap-8 w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                     {members.map((img,index) => 
+                    <Link 
+                        to="/about/staff"
+                        state={{ id: img.id }} // <-- Correct way in React Router v6
+                        key={index} // Pass data in the 'state' object
+                      >
                     <div key={index}>
                         <div className="memberImgCon w-full">
                         <Div className="rounded-[32px] aspect-[4/5] w-[100%]" image={img.image}></Div>
@@ -43,12 +48,13 @@ export default function Member({members,condition}){
                         </div>
                     </div>
 
-                    </div>)}
+                    </div>
+                    </Link>)}
                     
                 </Div2>
             </div>
         </div>
-        </Link>
+        
     )
 }
 

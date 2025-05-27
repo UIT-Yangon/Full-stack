@@ -56,7 +56,7 @@ const CarouselSlider = () => {
       {images.map((image)=>(
         <div key={image.id} className='relative' >
           <img src={image.image} alt="Slide 1" className='w-full h-[60vh] lg:h-[690px]'/>
-          <div className='absolute w-full h-[690px] flex flex-col bg-gradient-to-bottom top-0 '>
+          <div className='absolute w-full h-[690px] flex flex-col  top-0 '>
             <div className='lg:h-[30%] h-[20%]'>
 
             </div>

@@ -3,7 +3,7 @@ import '../../Styles/Faculty.css';
 import Headline from '../Components/Headline';
 import Vision from './Vision';
 import useResize from '../../utils/useResize';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Major from '../Components/Major';
 import Member from '../Components/Member';
 import UltiWrapper from '../../Components/UltiWrapper';
@@ -15,6 +15,8 @@ import Img5 from '../../Images/Faculty/CS/Teachers/Teacher_5.png';
 import High from '../../Images/Faculty/CS/Trivia/High_Performance_Computing.png';
 import Img from '../../Images/Faculty/CS/Trivia/Knowledge_Engineering.png'
 import Labs from './Labs';
+import axios from '../../utils/axiosInstance';
+
 
 function Faculty(){
 
@@ -31,39 +33,43 @@ function Faculty(){
       ]
 
 
-      const members = [
-        {
-            name: "Dr. Ei Chaw Htoon",
-            title: "Pro-rector & Dean",
-            image: Img1
-        },
-        {
-            name: "Dr. Ei Chaw Htoon",
-            title: "Pro-rector & Dean",
-            image: Img2
-        },
-        {
-            name: "Dr. Ei Chaw Htoon",
-            title: "Pro-rector & Dean",
-            image: Img3
-        },
-        {
-            name: "Dr. Ei Chaw Htoon",
-            title: "Pro-rector & Dean",
-            image: Img4
-        },
-        {
-            name: "Dr. Ei Chaw Htoon",
-            title: "Pro-rector & Dean",
-            image: Img5
-        }
-    
-    
-    
-    
-    
-    
-    ]
+      const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    const url = 'staff';
+
+    useEffect(() => {
+        axios.get(url)
+            .then(response => {
+                setData(response.data);
+                setLoading(false);
+            })
+            .catch(error => {
+                setError(error.message);
+                setLoading(false);
+            });
+    }, [url]);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error}</p>;
+    }
+
+    let members = [];
+    if (Array.isArray(data?.data)) {
+        members = data.data
+            .filter(staff => staff.department === "Faculty of Computer Systems and Technologies")
+            .map(staff => ({
+                id: staff.id,
+                name: staff.name,
+                title: staff.position,
+                image: staff.image
+            }));
+    }
 
     const numText = "three";
     const faculty= "FCST";

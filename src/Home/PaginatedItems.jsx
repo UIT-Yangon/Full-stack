@@ -190,7 +190,7 @@ const Div = styled.div`
     `;
 
     const Div2 = styled.div`
-
+    background: url(${props => `${url}${props.image}`});
     background-size: cover;
     aspect-ratio: 16/9;
     object-fit: cover;

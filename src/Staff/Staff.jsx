@@ -9,6 +9,7 @@ import StickyProfile from './Layout/StickyProfile';
 import Name from '../utils/Name';
 import React,{useState,useEffect } from 'react';
 import axios from '../utils/axiosInstance';
+import { useLocation } from 'react-router-dom';
 
 function Staff() {
   Name("Staff");
@@ -17,12 +18,17 @@ function Staff() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const location = useLocation(); // React Router v6 hook
 
-const url = 'staff/1';
+  // For React Router v5 and earlier, you'd access it via props:
+  // const { location } = props;
+
+  const secretData = location.state?.id;
+  const url = `staff/${secretData}`;
 
 useEffect(() => {
   // Define the URL to send the GET request to
- 
+
 
   // Make the GET request
   axios.get(url)
@@ -37,7 +43,7 @@ useEffect(() => {
       console.error('Error fetching data:', error);
       setLoading(false);
     });
-    
+
 }, [url]);
 
 if (loading) {
@@ -114,14 +120,14 @@ let profile = {
                 <Research data={research}/>
                 <Course data={courses}/>
             </div>
-            
+
         </div>
 
-   
+
 </UltiWrapper>
   );
 
- 
+
 }
 
 

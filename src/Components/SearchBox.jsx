@@ -37,9 +37,21 @@ const Div2 = styled.div`
   
 `
 
-const searchClient = algoliasearch('643IX7KDD6', '6fbc4ab6f1c102f42173cee482f6fa81');
+const searchClient = algoliasearch('VA98E9TEN8', '22f5498c50b33846cf53b89efe4d6e9e');
 
-const CustomHits = ({ hits,query }) => {
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * CustomHits
+ * 
+ * This component is used to display a list of hits from the Algolia search index.
+ * It will display the hits in a scrollable container and will navigate to the hit's link when the Enter key is pressed.
+ * It will also highlight the query in the hit's name.
+ * @param {object} props The props object
+ * @param {array} props.hits The array of hits from the Algolia search index
+ * @param {string} props.query The query string
+ * @returns {JSX.Element} The CustomHits component
+ */
+/*******  f96dae4f-4732-4b21-8cc5-f9160abc832c  *******/const CustomHits = ({ hits,query }) => {
  
   const navigate = useNavigate();
 
@@ -125,6 +137,22 @@ const Results = connectStateResults(
 
 
 
+const Input = styled.input`
+  width: 100%;
+  placeholder:font-normal;
+  placeholder:text-xl;
+  placeholder:leading-7;
+  placeholder:text-[#1C1D2080];
+  background-color: #F7F7F7;
+  border: none;
+  outline: none;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+`;
+
 const CustomSearchBox = ({ currentRefinement, refine }) => {
 
   const navigate = useNavigate();
@@ -182,13 +210,13 @@ const CustomSearchBox = ({ currentRefinement, refine }) => {
 
   return (
     <>
-      <input
-      ref={inputRef}
-      type="text"
-      value={currentRefinement}
-      onChange={handleInputChange}
-      className="w-full placeholder:font-normal placeholder:text-xl placeholder:leading-7 placeholder:text-[#1C1D2080] bg-[#F7F7F7]" placeholder="I’m looking for..."
-    />
+      <Input
+        ref={inputRef}
+        type="text"
+        value={currentRefinement}
+        onChange={handleInputChange}
+        placeholder="I’m looking for..."
+      />
     
         <Div2 className="bg-[#FFFFFF] rounded-[32px] p-3 cursor-pointer transition duration-500" onClick={handleClearSearch}>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-none transition duration-500 ">

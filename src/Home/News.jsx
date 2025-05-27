@@ -11,7 +11,7 @@ const Container = styled.div`
   border-top: 1px solid #F5F5F5;
   display: grid;
   grid-template-columns: 1fr 3fr; /* 1:3 ratio */
-  gap: 10px;
+  gap: 20px;
   @media (max-width: 1023px) {
     grid-template-columns: 1fr; /* For smaller screens, use 1 column */
   }
@@ -36,7 +36,7 @@ const News = () => {
             <AnimationButton value="Wanna know more"/>
                 
         </div>
-        <div className="flex justify-center items-center pt-5">
+        <div className="pt-5">
           <PaginatedItems/>
         </div>
       </Container>
